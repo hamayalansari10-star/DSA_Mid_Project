@@ -1,75 +1,107 @@
 import time
-import os
-import pandas as pd
+import requests
 from PyQt6.QtCore import QThread, pyqtSignal, QMutex, QWaitCondition
 from src.models import Book
 
 class ScraperThread(QThread):
-    progress_signal = pyqtSignal(int, int)  # (current_count, total_target)
-    entity_scraped = pyqtSignal(dict)       # Emits scraped record
-    finished_signal = pyqtSignal()
+    progress_signal = pyqtSignal(int, int)  # current, target
+    data_signal = pyqtSignal(list)          # batch of Book objects
+    status_signal = pyqtSignal(str)        # text status
+    finished_signal = pyqtSignal(int)       # total scraped
 
-    def __init__(self, target_url, target_count=15000, csv_path="data/scraped_books.csv"):
+    def __init__(self, target_url="https://openlibrary.org/search.json", query="programming", target_count=15000):
         super().__init__()
-        self.target_url = target_url
+        self.target_url = target_url if target_url.strip() else "https://openlibrary.org/search.json"
+        self.query = query if query.strip() else "computer"
         self.target_count = target_count
-        self.csv_path = csv_path
         
+        self.is_running = True
         self.is_paused = False
-        self.is_stopped = False
         self.mutex = QMutex()
-        self.condition = QWaitCondition()
+        self.wait_condition = QWaitCondition()
 
     def run(self):
-        scraped_count = 0
-        scraped_records = []
-        categories = ["Fiction", "Science", "History", "Fantasy", "Technology", "Biography", "Philosophy"]
-        authors = ["J.K. Rowling", "George Orwell", "Agatha Christie", "Stephen King", "J.R.R. Tolkien", "Arthur Conan Doyle"]
+        self.status_signal.emit("Initializing live OpenLibrary API scraper...")
+        scraped_books = []
+        page = 1
+        current_id = 1
 
-        # Ensure directory exists
-        os.makedirs(os.path.dirname(self.csv_path), exist_ok=True)
+        categories = ["Computer Science", "Algorithms", "Software", "Technology", "Programming"]
 
-        while scraped_count < self.target_count and not self.is_stopped:
-            # Handle Pause Logic
+        while self.is_running and current_id <= self.target_count:
+            # Check pause state with while loop to avoid spurious wakeups
             self.mutex.lock()
-            if self.is_paused:
-                self.condition.wait(self.mutex)
+            while self.is_paused:
+                self.status_signal.emit("Scraping Paused.")
+                self.wait_condition.wait(self.mutex)
             self.mutex.unlock()
 
-            if self.is_stopped:
+            if not self.is_running:
                 break
 
-            book = Book(
-                book_id=f"BK-{scraped_count + 1:05d}",
-                title=f"Book Title {scraped_count + 1}",
-                author=authors[scraped_count % len(authors)],
-                price=round(10 + (scraped_count * 0.13) % 90, 2),
-                rating=round(1.0 + (scraped_count % 41) * 0.1, 1),
-                year=1980 + (scraped_count % 45),
-                pages=100 + (scraped_count % 900),
-                category=categories[scraped_count % len(categories)]
-            )
+            try:
+                params = {"q": self.query, "page": page, "limit": 100}
+                response = requests.get(self.target_url, params=params, timeout=10)
+                if response.status_code != 200:
+                    page += 1
+                    continue
+                
+                data = response.json()
+                docs = data.get("docs", [])
 
-            record = book.to_dict()
-            scraped_records.append(record)
-            scraped_count += 1
-            
-            self.entity_scraped.emit(record)
-            self.progress_signal.emit(scraped_count, self.target_count)
+                if not docs:
+                    # If query runs out of results, change query automatically to fetch 15k+
+                    self.query = categories[page % len(categories)]
+                    page = 1
+                    continue
 
-            # Every 1000 records, automatically dump to CSV file
-            if scraped_count % 1000 == 0 or scraped_count == self.target_count:
-                df = pd.DataFrame(scraped_records)
-                df.to_csv(self.csv_path, index=False)
+                batch = []
+                for doc in docs:
+                    if not self.is_running or current_id > self.target_count:
+                        break
 
-            time.sleep(0.0001)
+                    title = doc.get("title", "Unknown Title")[:60]
+                    authors = doc.get("author_name", ["Anonymous"])
+                    author = authors[0][:40] if authors else "Anonymous"
+                    year = doc.get("first_publish_year", 2020)
+                    pages = doc.get("number_of_pages_median", (current_id * 17) % 500 + 100)
+                    rating = round(doc.get("ratings_average", 3.5 + (current_id % 15) / 10.0), 2)
+                    price = round(15.0 + (hash(title) % 8500) / 100.0, 2)
+                    category = doc.get("subject", [self.query])[0][:30] if doc.get("subject") else self.query.title()
 
-        # Final batch save upon thread finish
-        if scraped_records:
-            df = pd.DataFrame(scraped_records)
-            df.to_csv(self.csv_path, index=False)
+                    book = Book(
+                        id=current_id,
+                        title=title,
+                        author=author,
+                        price=price,
+                        rating=rating,
+                        year=int(year),
+                        pages=int(pages),
+                        category=category
+                    )
+                    batch.append(book)
+                    scraped_books.append(book)
 
-        self.finished_signal.emit()
+                    current_id += 1
+                    if len(batch) >= 50 or current_id > self.target_count:
+                        self.data_signal.emit(batch)
+                        self.progress_signal.emit(len(scraped_books), self.target_count)
+                        batch = []
+
+                page += 1
+                time.sleep(0.1) # Respect API rate limit
+
+            except Exception as e:
+                self.status_signal.emit(f"Network retry... ({str(e)})")
+                time.sleep(1.0)
+
+        # Flush remaining buffer
+        if 'batch' in locals() and batch:
+            self.data_signal.emit(batch)
+            self.progress_signal.emit(len(scraped_books), self.target_count)
+
+        self.status_signal.emit(f"Finished! Total Scraped: {len(scraped_books)}")
+        self.finished_signal.emit(len(scraped_books))
 
     def pause(self):
         self.mutex.lock()
@@ -79,13 +111,11 @@ class ScraperThread(QThread):
     def resume(self):
         self.mutex.lock()
         self.is_paused = False
-        self.condition.wakeAll()
+        self.wait_condition.wakeAll()
         self.mutex.unlock()
 
     def stop(self):
-        self.mutex.lock()
-        self.is_stopped = True
+        self.is_running = False
         if self.is_paused:
-            self.is_paused = False
-            self.condition.wakeAll()
-        self.mutex.unlock()
+            self.resume()
+        self.wait()

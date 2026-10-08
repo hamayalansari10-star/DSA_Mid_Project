@@ -1,416 +1,572 @@
-import sys
+import os
+import csv
 import pandas as pd
-from PyQt6.QtWidgets import (
-    QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QPushButton,
-    QLineEdit, QProgressBar, QTableView, QComboBox, QLabel,
-    QRadioButton, QGroupBox, QHeaderView
-)
-from PyQt6.QtCore import QAbstractTableModel, Qt
-from PyQt6.QtGui import QFont
+from PyQt6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
+                             QLabel, QLineEdit, QPushButton, QProgressBar, 
+                             QTableView, QComboBox, QRadioButton, QGroupBox, 
+                             QMessageBox, QHeaderView, QFrame, QGraphicsDropShadowEffect)
+from PyQt6.QtCore import Qt, QAbstractTableModel, QModelIndex, QThread, pyqtSignal
+from PyQt6.QtGui import QColor, QFont
 
 from src.scraper import ScraperThread
 from src.sorting import SortingEngine
-from src.searching import SearchEngine
+from src.searching import SearchingEngine
+from src.models import Book
 from ui.benchmark_dialog import BenchmarkDialog
 
-class PandasModel(QAbstractTableModel):
-    def __init__(self, data=pd.DataFrame()):
+
+class BookTableModel(QAbstractTableModel):
+    def __init__(self, data=None):
         super().__init__()
-        self._data = data
+        self._data = data or []
+        self._headers = ["ID", "Title", "Author", "Price ($)", "Rating ★", "Year", "Pages", "Category"]
 
-    def rowCount(self, parent=None):
-        return self._data.shape[0]
-
-    def columnCount(self, parent=None):
-        return self._data.shape[1]
+    def rowCount(self, parent=QModelIndex()): return len(self._data)
+    def columnCount(self, parent=QModelIndex()): return len(self._headers)
 
     def data(self, index, role=Qt.ItemDataRole.DisplayRole):
         if role == Qt.ItemDataRole.DisplayRole:
-            return str(self._data.iloc[index.row(), index.column()])
+            book = self._data[index.row()]
+            col_attr = ["id", "title", "author", "price", "rating", "year", "pages", "category"][index.column()]
+            val = getattr(book, col_attr)
+            if col_attr == "price":
+                return f"${val:.2f}"
+            if col_attr == "rating":
+                return f"{val:.1f} ★"
+            return str(val)
+        
+        if role == Qt.ItemDataRole.TextAlignmentRole:
+            if index.column() in [0, 3, 4, 5, 6]:
+                return Qt.AlignmentFlag.AlignCenter
+            return Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter
+
         return None
 
     def headerData(self, section, orientation, role=Qt.ItemDataRole.DisplayRole):
-        if role == Qt.ItemDataRole.DisplayRole:
-            if orientation == Qt.Orientation.Horizontal:
-                return str(self._data.columns[section])
-            if orientation == Qt.Orientation.Vertical:
-                return str(section + 1)
+        if role == Qt.ItemDataRole.DisplayRole and orientation == Qt.Orientation.Horizontal:
+            return self._headers[section]
         return None
+
+    def update_data(self, new_data):
+        self.beginResetModel()
+        self._data = new_data
+        self.endResetModel()
+
+
+class SortingWorker(QThread):
+    finished_signal = pyqtSignal(object)
+
+    def __init__(self, algo_fn, data, key_fn, reverse=False):
+        super().__init__()
+        self.algo_fn = algo_fn
+        self.data = data
+        self.key_fn = key_fn
+        self.reverse = reverse
+
+    def run(self):
+        res = self.algo_fn(self.data, key_fn=self.key_fn, reverse=self.reverse)
+        self.finished_signal.emit(res)
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("DSA Mid Project — Modern Algorithmic Data Engine")
-        self.resize(1280, 850)
+        self.setWindowTitle("Algorithmic Book Analytics Engine — Executive Suite")
+        self.resize(1350, 880)
 
-        self.raw_data = []
-        self.displayed_df = pd.DataFrame()
-        self.scraper_thread = None
+        # Data states
+        self.full_data = []
+        self.filtered_data = []
+        self.view_data = []
 
-        self.apply_global_styles()
-        self.init_ui()
+        self.rules_widgets = []
+        self.setup_stylesheet()
+        self.setup_ui()
+        self.load_persisted_csv()
 
-    def apply_global_styles(self):
-        """ Modern Dark Theme & Premium QSS Design """
-        qss = """
-        QMainWindow {
-            background-color: #0F172A;
-        }
-        QWidget {
-            color: #F8FAFC;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            font-size: 13px;
-        }
-        QGroupBox {
-            background-color: #1E293B;
-            border: 1px solid #334155;
-            border-radius: 10px;
-            margin-top: 12px;
-            font-weight: bold;
-            font-size: 14px;
-            color: #38BDF8;
-            padding: 15px;
-        }
-        QGroupBox::title {
-            subcontrol-origin: margin;
-            subcontrol-position: top left;
-            padding: 2px 8px;
-            background-color: #1E293B;
-            border-radius: 4px;
-        }
-        QLineEdit, QComboBox {
-            background-color: #0F172A;
-            border: 1px solid #475569;
-            border-radius: 6px;
-            padding: 6px 12px;
-            color: #F1F5F9;
-            selection-background-color: #0284C7;
-        }
-        QLineEdit:focus, QComboBox:focus {
-            border: 1px solid #38BDF8;
-        }
-        QComboBox::drop-down {
-            border: none;
-            width: 20px;
-        }
-        QPushButton {
-            background-color: #2563EB;
-            color: #FFFFFF;
-            font-weight: bold;
-            border: none;
-            border-radius: 6px;
-            padding: 8px 16px;
-        }
-        QPushButton:hover {
-            background-color: #1D4ED8;
-        }
-        QPushButton:pressed {
-            background-color: #1E40AF;
-        }
-        QPushButton#btn_pause {
-            background-color: #D97706;
-        }
-        QPushButton#btn_pause:hover {
-            background-color: #B45309;
-        }
-        QPushButton#btn_stop {
-            background-color: #DC2626;
-        }
-        QPushButton#btn_stop:hover {
-            background-color: #B91C1C;
-        }
-        QPushButton#btn_benchmark {
-            background-color: #7C3AED;
-        }
-        QPushButton#btn_benchmark:hover {
-            background-color: #6D28D9;
-        }
-        QPushButton#btn_reset {
-            background-color: #475569;
-        }
-        QPushButton#btn_reset:hover {
-            background-color: #334155;
-        }
-        QProgressBar {
-            background-color: #1E293B;
-            border: 1px solid #334155;
-            border-radius: 6px;
-            text-align: center;
-            color: #F8FAFC;
-            font-weight: bold;
-            height: 18px;
-        }
-        QProgressBar::chunk {
-            background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #06B6D4, stop:1 #3B82F6);
-            border-radius: 5px;
-        }
-        QTableView {
-            background-color: #1E293B;
-            border: 1px solid #334155;
-            gridline-color: #334155;
-            border-radius: 8px;
-            selection-background-color: #0284C7;
-            selection-color: #FFFFFF;
-        }
-        QHeaderView::section {
-            background-color: #0F172A;
-            color: #38BDF8;
-            font-weight: bold;
-            padding: 6px;
-            border: 1px solid #334155;
-        }
-        QRadioButton {
-            color: #CBD5E1;
-            spacing: 6px;
-        }
-        QRadioButton::indicator::checked {
-            background-color: #38BDF8;
-            border: 2px solid #0F172A;
-            border-radius: 6px;
-        }
-        QLabel#status_bar {
-            background-color: #1E293B;
-            border: 1px solid #334155;
-            border-radius: 6px;
-            padding: 8px 14px;
-            font-weight: 600;
-            color: #38BDF8;
-        }
-        """
-        self.setStyleSheet(qss)
+    def setup_stylesheet(self):
+        self.setStyleSheet("""
+            QMainWindow {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #090d16, stop:1 #0f172a);
+            }
+            QWidget {
+                color: #f1f5f9;
+                font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+                font-size: 13px;
+            }
+            QGroupBox {
+                background-color: rgba(30, 41, 59, 0.7);
+                border: 1px solid #334155;
+                border-radius: 10px;
+                font-weight: 700;
+                font-size: 13px;
+                margin-top: 12px;
+                padding: 14px;
+                color: #38bdf8;
+            }
+            QGroupBox::title {
+                subcontrol-origin: margin;
+                subcontrol-position: top left;
+                padding: 2px 8px;
+                background-color: #0f172a;
+                border: 1px solid #0284c7;
+                border-radius: 5px;
+                color: #38bdf8;
+            }
+            QLineEdit, QComboBox {
+                background-color: #0f172a;
+                border: 1px solid #334155;
+                border-radius: 6px;
+                padding: 7px 10px;
+                color: #f8fafc;
+                selection-background-color: #0284c7;
+            }
+            QLineEdit:focus, QComboBox:focus {
+                border: 1px solid #38bdf8;
+            }
+            QComboBox::drop-down {
+                border: none;
+                width: 20px;
+            }
+            QRadioButton {
+                color: #cbd5e1;
+                font-weight: 600;
+                spacing: 6px;
+            }
+            QRadioButton::indicator {
+                width: 14px;
+                height: 14px;
+            }
+            
+            /* Buttons Styling */
+            QPushButton {
+                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #0284c7, stop:1 #0369a1);
+                color: #ffffff;
+                border: none;
+                border-radius: 6px;
+                padding: 8px 16px;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+            }
+            QPushButton:hover {
+                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #38bdf8, stop:1 #0284c7);
+            }
+            QPushButton:pressed {
+                background-color: #0c4a6e;
+            }
+            QPushButton:disabled {
+                background-color: #1e293b;
+                color: #64748b;
+                border: 1px solid #334155;
+            }
 
-    def init_ui(self):
-        main_layout = QVBoxLayout()
-        main_layout.setSpacing(12)
-        main_layout.setContentsMargins(16, 16, 16, 16)
+            /* Custom Button Colors */
+            QPushButton#btn_start {
+                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #10b981, stop:1 #047857);
+            }
+            QPushButton#btn_start:hover {
+                background: #34d399;
+            }
+            QPushButton#btn_pause {
+                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f59e0b, stop:1 #b45309);
+            }
+            QPushButton#btn_pause:hover {
+                background: #fbbf24;
+            }
+            QPushButton#btn_resume {
+                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #06b6d4, stop:1 #0e7490);
+            }
+            QPushButton#btn_resume:hover {
+                background: #22d3ee;
+            }
+            QPushButton#btn_stop {
+                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #ef4444, stop:1 #b91c1c);
+            }
+            QPushButton#btn_stop:hover {
+                background: #f87171;
+            }
+            QPushButton#btn_benchmark {
+                background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #8b5cf6, stop:1 #6d28d9);
+            }
+            QPushButton#btn_benchmark:hover {
+                background: #a78bfa;
+            }
 
-        # Header Title
-        title_label = QLabel("⚡ DSA Mid-Term Algorithmic Workbench & Scraper")
-        title_font = QFont("Segoe UI", 16, QFont.Weight.Bold)
-        title_label.setFont(title_font)
-        title_label.setStyleSheet("color: #F8FAFC; margin-bottom: 2px;")
-        main_layout.addWidget(title_label)
+            /* Progress Bar */
+            QProgressBar {
+                border: 1px solid #334155;
+                border-radius: 6px;
+                text-align: center;
+                color: #ffffff;
+                font-weight: bold;
+                background-color: #0f172a;
+                height: 22px;
+            }
+            QProgressBar::chunk {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #06b6d4, stop:1 #10b981);
+                border-radius: 5px;
+            }
 
-        # --- 1. Scraping Controls Box ---
-        scrape_group = QGroupBox("1. Web Scraping Engine (Target: 15,000 Entities)")
-        scrape_layout = QHBoxLayout()
+            /* Table View */
+            QTableView {
+                background-color: #0b1329;
+                border: 1px solid #1e293b;
+                border-radius: 8px;
+                gridline-color: #1e293b;
+                selection-background-color: #0284c7;
+                selection-color: #ffffff;
+                font-size: 13px;
+            }
+            QHeaderView::section {
+                background-color: #1e293b;
+                color: #38bdf8;
+                padding: 8px;
+                font-weight: 700;
+                border: none;
+                border-bottom: 2px solid #0284c7;
+                border-right: 1px solid #334155;
+            }
+        """)
 
-        self.url_input = QLineEdit("http://books.toscrape.com")
-        self.btn_start = QPushButton("▶ Start")
-        self.btn_pause = QPushButton("⏸ Pause")
-        self.btn_pause.setObjectName("btn_pause")
-        self.btn_resume = QPushButton("⏯ Resume")
-        self.btn_stop = QPushButton("⏹ Stop")
-        self.btn_stop.setObjectName("btn_stop")
+    def setup_ui(self):
+        main_widget = QWidget()
+        self.setCentralWidget(main_widget)
+        layout = QVBoxLayout(main_widget)
+        layout.setContentsMargins(16, 16, 16, 16)
+        layout.setSpacing(12)
 
-        self.btn_start.clicked.connect(self.start_scraping)
-        self.btn_pause.clicked.connect(self.pause_scraping)
-        self.btn_resume.clicked.connect(self.resume_scraping)
-        self.btn_stop.clicked.connect(self.stop_scraping)
+        # Header Title Banner
+        header_frame = QFrame()
+        header_frame.setStyleSheet("""
+            QFrame {
+                background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #1e293b, stop:1 #0f172a);
+                border-radius: 10px;
+                border-left: 5px solid #38bdf8;
+                padding: 8px;
+            }
+        """)
+        header_layout = QHBoxLayout(header_frame)
+        title_lbl = QLabel("📚 Algorithmic Book Analytics Engine")
+        title_lbl.setStyleSheet("font-size: 18px; font-weight: 800; color: #f8fafc; letter-spacing: 0.5px;")
+        sub_lbl = QLabel("DSA Mid-Term Evaluation Suite • PyQt6 Multithreaded Engine")
+        sub_lbl.setStyleSheet("font-size: 12px; color: #94a3b8; font-weight: 500;")
+        
+        header_layout.addWidget(title_lbl)
+        header_layout.addStretch()
+        header_layout.addWidget(sub_lbl)
+        layout.addWidget(header_frame)
 
-        scrape_layout.addWidget(QLabel("Seed URL:"))
-        scrape_layout.addWidget(self.url_input, stretch=2)
-        scrape_layout.addWidget(self.btn_start)
-        scrape_layout.addWidget(self.btn_pause)
-        scrape_layout.addWidget(self.btn_resume)
-        scrape_layout.addWidget(self.btn_stop)
-        scrape_group.setLayout(scrape_layout)
+        # 1. Scraper Control Panel
+        scrape_box = QGroupBox("⚡ Real-Time Multi-Threaded Scraper Engine")
+        scrape_layout = QHBoxLayout(scrape_box)
+        scrape_layout.setSpacing(10)
 
+        self.url_input = QLineEdit("https://openlibrary.org/search.json")
+        self.query_input = QLineEdit("computer")
+        self.query_input.setPlaceholderText("Keyword (e.g. Science)")
+
+        self.start_btn = QPushButton("▶ Start")
+        self.start_btn.setObjectName("btn_start")
+        self.pause_btn = QPushButton("⏸ Pause")
+        self.pause_btn.setObjectName("btn_pause")
+        self.resume_btn = QPushButton("⏯ Resume")
+        self.resume_btn.setObjectName("btn_resume")
+        self.stop_btn = QPushButton("⏹ Stop")
+        self.stop_btn.setObjectName("btn_stop")
+
+        self.pause_btn.setEnabled(False)
+        self.resume_btn.setEnabled(False)
+        self.stop_btn.setEnabled(False)
+
+        self.start_btn.clicked.connect(self.start_scraping)
+        self.pause_btn.clicked.connect(self.pause_scraping)
+        self.resume_btn.clicked.connect(self.resume_scraping)
+        self.stop_btn.clicked.connect(self.stop_scraping)
+
+        scrape_layout.addWidget(QLabel("Target URL:"))
+        scrape_layout.addWidget(self.url_input, 3)
+        scrape_layout.addWidget(QLabel("Keyword:"))
+        scrape_layout.addWidget(self.query_input, 2)
+        scrape_layout.addWidget(self.start_btn)
+        scrape_layout.addWidget(self.pause_btn)
+        scrape_layout.addWidget(self.resume_btn)
+        scrape_layout.addWidget(self.stop_btn)
+
+        layout.addWidget(scrape_box)
+
+        # Progress bar
         self.progress_bar = QProgressBar()
-        self.progress_bar.setRange(0, 15000)
+        self.progress_bar.setFormat("0 / 15,000 entities scraped (0%)")
+        layout.addWidget(self.progress_bar)
 
-        # --- 2. Searching & Filter Box ---
-        search_group = QGroupBox("2. Advanced Composite Search (AND / OR / NOT Logic)")
-        search_layout = QHBoxLayout()
+        # 2. Controls Panel (Searching & Sorting)
+        ctrl_layout = QHBoxLayout()
+        ctrl_layout.setSpacing(12)
 
-        self.col1_combo = QComboBox()
-        self.col1_combo.addItems(["Title", "Author", "Category", "ID"])
-        self.type1_combo = QComboBox()
-        self.type1_combo.addItems(["Contains", "Starts With", "Ends With", "Exact Match"])
-        self.query1_input = QLineEdit()
-        self.query1_input.setPlaceholderText("Filter 1...")
+        # Search Panel
+        search_box = QGroupBox("🔍 Search & Composite Logical Filtering")
+        self.search_vbox = QVBoxLayout(search_box)
+        self.search_vbox.setSpacing(8)
 
-        self.operator_combo = QComboBox()
-        self.operator_combo.addItems(["NONE", "AND", "OR", "NOT"])
+        algo_choice_layout = QHBoxLayout()
+        algo_choice_layout.addWidget(QLabel("Mode:"))
+        self.search_algo_combo = QComboBox()
+        self.search_algo_combo.addItems(["Composite Rules", "Linear Search", "Binary Search (Exact)"])
+        algo_choice_layout.addWidget(self.search_algo_combo, 2)
 
-        self.col2_combo = QComboBox()
-        self.col2_combo.addItems(["Category", "Author", "Title", "ID"])
-        self.type2_combo = QComboBox()
-        self.type2_combo.addItems(["Contains", "Starts With", "Ends With", "Exact Match"])
-        self.query2_input = QLineEdit()
-        self.query2_input.setPlaceholderText("Filter 2...")
+        add_rule_btn = QPushButton("+ Add Rule")
+        add_rule_btn.setStyleSheet("background-color: #334155; color: #38bdf8; border: 1px solid #0284c7;")
+        add_rule_btn.clicked.connect(self.add_search_rule)
+        algo_choice_layout.addWidget(add_rule_btn, 1)
 
-        self.btn_search = QPushButton("🔍 Filter")
-        self.btn_reset_search = QPushButton("🔄 Reset")
-        self.btn_reset_search.setObjectName("btn_reset")
-        self.btn_search.clicked.connect(self.execute_search)
-        self.btn_reset_search.clicked.connect(self.reset_search)
+        self.search_vbox.addLayout(algo_choice_layout)
+        self.add_search_rule()  # Initial rule row
 
-        search_layout.addWidget(self.col1_combo)
-        search_layout.addWidget(self.type1_combo)
-        search_layout.addWidget(self.query1_input)
-        search_layout.addWidget(self.operator_combo)
-        search_layout.addWidget(self.col2_combo)
-        search_layout.addWidget(self.type2_combo)
-        search_layout.addWidget(self.query2_input)
-        search_layout.addWidget(self.btn_search)
-        search_layout.addWidget(self.btn_reset_search)
-        search_group.setLayout(search_layout)
+        search_btn_layout = QHBoxLayout()
+        apply_search_btn = QPushButton("🔍 Filter Results")
+        apply_search_btn.clicked.connect(self.execute_search)
+        reset_search_btn = QPushButton("🔄 Reset Filters")
+        reset_search_btn.setStyleSheet("background-color: #475569;")
+        reset_search_btn.clicked.connect(self.reset_filters)
 
-        # --- 3. Sorting Box ---
-        sort_group = QGroupBox("3. Algorithmic Sorting Engine & Benchmark Scope")
-        sort_layout = QHBoxLayout()
+        search_btn_layout.addWidget(apply_search_btn)
+        search_btn_layout.addWidget(reset_search_btn)
+        self.search_vbox.addLayout(search_btn_layout)
 
-        self.sort_col_combo = QComboBox()
-        self.sort_col_combo.addItems(["ID", "Title", "Author", "Price", "Rating", "Year", "Pages", "Category"])
+        ctrl_layout.addWidget(search_box, 3)
 
-        self.algo_combo = QComboBox()
-        self.algo_combo.addItems(["Bubble Sort", "Insertion Sort", "Selection Sort", "Merge Sort", "Shell Sort", "TimSort"])
+        # Sort Control Panel
+        sort_box = QGroupBox("🎯 Algorithmic Sorting & Benchmarking")
+        sort_vbox = QVBoxLayout(sort_box)
+        sort_vbox.setSpacing(8)
 
-        self.radio_full = QRadioButton("Full Dataset")
+        scope_layout = QHBoxLayout()
+        self.radio_full = QRadioButton("Full Dataset (15k)")
         self.radio_filtered = QRadioButton("Filtered Results")
         self.radio_full.setChecked(True)
+        scope_layout.addWidget(QLabel("Scope:"))
+        scope_layout.addWidget(self.radio_full)
+        scope_layout.addWidget(self.radio_filtered)
+        sort_vbox.addLayout(scope_layout)
 
-        self.btn_sort = QPushButton("⇅ Sort")
-        self.btn_benchmark = QPushButton("📊 Benchmark All")
-        self.btn_benchmark.setObjectName("btn_benchmark")
-        self.btn_sort.clicked.connect(self.execute_sort)
-        self.btn_benchmark.clicked.connect(self.execute_benchmark)
+        algo_sel_layout = QHBoxLayout()
+        self.sort_col_combo = QComboBox()
+        self.sort_col_combo.addItems(["ID", "Title", "Author", "Price", "Rating", "Year", "Pages", "Category"])
+        self.sort_algo_combo = QComboBox()
+        self.sort_algo_combo.addItems(["Merge Sort", "Quick Sort", "Heap Sort", "TimSort", "Shell Sort", "Bubble Sort", "Selection Sort", "Insertion Sort"])
 
-        sort_layout.addWidget(QLabel("Target Column:"))
-        sort_layout.addWidget(self.sort_col_combo)
-        sort_layout.addWidget(QLabel("Algorithm:"))
-        sort_layout.addWidget(self.algo_combo)
-        sort_layout.addWidget(self.radio_full)
-        sort_layout.addWidget(self.radio_filtered)
-        sort_layout.addWidget(self.btn_sort)
-        sort_layout.addWidget(self.btn_benchmark)
-        sort_group.setLayout(sort_layout)
+        algo_sel_layout.addWidget(self.sort_col_combo, 1)
+        algo_sel_layout.addWidget(self.sort_algo_combo, 2)
+        sort_vbox.addLayout(algo_sel_layout)
 
-        # --- 4. Main Table View ---
+        sort_btn_layout = QHBoxLayout()
+        exec_sort_btn = QPushButton("⚡ Sort Column")
+        exec_sort_btn.clicked.connect(self.execute_sort)
+        
+        benchmark_btn = QPushButton("📊 Benchmark All")
+        benchmark_btn.setObjectName("btn_benchmark")
+        benchmark_btn.clicked.connect(self.open_benchmark)
+
+        sort_btn_layout.addWidget(exec_sort_btn)
+        sort_btn_layout.addWidget(benchmark_btn)
+        sort_vbox.addLayout(sort_btn_layout)
+
+        ctrl_layout.addWidget(sort_box, 2)
+        layout.addLayout(ctrl_layout)
+
+        # 3. Main Entity Table
+        self.table_model = BookTableModel()
         self.table_view = QTableView()
+        self.table_view.setModel(self.table_model)
+        self.table_view.horizontalHeader().sectionClicked.connect(self.handle_header_click)
         self.table_view.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+        layout.addWidget(self.table_view)
 
-        # --- 5. Status & Metrics Footer Bar ---
-        self.status_label = QLabel("Status: Idle | Scraped Records: 0 | Time: - ms | Comparisons: - | Swaps: -")
-        self.status_label.setObjectName("status_bar")
+        # Status Footer Bar
+        self.status_lbl = QLabel("Ready • Engine initialized.")
+        self.status_lbl.setStyleSheet("""
+            QLabel {
+                background-color: #0f172a;
+                border: 1px solid #1e293b;
+                border-radius: 6px;
+                color: #38bdf8;
+                font-weight: 600;
+                padding: 8px 12px;
+            }
+        """)
+        layout.addWidget(self.status_lbl)
 
-        main_layout.addWidget(scrape_group)
-        main_layout.addWidget(self.progress_bar)
-        main_layout.addWidget(search_group)
-        main_layout.addWidget(sort_group)
-        main_layout.addWidget(self.table_view)
-        main_layout.addWidget(self.status_label)
+    def add_search_rule(self):
+        row_layout = QHBoxLayout()
+        col_combo = QComboBox()
+        col_combo.addItems(["Title", "Author", "Price", "Rating", "Year", "Pages", "Category"])
+        op_combo = QComboBox()
+        op_combo.addItems(["Contains", "Starts With", "Ends With", "Exact Match", "=", ">", ">=", "<", "<="])
+        val_input = QLineEdit()
+        val_input.setPlaceholderText("Value...")
+        logic_combo = QComboBox()
+        logic_combo.addItems(["AND", "OR"])
 
-        container = QWidget()
-        container.setLayout(main_layout)
-        self.setCentralWidget(container)
+        row_layout.addWidget(col_combo)
+        row_layout.addWidget(op_combo)
+        row_layout.addWidget(val_input)
+        row_layout.addWidget(logic_combo)
+
+        self.search_vbox.insertLayout(self.search_vbox.count() - 1, row_layout)
+        self.rules_widgets.append((col_combo, op_combo, val_input, logic_combo))
 
     def start_scraping(self):
-        url = self.url_input.text()
-        self.raw_data.clear()
-        self.scraper_thread = ScraperThread(url, 15000)
+        target_url = self.url_input.text()
+        query = self.query_input.text()
+
+        self.scraper_thread = ScraperThread(target_url=target_url, query=query, target_count=15000)
+        self.scraper_thread.data_signal.connect(self.handle_scraped_data)
         self.scraper_thread.progress_signal.connect(self.update_progress)
-        self.scraper_thread.entity_scraped.connect(self.add_entity)
+        self.scraper_thread.status_signal.connect(self.status_lbl.setText)
+        self.scraper_thread.finished_signal.connect(self.finish_scraping)
+
+        self.start_btn.setEnabled(False)
+        self.pause_btn.setEnabled(True)
+        self.stop_btn.setEnabled(True)
         self.scraper_thread.start()
 
     def pause_scraping(self):
-        if self.scraper_thread: self.scraper_thread.pause()
+        self.scraper_thread.pause()
+        self.pause_btn.setEnabled(False)
+        self.resume_btn.setEnabled(True)
 
     def resume_scraping(self):
-        if self.scraper_thread: self.scraper_thread.resume()
+        self.scraper_thread.resume()
+        self.pause_btn.setEnabled(True)
+        self.resume_btn.setEnabled(False)
 
     def stop_scraping(self):
-        if self.scraper_thread: self.scraper_thread.stop()
+        self.scraper_thread.stop()
+
+    def finish_scraping(self, total):
+        self.start_btn.setEnabled(True)
+        self.pause_btn.setEnabled(False)
+        self.resume_btn.setEnabled(False)
+        self.stop_btn.setEnabled(False)
+        self.save_to_csv()
+
+    def handle_scraped_data(self, batch):
+        self.full_data.extend(batch)
+        if not self.filtered_data:
+            self.view_data = list(self.full_data)
+            self.table_model.update_data(self.view_data)
 
     def update_progress(self, current, total):
-        self.progress_bar.setValue(current)
-
-    def add_entity(self, entity_dict):
-        self.raw_data.append(entity_dict)
-        if len(self.raw_data) % 500 == 0 or len(self.raw_data) == 15000:
-            self.displayed_df = pd.DataFrame(self.raw_data)
-            self.table_view.setModel(PandasModel(self.displayed_df))
-            self.status_label.setText(f"Status: Scraping in progress... | Scraped Records: {len(self.raw_data)}")
+        pct = int((current / total) * 100)
+        self.progress_bar.setValue(pct)
+        self.progress_bar.setFormat(f"{current:,} / {total:,} entities scraped ({pct}%)")
 
     def execute_search(self):
-        if not self.raw_data: return
-        rule1 = {
-            "column": self.col1_combo.currentText(),
-            "type": self.type1_combo.currentText(),
-            "query": self.query1_input.text()
-        }
-        rule2 = {
-            "column": self.col2_combo.currentText(),
-            "type": self.type2_combo.currentText(),
-            "query": self.query2_input.text()
-        }
-        operator = self.operator_combo.currentText()
+        rules = []
+        for col_c, op_c, val_i, log_c in self.rules_widgets:
+            val = val_i.text().strip()
+            if val:
+                rules.append({
+                    "col": col_c.currentText(),
+                    "op": op_c.currentText(),
+                    "val": val,
+                    "logic": log_c.currentText()
+                })
 
-        filtered = SearchEngine.composite_search(self.raw_data, rule1, operator, rule2)
-        self.displayed_df = pd.DataFrame(filtered)
-        self.table_view.setModel(PandasModel(self.displayed_df))
-        self.status_label.setText(f"Status: Filter Applied | Showing {len(filtered)} / {len(self.raw_data)} records")
+        if not rules:
+            self.reset_filters()
+            return
 
-    def reset_search(self):
-        self.displayed_df = pd.DataFrame(self.raw_data)
-        self.table_view.setModel(PandasModel(self.displayed_df))
-        self.status_label.setText(f"Status: Filters Reset | Displaying all {len(self.raw_data)} records")
+        res = SearchingEngine.composite_search(self.full_data, rules)
+        self.filtered_data = res.data
+        self.view_data = list(self.filtered_data)
+        self.table_model.update_data(self.view_data)
+        self.status_lbl.setText(f"🔍 Search Complete: Found {len(res.data)} matching books in {res.time_ms} ms ({res.comparisons:,} comparisons).")
+
+    def reset_filters(self):
+        self.filtered_data = []
+        self.view_data = list(self.full_data)
+        self.table_model.update_data(self.view_data)
+        self.status_lbl.setText(f"Filters reset. Displaying full dataset ({len(self.full_data):,} records).")
 
     def execute_sort(self):
-        if self.displayed_df.empty: return
-        col = self.sort_col_combo.currentText()
-        algo_name = self.algo_combo.currentText()
+        col_name = self.sort_col_combo.currentText()
+        algo_name = self.sort_algo_combo.currentText()
+        
+        target_list = self.filtered_data if (self.radio_filtered.isChecked() and self.filtered_data) else self.full_data
 
-        target_list = self.raw_data if self.radio_full.isChecked() else self.displayed_df.to_dict('records')
-        key_fn = lambda x: x[col]
+        if not target_list:
+            QMessageBox.warning(self, "No Data", "Dataset is empty!")
+            return
 
-        if algo_name == "Bubble Sort":
-            res = SortingEngine.bubble_sort(target_list[:2000], key_fn)
-        elif algo_name == "Insertion Sort":
-            res = SortingEngine.insertion_sort(target_list[:2000], key_fn)
-        elif algo_name == "Selection Sort":
-            res = SortingEngine.selection_sort(target_list[:2000], key_fn)
-        elif algo_name == "Merge Sort":
-            res = SortingEngine.merge_sort(target_list, key_fn)
-        elif algo_name == "Shell Sort":
-            res = SortingEngine.shell_sort(target_list, key_fn)
-        else:
-            res = SortingEngine.tim_sort(target_list, key_fn)
+        algo_map = {
+            "Merge Sort": SortingEngine.merge_sort,
+            "Quick Sort": SortingEngine.quick_sort,
+            "Heap Sort": SortingEngine.heap_sort,
+            "TimSort": SortingEngine.tim_sort,
+            "Shell Sort": SortingEngine.shell_sort,
+            "Bubble Sort": SortingEngine.bubble_sort,
+            "Selection Sort": SortingEngine.selection_sort,
+            "Insertion Sort": SortingEngine.insertion_sort,
+        }
 
-        self.displayed_df = pd.DataFrame(res.data)
-        self.table_view.setModel(PandasModel(self.displayed_df))
-        self.status_label.setText(
-            f"Metrics -> Algo: {algo_name} | Time: {res.time_ms} ms | "
-            f"Comparisons: {res.comparisons} | Swaps: {res.swaps} | Complexity: {res.complexity} | Stable: {res.is_stable}"
-        )
+        fn = algo_map[algo_name]
+        key_fn = lambda x: getattr(x, col_name.lower().replace(" ($)", "").replace(" ★", ""))
 
-    def execute_benchmark(self):
-        if not self.raw_data: return
-        col = self.sort_col_combo.currentText()
-        target_list = self.raw_data[:1000]
-        key_fn = lambda x: x[col]
+        self.status_lbl.setText(f"⚡ Running {algo_name} on {len(target_list):,} records...")
+        
+        self.sort_worker = SortingWorker(fn, target_list, key_fn)
+        self.sort_worker.finished_signal.connect(self.on_sort_finished)
+        self.sort_worker.start()
 
-        algos = [
-            ("Bubble Sort", SortingEngine.bubble_sort),
-            ("Insertion Sort", SortingEngine.insertion_sort),
-            ("Selection Sort", SortingEngine.selection_sort),
-            ("Merge Sort", SortingEngine.merge_sort),
-            ("Shell Sort", SortingEngine.shell_sort),
-            ("TimSort", SortingEngine.tim_sort),
-        ]
+    def on_sort_finished(self, res):
+        self.view_data = res.data
+        self.table_model.update_data(self.view_data)
+        self.status_lbl.setText(f"✅ Sorted in {res.time_ms} ms | Comparisons: {res.comparisons:,} | Swaps: {res.swaps:,} | Complexity: {res.complexity} | Stability: {res.stability}")
 
-        results = []
-        for name, fn in algos:
-            res = fn(target_list, key_fn)
-            results.append({
-                "algo": name,
-                "time": res.time_ms,
-                "comps": res.comparisons,
-                "swaps": res.swaps,
-                "complexity": res.complexity,
-                "stable": res.is_stable
-            })
+    def handle_header_click(self, logical_index):
+        headers = ["ID", "Title", "Author", "Price", "Rating", "Year", "Pages", "Category"]
+        col_name = headers[logical_index]
+        self.sort_col_combo.setCurrentText(col_name)
+        self.execute_sort()
 
-        dialog = BenchmarkDialog(results)
-        dialog.exec()
+    def open_benchmark(self):
+        target_list = self.filtered_data if (self.radio_filtered.isChecked() and self.filtered_data) else self.full_data
+        col_name = self.sort_col_combo.currentText().replace(" ($)", "").replace(" ★", "")
+
+        if not target_list:
+            QMessageBox.warning(self, "No Data", "Dataset is empty!")
+            return
+
+        dlg = BenchmarkDialog(target_list, col_name, self)
+        dlg.exec()
+
+    def save_to_csv(self):
+        os.makedirs("data", exist_ok=True)
+        path = "data/scraped_books.csv"
+        if self.full_data:
+            df = pd.DataFrame([b.to_dict() for b in self.full_data])
+            df.to_csv(path, index=False)
+
+    def load_persisted_csv(self):
+        path = "data/scraped_books.csv"
+        if os.path.exists(path):
+            try:
+                df = pd.read_csv(path)
+                for _, row in df.iterrows():
+                    book = Book(
+                        id=int(row['id']),
+                        title=str(row['title']),
+                        author=str(row['author']),
+                        price=float(row['price']),
+                        rating=float(row['rating']),
+                        year=int(row['year']),
+                        pages=int(row['pages']),
+                        category=str(row['category'])
+                    )
+                    self.full_data.append(book)
+                self.view_data = list(self.full_data)
+                self.table_model.update_data(self.view_data)
+                self.status_lbl.setText(f"Loaded {len(self.full_data):,} records from CSV cache.")
+            except Exception as e:
+                print("CSV Load Error:", e)
