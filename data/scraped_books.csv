@@ -1,99 +1,1446 @@
 id,title,author,price,rating,year,pages,category
-1,Computer Networks,Andrew S. Tanenbaum,57.85,3.3,1981,438,computer
-2,Hackers,Steven Levy,59.3,3.5,1984,145,computer
-3,"Advances in Computers, Volume 49 (Advances in Computers)",Marvin V. Zelkowitz,42.44,3.8,1995,387,computer
-4,Computer science,J. Glenn Brookshear,91.39,3.1,1985,223,computer
-5,Computer Concepts,June Jamrich Parsons,47.26,3.7,1996,418,computer
-6,The art of computer programming,Donald Knuth,50.46,3.1,1968,475,computer
-7,Code,Charles Petzold,72.46,4.9,1999,334,computer
-8,How computers work,Ron White,80.45,3.2,1993,483,computer
-9,Computer organization,V. Carl Hamacher,58.01,4.6,1978,129,computer
-10,Computer networking,James F. Kurose,94.51,4.2,1900,475,computer
-11,Algorithms to Live By,Brian Christian,58.91,4.4,2016,260,computer
-12,Structure and Interpretation of Computer Programs (SICP),Harold Abelson,21.74,4.4,1985,145,computer
-13,Computer Science,Carl French,27.38,3.0,1989,275,computer
-14,Advances in Computers,Marshall C. Yovits,63.42,3.0,1971,441,computer
-15,Fundamentals of Computers,V. Rajaraman,75.86,3.0,1996,418,computer
-16,Digital computer fundamentals,Thomas C. Bartee,71.17,4.4,1960,324,computer
-17,Mathematical structures for computer science,Judith L. Gersting,48.82,3.5,1982,131,computer
-18,Arthur's Computer Disaster,Marc Brown,17.68,4.5,1997,473,computer
-19,Structured Computer Organization,Andrew S. Tanenbaum,15.52,3.3,1975,507,computer
-20,Invitation to Computer Science,G. Michael Schneider,46.96,4.3,1995,230,computer
-21,Computer Confluence,George Beekman,55.35,4.6,1997,229,computer
-22,Digital computer electronics,Albert Paul Malvino,31.01,4.2,1977,430,computer
-23,Hackers & painters,"Graham, Paul",67.18,4.6,2004,141,computer
-24,Interactive Computing Series,Kenneth C. Laudon,95.61,3.3,1997,199,computer
-25,Mathematics for Computer Technology,Robert McCullough,80.14,4.7,2006,282,computer
-26,Reconfigurable Processor Array A Bit Sliced Parallel Compute,A. Rushton,27.95,3.7,1986,362,computer
-27,Computer Science Distilled,Wladston Ferreira Filho,96.89,3.5,2017,478,computer
-28,Introducing Computers,Robert H. Blissmer,66.93,4.0,1988,214,computer
-29,Computer organization and architecture,William Stallings,78.52,3.7,1987,219,computer
-30,The principles of computer hardware,"Clements, Alan",95.49,4.7,1985,407,computer
-31,Computer system architecture,M. Morris Mano,83.42,4.7,1983,490,computer
-32,Computer architecture and organisation,"Hayes, John P.",36.15,4.7,1998,242,computer
-33,Junkyard Planet,H. Beam Piper,71.44,4.7,1631,338,computer
-34,Computer Organization and Design,John L. Hennessy,15.21,3.9,1994,206,computer
-35,Advances in Computers,Atif Memon,68.77,4.3,2012,441,computer
-36,Mathematical Elements for Computer Graphics,David F. Rogers,59.73,3.2,1976,336,computer
-37,Computer ethics and professional responsibility,Terrell Ward Bynum,97.19,4.3,2003,454,computer
-38,Security in computing,Charles P. Pfleeger,55.25,4.5,1989,427,computer
-39,Quantum Computing Since Democritus,Scott Aaronson,78.89,3.6,2013,202,computer
-40,Computers!,Timothy N. Trainor,80.48,3.7,1987,464,computer
-41,Computer systems,Randal Bryant,35.52,3.5,2002,197,computer
-42,Computer graphics,Steven Harrington,84.26,4.8,1983,291,computer
-43,Computerdenken,Roger Penrose,83.35,3.1,1989,462,computer
-44,Computer Concepts and Management Information Systems,C. P. Gupta,21.57,3.8,2020,331,computer
-45,Transactions on Engineering Technologies,Sio-Iong Ao,96.13,3.3,2013,228,computer
-46,Computer ethics,Deborah G. Johnson,66.35,4.3,1985,174,computer
-47,Operating systems,Stuart E. Madnick,84.74,4.8,1974,132,computer
-48,"Data communications, computer networks, and open systems",Fred Halsall,82.03,4.5,1992,187,computer
-49,"Automation, Production Systems, and Computer-Integrated Manu",Mikell P. Groover,97.28,4.1,1987,275,computer
-50,The psychology of computer programming,Gerald M. Weinberg,88.44,4.7,1971,409,computer
-51,"Introduction to automata theory, languages, and computation",John E. Hopcroft,32.6,4.9,1979,255,computer
-52,Quantum computation and quantum information,Michael A. Nielsen,16.76,3.9,2000,244,computer
-53,Computer Fundamentals and Programming in C,Reema Thareja,63.11,3.2,2012,234,computer
-54,Computer Fundamentals,P.K. Sinha,85.86,3.6,2004,252,computer
-55,Computer science,Behrouz A. Forouzan,48.11,3.5,1997,223,computer
-56,The Computer and the Brain,John von Neumann,70.6,4.2,1958,207,computer
-57,Mindstorms,Seymour Papert,42.29,4.6,1980,217,computer
-58,Computer science,C. S. French,66.68,4.8,1980,223,computer
-59,Think Python,Allen B. Downey,94.43,4.5,2009,409,computer
-60,Data and Computer Communications,William Stallings,54.82,3.7,1985,181,computer
-61,Logic and Computer Design Fundamentals,M. Morris Mano,50.06,4.7,1997,339,computer
-62,Advanced Computing and Systems for Security,Rituparna Chaki,14.79,3.9,2015,331,computer
-63,Multimedia,Ralf Steinmetz,47.65,4.8,1995,331,computer
-64,Artificial Intelligence and Soft Computing,Leszek Rutkowski,89.63,4.4,2012,314,computer
-65,Computer science,L. Goldschlager,22.89,3.5,1982,223,computer
-66,Perceptrons,Marvin Minsky,21.97,4.2,1969,230,computer
-67,Computer networks and internets,Douglas E. Comer,38.09,3.6,1997,214,computer
-68,Computer Based Industrial Control,Krishna Kant,93.47,4.1,1997,176,computer
-69,Advances in Computers,Ali R. Hurson,78.67,4.5,2012,441,computer
-70,The Mystery in the Computer Game,Gertrude Chandler Warner,51.97,4.4,2000,444,computer
-71,BASIC,Robert J. Bent,74.74,4.1,1978,363,computer
-72,Human-computer interaction,Alan Dix,34.7,4.8,1993,516,computer
-73,The Computer Connection,Alfred Bester,92.93,3.7,1975,276,computer
-74,Cloud computing,Rajkumar Buyya,57.23,4.8,2010,337,computer
-75,Computer applications in pharmacy,William E. Fassett,25.92,4.5,1986,220,computer
-76,The Cuckoo’s Egg,Clifford Stoll,58.93,3.4,1989,465,computer
-77,Computer architecture,John L. Hennessy,32.03,3.9,1989,135,computer
-78,Computer security,William Stallings,19.72,3.7,2007,458,computer
-79,Physics for Computer Science Students,Narciso Garcia,55.26,3.9,1986,459,computer
-80,Fundamentals of Computing,Kamaljeet Sanghera,24.84,3.6,2005,342,computer
-81,English for computer science,Norma D. Mullen,45.63,3.9,1983,208,computer
-82,Cloud Computing,Nobert Young,12.41,4.2,2019,466,computer
-83,Computer networks,Philip J. Irving,55.15,3.0,2001,208,computer
-84,Computational fluid dynamics,Jiyuan Tu,14.95,4.1,2007,247,computer
-85,Computer Architecture and Organization,John P. Hayes,71.75,4.1,2002,425,computer
-86,Advanced Computer Architecture,Kai Hwang,22.51,3.9,1992,139,computer
-87,Computer architecture,Caxton C. Foster,38.85,4.1,1970,135,computer
-88,Discovering computers,Gary B. Shelly,67.61,4.0,2006,447,computer
-89,Visual design on the computer,Wucius Wong,93.31,3.1,1994,401,computer
-90,Understanding Computers 2000,Deborah Morley,94.98,3.6,1999,351,computer
-91,The essentials of computer organization and architecture,Linda Null,30.19,4.4,2003,462,computer
-92,Basic econometrics,Damodar N. Gujarati,72.62,4.9,1978,127,computer
-93,Concrete mathematics,Ronald L. Graham,82.02,4.2,1988,410,computer
-94,Computer organization and design,David A. Patterson,47.05,3.2,2004,144,computer
-95,Discovering Computers 2018,Misty E. Vermaat,90.31,4.0,2017,350,computer
-96,Computer Science With C++ Class,Sumita Arora,20.3,3.9,2017,287,computer
-97,Computer Programming : This Book Includes,Computer Programming Academy,37.64,3.7,2020,353,computer
-98,Understanding Computers,Deborah Morley,99.23,3.6,2006,487,computer
+1,Computer security,Dieter Gollmann,88.8,3.0,1999,458,computer
+2,Oxford International Primary Computing,Alison Page,98.7,3.9,2013,399,computer
+3,Dealers of Lightning,Michael A. Hiltzik,66.1,3.6,1999,506,computer
+4,Understanding computers,Deborah Morley,61.71,3.6,2010,148,computer
+5,Digital Design and Computer Architecture,Sarah Harris,73.74,4.8,2010,202,computer
+6,Introduction to business statistics,Alan H. Kvanli,79.72,3.0,1986,366,computer
+7,Computer graphics with OpenGL,Anonymous,37.06,3.5,2003,366,computer
+8,Beating the races with a computer,Steven L. Brecher,55.32,3.8,1980,414,computer
+9,Introduction to Computational Chemistry,Frank Jensen,91.89,4.5,1999,344,computer
+10,3D computer graphics,Alan H. Watt,66.12,4.4,1993,311,computer
+11,Computers,H. L. Capron,76.75,3.1,1987,154,computer
+12,Explorations in computing,John S. Conery,90.77,3.4,2010,129,computer
+13,Assembly language for Intel-based computers,Kip R. Irvine,96.44,4.0,1999,416,computer
+14,Languages and machines,Thomas A. Sudkamp,14.72,4.2,1988,466,computer
+15,Computation: finite and infinite machines,Marvin Minsky,21.2,4.2,1967,182,computer
+16,Computer concepts basics,Dolores Wells Pusins,76.48,4.4,2000,365,computer
+17,Computer systems design and architecture,Vincent P. Heuring,12.51,4.4,1997,414,computer
+18,Computer Sciences,Roger R. Flynn,68.66,3.8,2002,269,computer
+19,An introduction to computer science,Jean-Paul Tremblay,69.63,3.4,1979,167,computer
+20,New perspectives on computer concepts,June Jamrich Parsons,97.09,3.7,1994,503,computer
+21,Computer Security Basics,Deborah Russell,36.55,4.7,1991,369,computer
+22,Computer science illuminated,Nell B. Dale,88.6,4.6,2002,296,computer
+23,Quantum Computing for Everyone,Chris Bernhardt,37.79,4.6,2019,379,computer
+24,Mastering computer typing,Sheryl Lindsell-Roberts,31.28,4.7,1995,336,computer
+25,Cyber Security,Nina Godpole,13.82,4.8,2011,268,computer
+26,Computability and logic,George Boolos,87.6,4.2,1974,129,computer
+27,Computer graphics,Francis S. Hill,85.25,3.9,1990,291,computer
+28,Introduction To Computation And Programming Using Python,John Guttag,61.96,4.8,2013,425,computer
+29,Computational physics,Rubin H. Landau,83.01,4.4,1997,518,computer
+30,The Fifth Generation,Edward A. Feigenbaum,70.39,3.5,1983,328,computer
+31,Introduction to computers,Peter Norton,43.45,3.1,1994,228,computer
+32,Introduction to the theory of computation,Michael Sipser,52.37,4.7,2013,496,computer
+33,Computer system architecture,M. Morris Mano,83.42,4.7,1976,490,computer
+34,Computer Science,Robert Sedgewick,68.11,3.0,2016,275,computer
+35,Real-time computer control,S. Bennett,50.18,3.3,1984,221,computer
+36,A Balanced Introduction to Computer Science,David Reed,57.39,4.1,2005,229,computer
+37,CAD/CAM,Mikell P. Groover,76.89,4.1,1984,250,computer
+38,Reviews in computational chemistry,Kenny B. Lipkowitz,80.76,4.8,2003,304,computer
+39,How computers work,Ron White,80.45,3.2,2015,483,computer
+40,The History of Computers,Chris Oxlade,63.1,3.4,2017,176,computer
+41,Technology for Success,Jennifer Campbell,62.44,4.9,2019,433,computer
+42,Digital logic and computer design,M. Morris Mano,36.76,4.7,1979,169,computer
+43,The music kit,Tom Manoff,94.58,3.9,1976,299,computer
+44,Computer Science Principles,Mr. Kevin P Hare,79.5,4.8,2018,490,computer
+45,Quantum Computer Science,N. David Mermin,47.33,4.8,2007,283,computer
+46,Computer graphics with OpenGL,Donald Hearn,28.31,3.3,2002,366,computer
+47,Algorithmics,David Harel,69.2,4.3,1987,168,computer
+48,Testing computer software,Cem Kaner,58.75,3.2,1988,519,computer
+49,The  planiverse,A.K. Dewdney,77.33,3.9,1984,406,computer
+50,Introduction to computer security,Michael T. Goodrich,78.53,3.3,2011,335,computer
+51,Cloud Computing,Sunilkumar Manvi,81.41,4.2,2021,466,computer
+52,Computational Linguistics and Intelligent Text Processing,Alexander Gelbukh,64.21,4.5,2003,361,computer
+53,Fundamentals of Computers,Reema Thareja,18.79,3.2,2014,418,computer
+54,Fundamentals of Computer Graphics,Peter Shirley,34.4,3.7,2002,332,computer
+55,Logic and Computer Design Fundamentals,Charles Kime,72.29,3.0,2007,339,computer
+56,Computer programming,Ivan Flores,69.81,3.5,1966,419,computer
+57,"Computational physics, FORTRAN version",Steven E. Koonin,22.53,4.8,1986,279,computer
+58,Computers today,Donald H. Sanders,82.44,3.4,1983,205,computer
+59,The Internet Con,Cory Doctorow,72.73,3.9,2023,158,computer
+60,Numerical methods for scientific and engineering computation,"Jain, M. K.",77.61,3.1,1985,510,computer
+61,Horizons in computer science research,Thomas S. Clary,83.39,4.1,2010,137,computer
+62,Designing the user interface,Ben Shneiderman,35.71,4.5,1987,369,computer
+63,Computer organization and architecture,William Stallings,78.52,3.7,2005,219,computer
+64,Python programming,John M. Zelle,95.98,4.1,2003,451,computer
+65,Computer Forensics,John R. Vacca,82.35,4.7,2002,380,computer
+66,Python,Computer Programming Academy,76.69,3.7,2019,374,computer
+67,Introduction to computer theory,Daniel I. A. Cohen,69.52,3.4,1986,442,computer
+68,Feynman lectures on computation,Richard Phillips Feynman,73.87,3.2,1996,147,computer
+69,Computer Organization and Design RISC-V Edition,David A. Patterson,12.48,3.2,2017,208,computer
+70,Computer and robot vision,Robert M. Haralick,22.04,3.1,1992,199,computer
+71,Scientific Computing,Michael T. Heath,42.46,3.6,1996,327,computer
+72,Dictionary of computing,S. M. H. Collin,30.67,4.7,1988,291,computer
+73,Vector putting,H. A. Templeton,30.5,3.1,1984,440,computer
+74,Computer networks,Larry L. Peterson,61.2,4.2,1996,208,computer
+75,Statistical computing with R,Maria L. Rizzo,26.35,3.5,2007,370,computer
+76,Iwoz - Computer Geek to Cult Icon,Steve Wozniak,62.92,4.1,2007,240,computer
+77,"Computergraphik, Computerkunst",Herbert W. Franke,40.87,4.8,1971,240,computer
+78,Theory of Computation,Vivek Kulkarni,60.34,4.9,2013,424,computer
+79,"Concepts, techniques, and models of computer programming",Peter Van Roy,19.92,3.9,2004,310,computer
+80,Computer control of manufacturing systems,Yoram Koren,59.12,4.5,1983,169,computer
+81,Computing fundamentals,Peter Norton,19.42,3.1,1996,280,computer
+82,Information Systems Guides (CCTA Information Systems Guides),Central Computer & Telecommunications Ag,65.87,3.1,1989,477,computer
+83,Computer Lib/Dream Machines,Ted Nelson,61.37,4.8,1974,288,computer
+84,Cloud Computing,Dan C. Marinescu,26.21,3.8,2013,466,computer
+85,Computers,Larry E. Long,94.33,4.2,1986,154,computer
+86,Understanding Computers,Charles S. Parker,19.16,3.4,1996,487,computer
+87,Human-computer interaction,Open University. Human-Computer Interact,39.47,4.9,1990,516,computer
+88,Guide to computer forensics and investigations,Bill Nelson,18.59,4.6,2007,126,computer
+89,Interaction design,Helen Sharp,22.95,4.1,1991,357,computer
+90,Brain-Computer Interfacing,Rajesh P. N. Rao,73.43,4.9,2013,287,computer
+91,Computer literacy,Arthur Luehrmann,30.4,4.8,1983,422,computer
+92,Cloud Computing,R. Chopra,23.38,3.3,2017,466,computer
+93,The pattern on the stone,W. Daniel Hillis,91.2,3.0,1998,288,computer
+94,Machines That Think,Isaac Asimov,31.28,4.2,1984,268,computer
+95,Computer Architecture,Richard Y. Kain,72.07,4.6,1988,319,computer
+96,The Computational Beauty of Nature,Gary William Flake,63.61,4.9,1998,159,computer
+97,Computer Assisted Language Learning,Keith Cameron,58.55,4.6,1990,402,computer
+98,Computer sense,Paul Freiberger,68.34,4.4,1986,515,computer
+99,Digital Computer basics,United States. Bureau of Naval Personnel,31.25,4.0,1968,401,computer
+100,Microsoft computer dictionary,Microsoft Press,60.66,4.0,1999,419,computer
+101,Computation,"Hong, Jia-Wei.",75.12,3.3,1986,337,computer
+102,Computer arts presents the freelance handbook,Nick Carson,45.95,3.1,2012,254,computer
+103,Human-Computer Interaction,I. Scott MacKenzie,40.66,4.3,2013,168,computer
+104,Cloud computing networking,Lee Chao,25.88,3.0,2016,467,computer
+105,Computers Made Easy,Bernstein James,45.76,4.8,2018,317,computer
+106,Great Principles of Computing,Peter J. Denning,86.56,4.8,2015,501,computer
+107,Computer algorithms,Ellis Horowitz,62.61,3.2,1997,506,computer
+108,The consultant,John McNeil,71.25,3.0,1978,242,computer
+109,The power of computational thinking,Paul Curzon,32.87,4.9,2017,203,computer
+110,Computer Engineering and Technology,Weixia Xu,30.63,3.1,2013,518,computer
+111,Computer programming methodology,Władysław Turski,20.55,4.9,1977,407,computer
+112,Computer forensics,David Cowen,82.11,4.6,2013,255,computer
+113,SAS for dummies,Stephen McDaniel,64.47,4.7,2007,122,computer
+114,Computational Intelligence,Rudolf Kruse,93.9,3.9,2013,422,computer
+115,Unlocking the clubhouse,Jane Margolis,52.41,4.4,2001,216,computer
+116,Theoretical neuroscience,Peter Dayan,30.89,4.9,2001,288,computer
+117,Computer design and architecture,L. Howard Pollard,60.48,3.1,1990,408,computer
+118,Computer Ethics,Robert N. Barger,43.34,4.6,2008,184,computer
+119,Computation in modern physics,William R. Gibbs,73.34,3.6,1994,293,computer
+120,Quantity surveying by computer,Colin Dent,19.31,4.3,1964,159,computer
+121,An introduction to computer networking,Kenneth C. Mansfield,41.7,4.0,2001,346,computer
+122,Hybrid Computational Intelligence,Siddhartha Bhattacharyya,74.85,3.0,2019,161,computer
+123,PPI FE Electrical and Computer Practice Problems - Comprehen,Michael R. Lindeburg,74.03,3.2,2017,352,computer
+124,Computer graphics,Cornel K. Pokorny,24.09,4.7,1989,291,computer
+125,Oklahoma Computer Science,CodeHS,63.2,4.7,2024,212,computer
+126,Computer arithmetic,Behrooz Parhami,32.97,3.7,1999,332,computer
+127,When Computers Were Human,David Alan Grier,81.54,4.6,2005,379,computer
+128,Introduction to Computer Systems,Harold L Rogler,74.32,4.2,2015,363,computer
+129,"Brain, mind, and computers",Stanley L. Jaki,59.04,3.5,1969,356,computer
+130,Technical traders guide to computer analysis of the futures ,Charles LeBeau,87.27,4.9,1991,168,computer
+131,Computer information,Marjorie Leeson,99.82,4.7,1985,351,computer
+132,Relativity and scientific computing,F. W. Hehl,22.94,3.8,1996,308,computer
+133,We Can Use the Computer,Scholastic Professional Books,40.23,4.6,1994,439,computer
+134,Computational Nanoscience,Kálmán Varga,26.04,3.1,2011,438,computer
+135,Introduction To Computer Information Systems,Geoffrey Steinberg,74.92,3.4,2007,175,computer
+136,High-tech heretic,Clifford Stoll,31.76,3.4,1999,166,computer
+137,The computer from Pascal to von Neumann,Herman Heine Goldstine,47.6,3.9,1972,369,computer
+138,Python for Data Science,Computer Science Academy,80.59,4.1,2019,267,computer
+139,Networking Basics,Computer Networking School,69.97,4.7,2019,359,computer
+140,Python for Data Analysis,Computer Language Academy,69.62,4.0,2021,173,computer
+141,Php,Computer Programming Academy,75.17,3.7,2019,217,computer
+142,Turing and the computer,Paul Strathern,38.09,3.5,1999,346,computer
+143,History of Computing,Mark W. Greenia,92.26,3.6,1993,460,computer
+144,Advanced topics in end user computing,Mo Adam Mahmood,57.08,4.4,2002,225,computer
+145,Computer Games Designer,Mark Featherstone,18.37,3.9,2013,329,computer
+146,Implementing and developing cloud computing applications,David E. Y. Sarna,50.13,4.6,2010,406,computer
+147,Modern Computer Architecture and Organization,Jim Ledin,46.88,3.8,2020,252,computer
+148,Computer concepts,SRA Data-Processing Curriculum Group.,19.74,3.8,1970,212,computer
+149,Theory and Computation of Electromagnetic Fields,Jian-Ming Jin,96.7,4.3,2010,495,computer
+150,Solutions Manual for Introduction to Systems Biology,Uri Alon,29.73,3.4,2006,472,computer
+151,Computers As Cognitive Tools,Susanne P. Lajoie,86.95,3.4,2000,483,computer
+152,How Computers Work,Joy Lind,42.07,4.5,2018,501,computer
+153,Selected Papers on Computer Science,Donald Knuth,81.02,3.1,1996,218,computer
+154,Understanding digital computers,Paul Siegel,21.09,4.6,1961,388,computer
+155,Advances in Computational Intelligence,Ignacio Rojas,95.8,4.3,2013,235,computer
+156,Spoken English on Computer,Geoffrey N. Leech,14.64,4.7,1995,462,computer
+157,Computer programming in the BASIC language,Neal Golden,52.06,4.2,1975,162,computer
+158,Computer Security Fundamentals,"Easttom, William, II",80.92,4.6,2022,276,computer
+159,Advances in Computing Research,Franco P. Preparata,96.73,4.4,1983,267,computer
+160,The computer in art,Jasia Reichardt,19.51,4.9,1970,394,computer
+161,What can be automated?,Bruce W. Arden,85.84,3.1,1980,483,computer
+162,Aircraft digital electronic and computer systems,"Tooley, Michael H.",74.48,3.6,2007,343,computer
+163,Computer Crimes and Digital Investigations,Ian Walden,80.04,3.6,2007,502,computer
+164,Mastering Cloud Computing,Christian Vecchiola,28.91,4.3,2013,317,computer
+165,Programming principles in computer graphics,L. Ammeraal,77.35,4.4,1986,178,computer
+166,The technology of computer music,Max V. Mathews,25.18,4.0,1969,196,computer
+167,"GIS, a computing perspective",Michael Worboys,78.53,3.2,1995,134,computer
+168,Discrete mathematics for computing[electronic resource],Peter Grossman,91.7,4.8,2002,339,computer
+169,Programming abstractions in C,Eric Roberts,96.18,3.3,1997,511,computer
+170,The Most Human Human,Brian Christian,79.89,4.4,2011,400,computer
+171,Computer programming and architecture,Henry M. Levy,80.98,4.4,1989,176,computer
+172,Introduction to Statistical Computing,Jochen Voss,57.79,3.1,2013,366,computer
+173,Webster's New World Dictionary of Computer Terms,Donald D. Spencer,70.43,4.9,1992,350,computer
+174,Recent Advances in Computer Science and Information Engineer,Zhihong Qian,16.97,4.3,2012,161,computer
+175,Computer Networking,James F. Kurose,97.51,4.2,2016,139,computer
+176,The Complete Idiot's Guide to Computer Security,Richard Tammadge,84.44,4.5,2002,350,computer
+177,Cambridge Primary Computing Learner's Book Stage 6,Roland Birbal,79.26,4.2,2022,514,computer
+178,Computer Techniques and Models in Power Systems,K. Uma Rao,15.72,3.0,2014,474,computer
+179,"Inspire Computing International, Student Book, Year 9",Paul Clowrey,68.19,3.1,2022,299,computer
+180,Virtual Music,David Cope,49.2,4.7,2001,468,computer
+181,Computational organic chemistry,Steven M. Bachrach,90.23,4.3,2006,195,computer
+182,Mobile computing principles,Reza B'Far,31.15,3.5,2000,186,computer
+183,Foundations of music,"Nelson, Robert",65.67,3.8,1987,198,computer
+184,Introducing the Theory of Computation,Wayne Goddard,39.42,3.3,2008,164,computer
+185,"Principles of Computer Security, Fourth Edition (Official Co",Wm. Arthur Conklin,65.91,4.8,2015,498,computer
+186,Ugc Net/Jrf Exam Solved Papers Computer Science & Applicatio,Editorial Board: Pratiyogita Darpan,99.73,4.5,2015,366,computer
+187,Topic Wise Tests Gate Computer Science And Information Techn,Trishna,48.11,4.3,2018,485,computer
+188,Computability and logic,George S. Boolos,52.32,4.6,2007,129,computer
+189,Computed Tomography,Jiang Hsieh,74.49,3.7,2003,434,computer
+190,Computational Fluid Dynamics for Wind Engineering,R. Panneer Selvam,64.45,3.1,2022,310,computer
+191,The historian and the computer,Edward Shorter,72.43,4.5,1971,143,computer
+192,The complete idiot's guide to a career in computer programmi,Jesse Liberty,37.03,3.8,1999,242,computer
+193,"A bibliographic guide to the history of computing, computers",James W. Cortada,75.94,4.9,1990,353,computer
+194,Computer Fundamentals And Programming In C,S.K. Jha,13.66,4.8,2007,127,computer
+195,Hacking,Aman Kumar Jha,45.98,4.1,2015,517,computer
+196,Mackintosh - ML project room computer,computer.,64.0,3.4,2021,147,computer
+197,Python Object-Oriented Programming,Steven F. Lott,44.32,4.3,2021,156,programming
+198,Programming for Beginners : This Book Includes,Matthew Python,80.06,3.7,2020,450,programming
+199,Scooby-doo! and the fairground phantom,James Gelsey,81.97,3.7,2000,474,programming
+200,Dora,Phoebe Beinstein,43.25,4.8,2003,489,programming
+201,Naughty nautical neighbors,Annie Auerbach,45.26,4.0,2000,466,programming
+202,Vocabulary Workshop,Jerome Shostak,24.56,4.3,1984,306,programming
+203,Cobol programming,M.K. Roy,92.45,3.6,1989,491,programming
+204,Synthesizer programming,Peter Gorges,16.11,4.5,2005,202,programming
+205,French for reading,Karl C. Sandberg,91.46,3.5,1968,486,programming
+206,Fundamentals of Computer Programming with CSharp Free Book (,Svetlin Nakov,40.75,4.7,2013,421,programming
+207,SpongeBob Superstar,Annie Auerbach,63.02,4.0,2001,124,programming
+208,Testing ESL composition,Holly Jacobs,81.34,4.0,1981,387,programming
+209,Z80 assembly language programming,Lance A. Leventhal,23.89,3.5,1979,503,programming
+210,Cort Thinking Program,Edward de Bono,26.95,4.9,1987,187,programming
+211,C# and Game Programming,Salvatore A. Buono,89.9,3.8,2003,288,programming
+212,Visual Basic .NET Programming,Harold Davis,15.9,4.6,2002,261,programming
+213,Python Programming Patterns,Thomas W. Christopher,46.24,3.1,2001,159,programming
+214,Good Eats,Alton Brown,22.53,4.6,2009,407,programming
+215,NLP,Modern Psychology Publishing,47.96,3.3,2019,381,programming
+216,Sabrina the Teenage Witch (Sabrina the Teenage Witch #1),David Cody Weiss,58.11,3.5,1997,443,programming
+217,Concise Introduction to Robot Programming with Ros2,Francisco Martín Rico,76.06,3.1,2022,409,programming
+218,The helmet,Cathy Hapka,43.07,3.5,2011,262,programming
+219,Mirror image,Jeff Mariotte,36.58,4.9,2003,227,programming
+220,Programming C# 3.0,Jesse Liberty,56.75,3.8,2007,420,programming
+221,Bone Key,Keith R. A. DeCandido,82.0,3.5,2008,191,programming
+222,Programming the finite element method,I. M. Smith,89.18,3.7,1982,466,programming
+223,Python,Bradley N. Miller,13.3,3.0,2013,374,programming
+224,Python Programming for Intermediates,Python Programming,29.77,3.8,2017,268,programming
+225,Object-oriented programming,Brad J. Cox,47.58,4.9,1986,220,programming
+226,Therapeutic recreation program design,Norma J. Stumbo,53.02,3.7,2008,433,programming
+227,The Program,Stephen White,30.33,4.6,2002,397,programming
+228,Heat rises,Richard Castle,57.14,3.9,2011,129,programming
+229,Beginning programming with C++ for dummies,Stephen R. Davis,43.14,4.7,2010,122,programming
+230,Picture perfect,Cameron Dokey,36.78,4.8,2005,158,programming
+231,Programming in Scala,Martin Odersky,59.95,3.9,2008,200,programming
+232,Dr. Dean Ornish's program for reversing heart disease,Dean Ornish,99.9,3.1,1990,375,programming
+233,Applied nonlinear programming,David Mautner Himmelblau,97.45,3.4,1972,237,programming
+234,The Power of Positive Thinking,Norman Vincent Peale,37.26,3.0,1952,181,programming
+235,The 8086/8088 family,John E. Uffenbeck,86.48,4.2,1986,488,programming
+236,Will you be my Valentine?,Diana G. Burke,96.38,3.2,2000,133,programming
+237,Hitler's revolution,Richard Tedor,45.05,3.4,2013,482,programming
+238,Android How to Program,Paul J. Deitel,86.61,3.4,2013,279,programming
+239,Linear programming: methods and applications,Saul I. Gass,94.92,4.7,1958,182,programming
+240,The Victorian kitchen,Jennifer Davies,39.74,4.6,1989,281,programming
+241,Nonlinear Programming,Olvi L. Mangasarian,80.85,3.2,1969,245,programming
+242,Java,Walter J. Savitch,74.05,4.0,2004,452,programming
+243,Program evaluation,"Owen, John M.",37.35,4.6,1993,172,programming
+244,Seven Languages in Seven Weeks,Bruce Tate,86.44,3.6,2010,135,programming
+245,Python Data Science,Press Computer Programming,87.98,3.1,2020,360,programming
+246,"Introduction to Java Programming and Data Structures, Compre",Y. Daniel Liang,99.4,3.0,2017,365,programming
+247,Python Web Programming,Steve Holden,82.77,3.5,2002,275,programming
+248,Rust for Rustaceans,Jon Gjengset,57.47,4.4,2021,395,programming
+249,Data structures and program design in C,Robert L. Kruse,33.84,4.0,1991,266,programming
+250,Program management,Michel Thiry,42.6,3.3,2010,454,programming
+251,Head First Java Script Programming,Eric Freeman,31.93,3.7,2014,433,programming
+252,Intimate connections,David D. Burns,57.99,4.2,1984,295,programming
+253,Functional JavaScript,Michael Fogus,72.0,3.4,2013,507,programming
+254,Algebra programmed,Robert H. Alwin,15.48,4.2,1969,484,programming
+255,The McDougall program,John A. McDougall,18.72,4.2,1990,372,programming
+256,Understanding Computation,Tom Stuart,59.63,3.9,2013,482,programming
+257,Python Programming : Advanced Python Applications and Featur,Coding ACADEMY,27.48,3.7,2019,348,programming
+258,Reality check,Diana G. Gallagher,17.48,4.4,2000,171,programming
+259,Mortal fear,Scott Ciencin,25.23,4.3,2003,366,programming
+260,Heat storm,Richard Castle,16.04,3.9,2017,498,programming
+261,Restful Sleep,Deepak Chopra,71.88,3.6,1994,128,programming
+262,Broadcast/cable programming,Susan Tyler Eastman,44.06,3.3,1985,465,programming
+263,Comparative programming languages,Leslie B. Wilson,96.5,4.6,1988,402,programming
+264,Scooby-doo! and the Frankenstein monster,James Gelsey,81.79,3.7,2000,500,programming
+265,Programming.Java,Rick Decker,81.12,4.0,1997,274,programming
+266,Evaluating Training Programs C. 27,Donald L. Kirkpatrick,88.23,4.0,2009,342,programming
+267,Goddess Initiation,Francesca De Grandis,47.58,4.2,2001,223,programming
+268,The technical analysis course,Thomas A. Meyers,45.54,3.0,1989,360,programming
+269,Self-Discipline,Ray Vaden,70.55,4.7,2019,244,programming
+270,Java,Todd Knowlton,24.09,3.4,1998,452,programming
+271,Software design,Eric J. Braude,55.93,3.8,2003,174,programming
+272,Problem Solving with C++,Walter Savitch,31.8,3.5,2003,142,programming
+273,Curriculum leadership,Forrest W. Parkay,37.96,4.6,2009,273,programming
+274,Worth a shot,Joss Whedon,62.64,3.8,2000,248,programming
+275,Python Programming Fundamentals,Kent D. Lee,64.78,4.1,2011,502,programming
+276,Programming entity framework,Julia Lerman,81.58,3.8,2009,443,programming
+277,Computer Programming in C,V. Rajaraman,20.39,3.0,2004,132,programming
+278,Curso de programacion,Jorge Castro Rabal,96.01,3.4,1993,202,programming
+279,Cursed,Mel Odom,82.38,4.6,2003,235,programming
+280,Programming ASP. NET,Jesse Liberty,27.88,3.8,2002,384,programming
+281,Linear programming and its applications,James K. Strayer,20.89,4.7,1989,419,programming
+282,Pascal programming,Chris Hawksley,58.89,4.6,1983,416,programming
+283,Scooby Doo! A Haunted Halloween,Lee Howard,89.19,4.8,2011,320,programming
+284,Game Programming Gems 7 (Game Programming Gems Series),Scott Jacobs,81.54,3.0,2008,502,programming
+285,C++ How to Program--early objects,Paul J. Deitel,79.88,3.4,2013,367,programming
+286,Heat wave,Anonymous,86.54,3.5,2009,337,programming
+287,Remember everything you read,Stanley D. Frank,67.02,4.1,1990,418,programming
+288,Beginning programming,Adrian Kingsley-Hughes,16.42,4.1,2005,171,programming
+289,Mastering Bitcoin: Programming the Open Blockchain,Andreas M. Antonopoulos,18.65,3.9,2021,486,programming
+290,Processing,Casey Reas,25.28,4.6,2007,227,programming
+291,Beginning Linux programming,Neil Matthew,60.83,3.8,2004,368,programming
+292,Run Program,Scott Meyer,24.06,4.1,2017,459,programming
+293,Olivia and the snow day,Farrah McDoogle,35.56,4.4,2010,135,programming
+294,Simpsons comics unchained,Matt Groening,47.28,3.1,2001,237,programming
+295,"Computer Programming. Python, SQL, PHP, C++ : 4 Books in 1",Computer Programming Academy Us,81.68,3.0,2020,247,programming
+296,Delphi programming for dummies,Neil J. Rubenking,89.25,3.9,1995,266,programming
+297,Parallel programming,Lawrence Snyder,86.51,3.4,2008,390,programming
+298,The Thousand-Dollar Tan Line (Veronica Mars #1),Rob Thomas,96.41,3.3,2014,393,programming
+299,An introduction to Web design and programming,Paul S. Wang,70.89,4.9,2004,254,programming
+300,Clipper programming guide,Rick Spence,90.34,3.1,1989,150,programming
+301,Pediatric Strengthening Program,Linda Stern,55.6,3.6,1998,134,programming
+302,Programming Erlang,Joe Armstrong,96.95,3.4,2008,299,programming
+303,Planning and administering early childhood programs,Celia Anita Decker,95.71,4.8,1976,360,programming
+304,Curious George roller coaster,Monica Perez,49.15,3.8,2007,493,programming
+305,Programming with ANSI C++,Bhushan Trivedi,52.92,4.0,2007,359,programming
+306,"The Canadian spelling program 2.1, 7",Ruth Scott,93.33,4.9,1949,443,programming
+307,CNC Programming Principles and Applications,Mike Mattson,68.77,4.8,2001,419,programming
+308,Strange visitors,Roger Stern,66.54,4.8,2002,267,programming
+309,Fundamentals of Python: First Programs,Kenneth Alfred Lambert,72.46,4.2,2018,129,programming
+310,Terry Jones' Medieval Lives,Terry Jones,71.82,3.9,2004,226,programming
+311,VB.NET Programming for AutoCAD Customization - Level 1,Jerry Winters,45.14,3.1,2007,471,programming
+312,Developing and Administering an Early Childhood Education Pr,Shauna Adams,96.3,3.2,2021,174,programming
+313,"Fun, sun, and flamingoes",Janet Quin-Harkin,18.01,4.1,1997,156,programming
+314,Communicating skills [5],Dave Martin,36.66,4.8,1981,242,programming
+315,Shades,Joss Whedon,36.88,3.8,2002,288,programming
+316,Ecce Romani,Scottish Classics Group,15.67,4.3,1995,228,programming
+317,Data structures and program design,Robert L. Kruse,44.92,4.0,1984,364,programming
+318,ObjectiveC Programming for Dummies,Neal Goldstein,70.11,3.5,2012,166,programming
+319,Neuro-Linguistic Programming,Robert Dilts (undifferentiated),47.95,4.7,1980,496,programming
+320,Programming with PASCAL,John Konvalina,87.35,3.1,1987,182,programming
+321,Dr. David Reuben's Quick weight-gain program,David R. Reuben,27.88,4.6,1996,449,programming
+322,Programming Scala,Dean Wampler,57.93,3.8,2009,153,programming
+323,Programming cochlear implants,Jace Wolfe,27.39,4.2,2010,351,programming
+324,Practical programming in Tcl and Tk,Brent B. Welch,33.22,4.6,1995,442,programming
+325,Secret Coders,Gene Luen Yang,50.09,3.1,2015,191,programming
+326,Zen of Graphics Programming,Michael Abrash,13.76,4.2,1994,298,programming
+327,The process of education,Jerome S. Bruner,18.27,3.9,1960,433,programming
+328,Bereavement Support Group Program for Children,Beth Haasl,63.44,4.7,1999,346,programming
+329,Programming Language Design Concepts,David A. Watt,20.39,4.2,2004,274,programming
+330,The television program,Edward Stasheff,66.94,4.7,1951,375,programming
+331,"Eat More, Weigh Less",Dean Ornish,33.83,3.1,1993,325,programming
+332,Extreme Programming in Practice,James W. Newkirk,59.92,4.3,2001,246,programming
+333,What a Doll!,Nancy E. Krulik,67.5,4.2,2003,482,programming
+334,Arthur and the Big Snow,Marc Brown,45.2,4.5,2005,150,programming
+335,The Hippocrates diet and health program,Ann Wigmore,91.56,4.0,1984,210,programming
+336,Beginning Game Programming,Michael Morrison,22.56,3.1,2005,339,programming
+337,Aang's school days,Michael Teitelbaum,37.28,4.7,2008,479,programming
+338,Advanced PLC Hardware & Programming,Frank Lamb,88.05,4.4,2019,274,programming
+339,Zero to Mastery in Python Programming,Vayu PUBLISHING,63.72,4.7,2022,330,programming
+340,Object-oriented programming with ANSI and Turbo C++,Ashok N. Kamthane,83.25,3.2,2003,353,programming
+341,The silent partner,"Goldberg, Lee",58.19,4.4,2003,427,programming
+342,Millennium Madness,Pocket Books.,75.56,3.8,2000,158,programming
+343,Teen wolf,Tyler Posey,78.77,3.2,2017,417,programming
+344,Windows 95 WIN 32 programming API bible,Richard J. Simon,46.95,3.3,1996,177,programming
+345,Reframing,Richard Bandler,19.89,4.3,1981,306,programming
+346,Adult Children of Abusive Parents,Steven Farmer,69.62,4.5,1814,514,programming
+347,How to enjoy your old age,B. F. Skinner,18.27,3.0,1983,246,programming
+348,Juvenile justice,"Taylor, Robert W.",40.34,3.8,2006,251,programming
+349,Programming as if people mattered,Nathaniel S. Borenstein,72.28,4.6,1991,187,programming
+350,Artificial intelligence programming,Eugene Charniak,77.2,4.1,1980,429,programming
+351,Game Audio Programming 3,Guy Somberg,50.79,3.1,2020,467,programming
+352,Affluenza,John De Graaf,17.51,4.0,2005,326,programming
+353,The Warren witches,Greg Elliot,45.29,3.2,2005,230,programming
+354,Rapid interpretation of EKG's,Dale Dubin,23.35,3.3,1970,270,programming
+355,Mathematics for 3D game programming and computer graphics,Eric Lengyel,70.96,4.6,2002,132,programming
+356,"Programming Logic and Design, Introductory",Joyce Farrell,90.28,3.5,2012,346,programming
+357,Infant and Toddler Development and Responsive Program Planni,Donna S. Wittmer,81.56,3.7,2010,186,programming
+358,Schaum's Outline of Programming with Java,John R. Hubbard,22.47,3.0,2001,193,programming
+359,The Legend of Korra,Michael Dante DiMartino,12.68,3.5,2017,135,programming
+360,Pascal,Sanford Leestma,94.46,4.9,1987,479,programming
+361,Bodybuilding nutrition and training programs,Joe Weider,70.11,3.0,1981,452,programming
+362,Soft Computing,N. P. Padhy,29.22,3.2,2015,259,programming
+363,Programming and Planning in Early Childhood Settings,Leonie Arthur,34.33,3.1,2017,312,programming
+364,Dora the Explorer Phonics,Quinlan B. Lee,13.15,4.3,2004,475,programming
+365,Overcoming Binge Eating,Christopher G. Fairburn,33.09,4.8,2013,160,programming
+366,Bugs Il (Discovery Program),Rosie Dickins,73.86,3.3,2002,160,programming
+367,New stories from the Twilight zone,Rod Serling,62.61,4.2,1962,200,programming
+368,Multiplayer Game Programming,Josh Glazer,94.2,3.2,2015,147,programming
+369,Programming Clojure,Stuart Halloway,71.42,3.3,2009,128,programming
+370,Knowledge-based tutoring,William J. Clancey,21.83,3.0,1987,265,programming
+371,A first course in computational physics and object-oriented ,David Yevick,65.36,3.0,2005,448,programming
+372,Efficient C/C++ programming,"Heller, Steve",52.27,4.3,1995,340,programming
+373,Principles of program analysis,Flemming Nielson,52.1,4.3,1999,185,programming
+374,Beginning Swift programming,Wei-Meng Lee,12.43,3.2,2014,395,programming
+375,Elmo,Art Mawhinney,69.01,3.1,2007,332,programming
+376,Scooby-doo! and the runaway robot,James Gelsey,24.4,3.7,2000,289,programming
+377,Computer programming,Marvin L. Stein,83.85,4.6,1964,419,programming
+378,Insiders reveal secret space programs & extraterrestrial all,Michael E. Salla,30.78,4.7,2015,244,programming
+379,STM32 Arm Programming for Embedded Systems,Muhammad Ali Mazidi,18.04,4.8,2018,303,programming
+380,The PL/I programming language,Paul Abrahams,95.54,4.5,1978,275,programming
+381,More Effective C++,Scott Meyers,90.67,3.8,1995,322,programming
+382,3D game programming all in one,Kenneth C. Finney,70.85,4.7,2004,306,programming
+383,Sea monster scare,Gail Herman,76.12,4.2,2002,146,programming
+384,Python Programming and Numerical Methods,Alexandre Bayen,32.63,4.4,2020,401,programming
+385,Nightmare,John Peel,75.72,4.6,1998,234,programming
+386,Game Programming with Unity and C#,Casey Hardman,35.84,3.2,2020,369,programming
+387,Programming for Computations,Computer Language,95.52,3.4,2022,498,programming
+388,Minecraft mods programming,Rogers Cadenhead,58.04,3.5,2015,369,programming
+389,Programming Boot Sector Games,Oscar Toledo Gutierrez,61.03,3.2,2019,498,programming
+390,Bettypalooza,Elizabeth Lenhard,59.1,3.4,1999,464,programming
+391,Python Programming for Arduino,Pratik Desai,19.42,3.0,2015,425,programming
+392,"Data structures, algorithms, and object-oriented programming",Gregory L. Heileman,36.48,3.6,1996,131,programming
+393,Designing resistance training programs,Steven J. Fleck,43.33,4.8,1987,445,programming
+394,Introduction to Java Programming,Y. Daniel Liang,57.97,3.0,2008,166,programming
+395,Smalltalk-80,Adele Goldberg,97.65,3.4,1983,403,programming
+396,Learning English,Mercer. Swann.,43.35,3.1,1992,262,programming
+397,Pascal programming,Holmes,28.78,3.2,2003,416,programming
+398,The Program & The Treatment,Suzanne Young,24.13,3.1,2016,222,programming
+399,Planning and administering early childhood programs,Nancy K. Freeman,94.75,3.3,2013,360,programming
+400,Object-oriented programming using C++,Ira Pohl,14.98,3.1,1993,382,programming
+401,Programming the Z80,Rodnay Zaks,17.23,3.6,1979,235,programming
+402,The Diet Center program,Sybil Ferguson,89.43,3.1,1983,254,programming
+403,C Programming,Malik SHAHZAIN,63.1,3.2,2022,131,programming
+404,Python Programming,Infinity Solutions,75.4,4.4,2020,308,programming
+405,Scooby-Doo team-up,Sholly Fisch,67.93,3.2,2015,325,programming
+406,Blue's Checkup (Blue's Clues),Sarah Albee,15.41,3.8,2003,402,programming
+407,SpongeBob's secret valentine,David Lewman,37.07,3.4,2004,362,programming
+408,Overcoming Dyslexia,Sally E. Shaywitz,81.18,3.0,2003,505,programming
+409,Ruminations on C++,Andrew Koenig,77.69,4.8,1996,494,programming
+410,World history,Burton F. Beers,32.07,3.5,1984,333,programming
+411,Visual programming,Nan C. Shu,43.75,4.5,1988,134,programming
+412,Concurrent programming,C. R. Snow,45.41,4.9,1992,222,programming
+413,The 8051 microcontroller,Kenneth J. Ayala,36.49,4.6,1991,358,programming
+414,Discovering Computer Science,Jessen Havill,39.63,4.9,2015,242,programming
+415,The nemesis program,Scott Mariani,24.63,3.0,2015,250,programming
+416,Program management for improved business results,"Milošević, Dragan.",37.54,3.7,2007,426,programming
+417,And the winner is-,"Alexander, Nina.",60.9,4.3,1999,360,programming
+418,"Programming & interfacing the 6502, with experiments",Marvin L. De Jong,80.48,4.6,1980,445,programming
+419,IEEE standard for information technology,Institute of Electrical and Electronics ,88.0,4.5,1991,404,programming
+420,Voice and diction,Jon Eisenson,65.49,3.7,1979,397,programming
+421,Lärobok i ALGOL,Torgil Ekman,66.13,4.2,1965,132,programming
+422,ANSI C,Kenneth A. Barclay,85.96,4.8,1990,209,programming
+423,Software for data analysis,John M. Chambers,30.1,4.4,2008,271,programming
+424,Grokking Functional Programming,Michal Plachta,98.82,4.2,2021,125,programming
+425,Functional Reactive Programming,Stephen Blackheath,27.88,3.6,2016,324,programming
+426,Java programming,J. Wigglesworth,59.45,4.8,1999,227,programming
+427,Computer Graphics Programming in OpenGL with C++,V. Scott Gordon,88.9,4.3,2018,336,programming
+428,"Princess protection program, the junior novel",Wendy Loggia,67.39,4.0,2009,159,programming
+429,The standard for program management,Project Management Institute,24.95,3.9,2006,130,programming
+430,Dynamic programming and optimal control,Dimitri P. Bertsekas,18.46,3.1,1995,374,programming
+431,Peter Norton's guide to Java programming,Peter Norton,31.68,3.1,1996,143,programming
+432,Arthur's Chicken Pox (Arthur Adventure Series),Marc Brown,24.82,4.5,1994,296,programming
+433,Financial Intelligence,Sir Patrick Bijou,48.57,3.5,2021,452,programming
+434,C Programming and Numerical Analysis,Seiichi Nomura,57.07,3.4,2018,171,programming
+435,Learning to program with Alice,Wanda Dann,83.13,4.1,2004,188,programming
+436,Leisure education program planning,John Dattilo,97.71,3.0,1991,368,programming
+437,Descriptive statistics,Lassar G. Gotkin,89.95,3.0,1964,129,programming
+438,Press On,Harold Thimbleby,45.69,3.5,2007,420,programming
+439,Python 3 object oriented programming,Dusty Phillips,82.06,4.6,2010,379,programming
+440,Scooby apocalypse,Keith Giffen,36.6,3.2,2017,456,programming
+441,C Programming,Rajiv Chopra,31.03,3.0,2016,131,programming
+442,X Window System Programming,Nabajyoti Barkakati,68.11,3.3,1991,265,programming
+443,Engineering mathematics,C. W. Evans,27.59,3.7,1989,322,programming
+444,The Star Trek Reader III,James Blish,71.9,4.5,1977,175,programming
+445,Java,Andy Vickler,32.53,4.0,2021,452,programming
+446,The German body comp program,Charles Poliquin,18.79,4.0,1997,495,programming
+447,Unit 731 Testimony,Hal Gold,76.72,4.4,1995,409,programming
+448,Concurrency,Jeff Magee,77.84,4.1,2006,231,programming
+449,Object-oriented programming in C++,Robert Lafore,75.27,3.6,2002,489,programming
+450,Teach Yourself Games Programming,Alan Thorn,50.71,4.0,2007,122,programming
+451,Introduction to functional programming,"Bird, Richard",71.08,4.7,1988,226,programming
+452,Handbook of practical program evaluation,Joseph S. Wholey,51.67,3.8,1994,166,programming
+453,Programming in Pascal,Nell B. Dale,92.58,4.6,1989,486,programming
+454,Programming in Scheme,"Eisenberg, Michael.",48.28,4.5,1988,332,programming
+455,C++ programming,D. S. Malik,22.23,4.1,2011,131,programming
+456,Land of Lisp,Conrad Barski,90.68,3.3,2010,271,programming
+457,Cocoa programming for Mac OS X,Aaron Hillegass,36.66,4.7,2001,327,programming
+458,LabVIEW graphical programming,"Johnson, Gary W.",48.75,3.9,1994,151,programming
+459,Adventure Time vol. 6,Ryan North,20.01,3.5,2015,176,programming
+460,Programming Language Fundamentals by Example,D. E. Stevenson,37.58,3.1,2006,409,programming
+461,Programming in COBOL/400,"Cooper, James",65.86,4.7,1997,194,programming
+462,Programming Logics,Andrei Voronkov,13.68,4.6,2013,505,programming
+463,Essentials of programming languages,Daniel P. Friedman,21.76,4.0,2001,269,programming
+464,Murach's C++ Programming (2nd Edition),Mary Delamater,63.52,3.9,2022,241,programming
+465,Scary princess,E. S. Mooney,29.09,4.8,2001,436,programming
+466,Computer Fundamentals And Programming In C,Manas Ghosh,36.88,4.0,2013,127,programming
+467,Programmed Learning Approach to Medical Terminology,Judi L. Nath,17.11,3.2,2018,155,programming
+468,C++ programming 101,Greg M. Perry,68.95,3.9,1992,153,programming
+469,Advanced 6502 programming,Rodnay Zaks,92.74,3.6,1980,456,programming
+470,C Programming,Adam Dodson,42.71,3.0,2016,131,programming
+471,The Purdue Creative Thinking Program,Purdue Creative Thinking Program.,94.3,3.4,1970,247,programming
+472,Beware What You Wish,Diana G. Gallagher,91.6,4.4,2001,440,programming
+473,Scooby-Doo! and the marsh monster,Jesse Leon McCann,56.84,4.0,2002,155,programming
+474,Win32 Programming,Brent E. Rector,88.44,4.3,1997,511,programming
+475,C++ Programming,Procode Publishing,67.03,3.3,2019,452,programming
+476,Basic Arduino Programming,Vijay Verma,87.42,3.4,2021,288,programming
+477,LabVIEW power programming,"Johnson, Gary W.",43.13,3.9,1998,284,programming
+478,Parallel logic programming,Evan Tick,42.43,3.8,1991,491,programming
+479,Programmed for Love,Marion Crane,36.06,4.3,1985,177,programming
+480,Programming TypeScript,Anonymous,31.36,3.5,2019,268,programming
+481,Programming Bitcoin: Learn How to Program Bitcoin from Scrat,Jimmy Song,41.21,3.9,2019,308,programming
+482,Spike speaks!,Terry Collins,73.28,4.8,2003,160,programming
+483,Hands-On Network Programming with C,Lewis Van Winkle,18.17,3.0,2019,200,programming
+484,Christmas crisis,Nancy E. Krulik,17.27,4.2,2003,241,programming
+485,Healing Your Emotional Self,Beverly Engel,93.59,3.6,2006,165,programming
+486,Java Programming Fundamentals,Premchand S. Nair,22.86,3.4,2008,240,programming
+487,Metaprogramming Ruby,Paolo Perrotta,91.06,3.1,2010,407,programming
+488,Programming in Ada,J. G. P. Barnes,98.64,4.8,1982,287,programming
+489,"Think Like a Programmer, Python Edition",V. Anton Spraul,33.7,3.3,2021,506,programming
+490,Salem Goes to Rome,Cathy East Dubowski,84.64,3.6,1998,203,programming
+491,Lemonade with a twist,Steven Banks,55.79,4.5,2004,389,programming
+492,C programming language,Lawrence H. Miller,12.28,4.9,1987,423,programming
+493,Operating systems programming,Stephen J. Hartley,63.41,4.6,1995,194,programming
+494,An introduction to programming and object-oriented design us,Jaime Niño,27.06,3.8,2002,489,programming
+495,Hooked on books,Daniel N. Fader,41.88,3.7,1966,242,programming
+496,The essentials of C programming language,Ernest C. Ackermann,16.87,4.0,1989,369,programming
+497,The Headway program,Carl Bereiter,19.33,4.3,1982,506,programming
+498,Using Asyncio in Python,Caleb Hattingh,79.19,3.7,2020,152,programming
+499,Programming ArcObjects with VBA,Kang-Tsung Chang,58.11,4.9,2004,422,programming
+500,WITSEC,Pete Earley,17.01,3.5,2002,314,programming
+501,Structured design,Edward Yourdon,51.57,4.9,1975,409,programming
+502,Get Programming with Go,Nathan Youngman,57.02,4.9,2018,301,programming
+503,Power programming with RPC,John Bloomer,14.49,4.3,1991,442,programming
+504,The Waltons,Robert Weverka,97.37,3.9,1974,296,programming
+505,Babes in boyland,H. B. Gilmour,57.85,4.4,1998,422,programming
+506,Family guy,Seth MacFarlane,88.07,4.3,2004,429,programming
+507,Python Programming for the Absolute Beginner,Michael Dawson,83.06,4.9,2010,271,programming
+508,Achieving emotional literacy,Claude Steiner,31.62,4.6,1997,224,programming
+509,Voodoo moon,Wendy Corsi Staub,75.14,3.9,2000,281,programming
+510,Pascal,Elliot B. Koffman,90.59,3.5,1982,479,programming
+511,Programming real-time computer systems,James Martin,83.17,3.3,1965,240,programming
+512,Programacion Web Java/ Java Web Programming,Andres Martinez Quijano,85.34,3.9,2006,247,programming
+513,Program pembelajaran multimedia interaktif berbantuan komput,Yogyakarta (Indonesia : Daerah Istimewa),48.85,3.2,2008,280,programming
+514,Your first Pokémon!,Simcha Whitehill,64.09,4.3,2012,467,programming
+515,Visitors,Laura Anne Gilman,18.45,4.0,1999,465,programming
+516,Schaum's outline of theory and problems of programming with ,"Hubbard, J. R.",60.98,4.5,1995,459,programming
+517,TI Tiva ARM Programming For Embedded Systems,Muhammad Ali Mazidi,99.42,4.8,2017,431,programming
+518,Clemson University Football Programs,Clemson University,89.84,3.8,1941,395,programming
+519,Introduction to computer science,Thomas L. Naps,22.26,3.2,1989,480,programming
+520,Linux Programming,Richard Petersen,26.81,3.2,2000,354,programming
+521,The joy of C,Lawrence H. Miller,38.24,4.9,1993,419,programming
+522,Programming,Ward Douglas Maurer,33.83,4.6,1968,512,programming
+523,PLC Programming Software : Automation and Controls Guide wit,Lon Koslan,13.36,3.8,2021,517,programming
+524,Introduction to Mathematical Programming,Wayne L. Winston,60.68,4.6,1991,135,programming
+525,"The CIA and the U-2 program, 1954-1974",Gregory W. Pedlow,49.03,3.5,1998,360,programming
+526,Python Programming for Beginners,Programming Languages Academy,17.97,4.0,2019,474,programming
+527,Let Us Java,Yashavant Kanetkar,34.44,4.3,2019,444,programming
+528,Intro to Python for Computer Science and Data Science,Paul J. Deitel,69.17,3.4,2019,433,programming
+529,Star Trek 1,James Blish,21.77,4.5,1967,147,programming
+530,Breakout Squad,Ryder Windham,13.87,3.2,2009,282,programming
+531,The Chimp Paradox: The Mind Management Program to Help You A,Dr. Steve Peters,72.24,4.7,2013,364,programming
+532,Erlang programming,Francesco Cesarini,93.95,3.7,2009,294,programming
+533,Programming Android,Zigurd R. Mednieks,41.98,4.1,2011,361,programming
+534,Program evaluation,Blaine R. Worthen,16.83,4.5,1996,172,programming
+535,The Go programming language phrasebook,David Chisnall,43.76,3.8,2012,426,programming
+536,Criminal minds,Max Allan Collins,69.13,4.2,2007,456,programming
+537,Fundamentals of programming,Richard Halterman,34.2,3.5,1994,472,programming
+538,Storm front,Richard Castle,34.56,3.9,2013,403,programming
+539,The new Beverly Hills diet,Judy Mazel,29.58,3.3,1996,311,programming
+540,BASIC computer programming,Thomas C. Bartee,77.02,4.4,1981,385,programming
+541,Health Promotion Programs,Carl I. Fertman,24.41,3.0,2010,509,programming
+542,Cults in America,Willa Appel,99.06,4.8,1983,267,programming
+543,Spelling improvement,Patricia M. Fergus,77.22,3.8,1964,423,programming
+544,Star Trek Voyager - Mosaic,Jeri Taylor,79.92,3.2,1996,232,programming
+545,Programming logic and design,Joyce Farrell,54.35,3.5,2006,121,programming
+546,Beginning C++ Game Programming,John Horton,81.23,4.4,2016,184,programming
+547,Elements of programming interviews,Adnan Aziz,23.82,3.0,2017,403,programming
+548,Scooby-doo! and the farmyard fright,James Gelsey,64.43,3.7,2001,253,programming
+549,"The Art of Computer Programming, Volumes 1-4A Boxed Set",Donald Knuth,97.33,3.1,2011,248,programming
+550,Four hours in My Lai,Michael Bilton,36.77,3.8,1992,225,programming
+551,Programming Language Pragmatics,Michael L. Scott,14.01,4.8,2005,493,programming
+552,Proofreading,Dona Orr,12.2,3.2,2002,178,programming
+553,Teaching the Mindful Self-Compassion Program,Christopher K. Germer,26.73,4.4,2019,206,programming
+554,The Suicide King,Robert Joseph Levy,50.4,3.8,2005,295,programming
+555,Computer Programming for Absolute Beginners,Joakim Wassberg,55.85,4.0,2020,341,programming
+556,The Silva Mind Control Method,Jose Silva,58.65,4.3,1978,174,programming
+557,PLC Programming for Industrial Automation,Kevin Collins,27.66,3.0,2006,288,programming
+558,Curious George,Samantha McFerrin,12.55,3.7,2010,361,programming
+559,Kurikulum tingkat satuan pendidikan (KTSP),I Wayan A. S.,47.68,3.1,2008,455,programming
+560,Star Trek Myriad Universes - Echoes and Refractions,Chris Roberson,57.42,3.2,2008,382,programming
+561,Starting Out with Programming Logic and Design,Tony Gaddis,39.21,4.1,2009,347,programming
+562,SQL antipatterns,Bill Karwin,19.34,4.7,2010,357,programming
+563,Becoming wise,Krista Tippett,87.67,3.9,2016,451,programming
+564,Star Trek Voyager - String Theory - Evolution,Heather Jarman,52.06,4.9,2006,451,programming
+565,Introduction to numerical methods and FORTRAN programming,Thomas Richard McCalla,56.3,3.5,1967,461,programming
+566,Agreed-upon procedures guide (attestation engagement),Anonymous,85.35,3.5,1997,440,programming
+567,Don't scream,C. J. Anders,49.42,4.9,1999,468,programming
+568,C++ Programming,Judy Scholl,73.3,4.3,2002,452,programming
+569,Assembly language programming,Vincent Mahout,18.43,3.1,2012,298,programming
+570,Northeastern Gulf of Mexico Coastal and Marine Ecosystem Pro,Anonymous,89.24,3.5,2021,216,programming
+571,The Sugar Addict's Total Recovery Program,Kathleen DesMaisons,14.77,4.7,2000,177,programming
+572,"First Program for Strings, Level 1 (Belwin Course for String",Samuel Applebaum,42.59,3.4,1985,215,programming
+573,JavaScript Cookbook,Shelley Powers,74.57,4.6,2010,214,programming
+574,The Harvest (Buffy the Vampire Slayer,Richie Tankersley Cusick,42.07,4.3,1992,153,programming
+575,iOS programming,Christian Keur,81.56,3.5,2015,416,programming
+576,Game Programming In C++,Erik Yuzwa,91.88,4.3,2005,252,programming
+577,Deadly heat,Richard Castle,99.75,3.9,2013,355,programming
+578,Docker,Miles Price,16.46,4.7,2017,259,programming
+579,Peppas washing day,Peppa Pig Staff,73.88,4.7,2010,266,programming
+580,Self-Hypnosis,Barrie L. Konicov,91.73,3.4,1982,472,programming
+581,Programming in Python,Pooja Sharma,68.99,4.8,2017,175,programming
+582,Evaluating Training Programs,Donald L. Kirkpatrick,37.1,4.0,2006,145,programming
+583,Programming in Haskell,Graham Hutton,35.15,3.9,2016,456,programming
+584,Component software,Clemens Szyperski,40.79,3.4,1997,222,programming
+585,Machine-independent computer programming,Maurice H. Halstead,42.87,3.1,1962,177,programming
+586,"Introduction to Python Programming and Data Structures, Glob",Y Liang,41.54,3.8,2022,492,programming
+587,Programming by design,Philip L. Miller,30.14,3.3,1987,494,programming
+588,Introducing Neuro-Linguistic Programming,"O'Connor, Joseph",52.52,3.8,1990,150,programming
+589,Programming assembler language,"Abel, Peter",65.91,4.9,1979,295,programming
+590,PgMP,Paul Sanghera,49.9,4.0,2007,207,programming
+591,Silence,Nancy Holder,76.69,3.0,2003,250,programming
+592,ROSCOE Programming Facility (RPF) command specifications,University of Manchester. Regional Compu,34.05,4.3,1984,120,programming
+593,SAS Clinical Programming,Y. Lakshmi Prasad,56.68,4.3,2014,485,programming
+594,Object-oriented programming in C++,Nicolai M. Josuttis,12.78,3.7,2002,489,programming
+595,Fundamentals of Deep Learning,Nikhil Buduma,19.71,3.8,2017,493,algorithms
+596,Algorithms & data structures in Python,Srinivasan Jagannathan,69.89,4.7,2014,299,algorithms
+597,"Pascal Plus data structures, algorithms, and advanced progra",Nell B. Dale,72.45,4.6,1985,391,algorithms
+598,The simple genetic algorithm,Michael D. Vose,46.67,4.0,1999,437,algorithms
+599,The formula,Luke Dormehl,57.64,3.6,2014,388,algorithms
+600,Machine Vision,E. R. Davies,13.76,4.8,1991,360,algorithms
+601,Data Structures and Algorithm Analysis in C++,Mark Allen Weiss,93.91,3.2,1998,250,algorithms
+602,Evolutionary Optimization Algorithms,Dan Simon,54.48,3.8,2013,138,algorithms
+603,"Ideals, varieties, and algorithms",David A. Cox,27.18,3.8,1992,437,algorithms
+604,Evaluating Learning Algorithms,Nathalie Japkowicz,18.56,3.4,2011,423,algorithms
+605,Hands-On Deep Learning Algorithms with Python,Sudharsan Ravichandiran,92.44,3.5,2019,363,algorithms
+606,Circuit simulation methods and algorithms,Jan Ogrodzki,19.72,4.2,1994,153,algorithms
+607,Scheduling,Michael L. Pinedo,26.93,4.0,2008,365,algorithms
+608,String searching algorithms,Graham A. Stephen,79.41,3.6,1994,122,algorithms
+609,Algorithms for Optimization,Mykel J. Kochenderfer,84.42,4.2,2019,437,algorithms
+610,Algorithms for interviews,Adnan Aziz,33.24,3.0,2010,368,algorithms
+611,Algorithmic learning in a random world,Vladimir Vovk,89.63,4.1,2005,174,algorithms
+612,Python and algorithmic thinking for the complete beginner,Aristides S. Boures,60.04,4.6,2015,332,algorithms
+613,Principles of robot motion,Howie Choset,70.08,4.5,2004,394,algorithms
+614,Algorithmic and High-Frequency Trading,Álvaro Cartea,14.31,4.4,2015,500,algorithms
+615,Twenty Lectures on Algorithmic Game Theory,Tim Roughgarden,82.63,3.0,2016,172,algorithms
+616,Distributed algorithms,Nancy A. Lynch,26.62,3.9,1997,153,algorithms
+617,Machine Learning and Security: Protecting Systems with Data ,Clarence Chio,60.86,3.8,2018,251,algorithms
+618,Gps,Guochang Xu,99.19,4.7,2003,511,algorithms
+619,Algorithmic logic,Grażyna Mirkowska-Salwicka,46.47,3.7,1987,245,algorithms
+620,Computer algorithms and flowcharting,Gerald A. Silver,66.63,3.4,1975,275,algorithms
+621,Algorithms and parallel computing,Fayez Gebali,83.5,3.3,2011,176,algorithms
+622,Graphs,K. Thulasiraman,76.79,3.1,1992,239,algorithms
+623,Pearls of functional algorithm design,"Bird, Richard",29.0,4.7,2010,253,algorithms
+624,Mobile Applications Development with Android,Meikang Qiu,12.91,4.6,2016,494,algorithms
+625,Automating Open Source Intelligence,Robert Layton,17.3,4.0,2015,400,algorithms
+626,Foundations of Genetic Algorithms 1991 (FOGA 1),FOGA,21.07,4.2,1991,203,algorithms
+627,"Algorithms, Fractals and Dynamics",Y. Takahashi,44.69,3.8,1995,314,algorithms
+628,Histoire d'algorithmes,Jean-Luc Chabert,45.65,4.1,1994,318,algorithms
+629,Universal Artificial Intelligence,Marcus Hutter,45.88,3.7,2004,367,algorithms
+630,Algorithmic Trading Strategies,David Hanson,76.23,3.3,2021,177,algorithms
+631,The algorithmic beauty of plants,Przemyslaw Prusinkiewicz,43.23,3.8,1990,121,algorithms
+632,Applied Computational Thinking with Python,Sofía De Jesús,60.17,3.6,2020,206,algorithms
+633,Acupuncture Logic,Michael J. Migliore,90.31,3.1,2003,200,algorithms
+634,Algorithms in chemical pathology,Martin Crook,22.11,3.4,1997,294,algorithms
+635,The art of computer programming,Donald Knuth,50.46,3.1,2011,475,algorithms
+636,Algorithms,Kenneth A Berman,48.57,3.3,2017,455,algorithms
+637,Data structures and algorithms in Java,Michael T. Goodrich,35.88,3.3,2000,221,algorithms
+638,Distributed Algorithms,Wan Fokkink,47.95,3.1,2013,233,algorithms
+639,Fundamentals of neural networks,Laurene V. Fausett,94.47,4.2,1994,427,algorithms
+640,Algorithms and networking for computer games,Jouni Smed,82.54,3.8,2006,406,algorithms
+641,Probability and Computing,Michael Mitzenmacher,92.35,3.1,2005,349,algorithms
+642,Algorithmic Trading and Quantitative Strategies,Raja Velu,18.73,4.0,2018,449,algorithms
+643,Handbook of Approximation Algorithms and Metaheuristics,Teofilo F. Gonzalez,42.06,4.3,2007,510,algorithms
+644,Data classification,Charu C. Aggarwal,19.81,3.3,2014,270,algorithms
+645,"Introduction to Algorithmic Finance, Algorithmic Trading and",Satya Chakravarty,25.76,4.9,2020,433,algorithms
+646,"Genetic algorithms in search, optimization, and machine lear","Goldberg, David E.",90.87,4.2,1989,250,algorithms
+647,Algorithms for VLSI physical design automation,N. A. Sherwani,17.71,4.4,1993,465,algorithms
+648,Guide to Competitive Programming,Antti Laaksonen,47.85,4.2,2020,252,algorithms
+649,Data Structures and Algorithms in JavaScript,Federico Kereki,51.79,4.2,2023,398,algorithms
+650,Digital systems and hardware/firmware algorithms,Miloš D. Ercegovac,22.64,3.1,1985,230,algorithms
+651,Computer animation,Rick Parent,91.56,4.3,2001,476,algorithms
+652,Data Structure and Algorithms Using C++,Sachi Nandan Mohanty,70.25,3.5,2021,291,algorithms
+653,Evolutionary Algorithms,Alain Petrowski,31.2,3.9,2017,174,algorithms
+654,Unsupervised Learning Algorithms,M. Emre Celebi,99.98,4.9,2016,248,algorithms
+655,Nonlinear programming,Mokhtar S. Bazaraa,92.48,3.3,1993,290,algorithms
+656,Fast algorithms for signal processing,Richard E. Blahut,80.98,4.8,2010,358,algorithms
+657,The Practical Handbook of Genetic Algorithms,Lance D. Chambers,87.82,3.0,1995,177,algorithms
+658,Mathematics for algorithm and systems analysis,Edward A. Bender,83.51,4.8,2005,462,algorithms
+659,Elementary Functions,Jean-Michel Muller,65.58,4.7,2005,370,algorithms
+660,Chaos-Based Cryptography,Ljupco Kocarev,25.71,3.2,2011,276,algorithms
+661,"Common-Sense Guide to Data Structures and Algorithms, Second",Jay Wengrow,32.23,4.4,2020,319,algorithms
+662,Obstetric Clinical Algorithms,Errol R. Norwitz,87.45,3.1,2010,386,algorithms
+663,Easy Learning Data Structures and Algorithms Python 3,yang hu,45.53,3.3,2019,466,algorithms
+664,Elementary numerical analysis,Samuel Daniel Conte,20.73,4.9,1965,148,algorithms
+665,Design and Analysis of Algorithm,Bhupendra MANDLOI,72.91,4.7,2018,429,algorithms
+666,Boosting,Robert E. Schapire,53.18,3.5,2012,139,algorithms
+667,The Art of Programming Through Flowcharts and Algorithms,Anil Bikas Chaudhuri,62.64,3.4,2005,208,algorithms
+668,Algorithms for mutual exclusion,M. Raynal,40.96,4.0,1986,152,algorithms
+669,Problem solving with algorithms and data structures using Py,Bradley N. Miller,28.92,3.0,2005,237,algorithms
+670,Internet Security,Man Young Rhee,19.29,3.2,2003,343,algorithms
+671,Parallel algorithms,Henri Casanova,32.54,4.8,2008,463,algorithms
+672,Algorithms,Blake A. Hoena,83.8,3.3,2018,455,algorithms
+673,Telecommunications network design algorithms,Aaron Kershenbaum,15.56,3.5,1993,494,algorithms
+674,Algorithms and Law,Martin Ebers,91.99,4.9,2020,364,algorithms
+675,Computational algorithms for fingerprint recognition,Bir Bhanu,35.93,4.1,2003,133,algorithms
+676,Optimization for Engineering Design - Algorithms and Example,Kalyanmoy Deb,22.3,3.6,2013,260,algorithms
+677,Data structures and algorithm analysis in Java,Mark Allen Weiss,74.92,3.2,2012,206,algorithms
+678,Outnumbered,David J. T. Sumpter,73.35,3.5,2018,200,algorithms
+679,Introduction to the design & analysis of algorithms,Anany Levitin,78.87,4.8,2012,497,algorithms
+680,Computational geometry,Mark de Berg,28.46,4.8,1997,359,algorithms
+681,Bioinformatics algorithms,Alexander Zelikovsky,68.3,4.5,2007,159,algorithms
+682,Algorithmic Trading Strategy,TradeSignAlgo,52.54,4.9,2017,480,algorithms
+683,Algorithmic Adventures,Juraj Hromkovič,19.15,3.9,2014,380,algorithms
+684,High-Frequency Trading,Irene Aldridge,58.41,3.3,2009,175,algorithms
+685,Algorithms and Bugs,Elizabeth Tweedale,50.01,3.4,2017,412,algorithms
+686,Learn Algorithmic Trading with Python,Jamal Sinclair O'Garro,18.55,4.9,2022,177,algorithms
+687,Fundamentals of Natural Computing,Leandro Nunes de Castro,48.21,3.8,2006,368,algorithms
+688,Algorithms and data structures,Frank Dehne,12.09,4.2,2003,448,algorithms
+689,The Sachertorte algorithm and other antidotes to computer an,John Shore,63.56,3.7,1985,383,algorithms
+690,Algorithms of the intelligent web,Haralambos Marmanis,50.46,4.9,2009,426,algorithms
+691,Machine Learning Algorithms: Popular algorithms for data sci,Giuseppe Bonaccorso,30.52,3.1,2018,296,algorithms
+692,Algorithmic Problem Solving,Roland C. Backhouse,80.12,4.2,2012,361,algorithms
+693,Analysis and Design of Algorithms,WILEY INDIA,29.17,3.1,2015,188,algorithms
+694,Algorithms and theory of computation handbook,Mikhail J. Atallah,24.0,3.2,2009,230,algorithms
+695,Differential Diagnosis and Management for the Chiropractor,Thomas Souza,68.72,3.1,2005,375,algorithms
+696,Microarray image analysis,Karl Fraser,69.19,3.5,2010,149,algorithms
+697,An arbitrary grid CFD algorithm for configuration aerodynami,P. D. Manhardt,40.34,3.3,1992,351,algorithms
+698,Multiobjective scheduling by genetic algorithms,Tapan P. Bagchi,59.67,3.4,1999,338,algorithms
+699,Approximation algorithms and semidefinite programming,Bernd Gärtner,31.75,3.4,2012,362,algorithms
+700,Logic synthesis and verification algorithms,Gary D. Hachtel,55.85,3.6,1996,519,algorithms
+701,Evolutionary algorithms in management applications,Jörg Biethahn,50.51,3.8,1995,336,algorithms
+702,Collected algorithms from ACM,Association for Computing Machinery.,84.08,3.3,1989,381,algorithms
+703,A symmetric concurrent B-tree algorithm,Vladimir Lanin,86.49,4.2,1986,407,algorithms
+704,Data Structures & Algorithms in Swift,raywenderlich.com Team,49.98,3.1,2018,302,algorithms
+705,Network and discrete location,Mark S. Daskin,93.21,4.9,1995,176,algorithms
+706,La tyrannie des algorithmes,Miguel Benasayag,65.14,4.7,2019,157,algorithms
+707,Algorithmic Randomness,Johanna N. Y. Franklin,61.96,4.5,2020,296,algorithms
+708,Le temps des algorithmes,Gilles Dowek,61.55,3.3,2017,323,algorithms
+709,Graphic Python Algorithms,Yang Hu,81.03,3.5,2020,396,algorithms
+710,Introduction to Algorithm Trading,Stock Market Guru,89.15,4.4,2015,456,algorithms
+711,Data Structures and Algorithm Analysis in C++,Mark Weiss,95.46,3.3,2013,250,algorithms
+712,Algorithms and Data Structures for Massive Datasets,Dzejla Medjedovic,56.2,4.4,2022,151,algorithms
+713,Guide to Algorithm Design,Anne Benoit,96.22,3.1,2013,150,algorithms
+714,The top ten algorithms in data mining,Xindong Wu,93.88,4.5,2009,403,algorithms
+715,Algorithmic Ethics,Michael Filimowicz,16.07,3.6,2023,229,algorithms
+716,Hands-On Data Structures and Algorithms with Python,Dr. Basant Agarwal,94.96,3.5,2018,477,algorithms
+717,Data structures and algorithms in Java,"Drake, Peter.",45.33,3.4,2005,221,algorithms
+718,Fast algorithms for digital signal processing,Richard E. Blahut,91.31,4.8,1985,195,algorithms
+719,Hardware acceleration of EDA algorithms,Kanupriya Gulati,75.43,3.9,2010,483,algorithms
+720,Data Science Algorithms in a Week: Top 7 algorithms for comp,David Natingga,47.74,3.8,2017,346,algorithms
+721,Numerical algorithms,A. N. Barrett,68.2,4.4,2021,281,algorithms
+722,Random structures & algorithms,Anonymous,16.1,3.5,1990,367,algorithms
+723,Intelligent Algorithms,Han Huang,48.77,4.3,2024,203,algorithms
+724,Revolutionary Algorithms,Torey Akers,98.5,3.7,2024,389,algorithms
+725,Parallel algorithms,Pranay Chaudhuri,45.66,3.5,1992,463,algorithms
+726,Algorithm complexity,Roger Goodwin,97.04,3.3,1991,198,algorithms
+727,Microcomputer algorithms,J. P. Killingbeck,35.8,4.1,1991,296,algorithms
+728,"Approximation, Randomization, and Combinatorial Optimization",Prasad Raghavendra,82.67,3.7,2003,373,algorithms
+729,Practical Introduction to Data Structures and Algorithm Anal,Clifford A. Shaffer,51.87,4.9,1997,493,algorithms
+730,Proceedings of the First International Conference on Genetic,John J. Grefenstette,95.86,4.2,1985,471,algorithms
+731,"Algorithms, Humans, and Interactions",Don Donghee Shin,65.19,4.3,2023,340,algorithms
+732,Learning Kernel Classifiers,Ralf Herbrich,60.16,3.3,2001,507,algorithms
+733,Applied and algorithmic graph theory,Gary Chartrand,24.52,3.8,1993,497,algorithms
+734,The standard data encryption algorithm,Harry Katzan,29.23,3.6,1977,435,algorithms
+735,Parallel algorithms in computational science,Dieter W. Heermann,22.81,3.9,1991,512,algorithms
+736,Parallel algorithms and matrix computation,Jagdish J. Modi,59.43,4.3,1990,324,algorithms
+737,An Introduction to Genetic Algorithms,Melanie Mitchell,66.43,4.8,1998,389,algorithms
+738,Digital Image Processing Algorithms,Ioannis Pitas,53.96,3.3,1993,291,algorithms
+739,Data Structure and Algorithm,Nikhat Raza Khan,25.32,4.5,2022,280,algorithms
+740,Algorithms for Functional Programming,John David Stone,91.03,4.5,2018,327,algorithms
+741,Electronic and Algorithmic Trading Technology,Kendall Kim,23.09,4.2,2007,402,algorithms
+742,Algorithms for the People,Joshua Simons,80.68,4.4,2023,426,algorithms
+743,Algorithmic Trading : ,Jordan Wayne,29.84,3.2,2018,217,algorithms
+744,Applications and algorithms in computer science,C. William Gear,85.93,4.8,1978,296,algorithms
+745,"Algorithms, abstraction, and implementation",C. L. Foster,72.61,3.8,1992,425,algorithms
+746,Parallel algorithms for knapsack type problems,Vassil Alexandrov,20.5,3.8,1995,483,algorithms
+747,Algorithms of Resistance,Tiziano Bonini,38.64,4.3,2024,140,algorithms
+748,Stochastic simulation,Søren Asmussen,32.79,3.4,2007,373,algorithms
+749,Decision making and automation,V. V. Druzhinin,18.47,3.8,1975,480,algorithms
+750,Decision Procedures,Daniel Kroening,33.03,3.4,2008,187,algorithms
+751,FPGA Algorithms and Applications for the Internet of Things,Preeti Sharma,92.27,3.6,2020,414,algorithms
+752,Data Structures and Algorithms Using Python,Subrata Saha,40.91,4.2,2022,124,algorithms
+753,Constitutional Challenges in the Algorithmic Society,Hans-Wolfgang Micklitz,32.31,4.0,2021,490,algorithms
+754,Algorithms for Graphics and Image Processing,T. Pavlidis,66.43,3.0,1982,204,algorithms
+755,NAG Fortran Library introductory guide,Numerical Algorithms Group.,94.7,3.2,1988,294,algorithms
+756,NAG FORTRAN library manual mark 11,Numerical Algorithms Group.,45.81,3.2,1983,490,algorithms
+757,NAg graphical supplement,Numerical Algorithms Group.,68.79,3.2,1981,204,algorithms
+758,"Leadership Strategies in the Age of Big Data, Algorithms, an",Norton Paley,62.53,3.5,2017,176,algorithms
+759,Nonlinear Model Predictive Control,Lars Grüne,92.11,4.5,2011,347,algorithms
+760,Digraphs,Jørgen Bang-Jensen,56.74,3.7,2001,162,algorithms
+761,The Algorithmic Beauty of Sea Shells,Hans Meinhardt,66.09,4.4,2003,332,algorithms
+762,"PASCAL plus data structures, algorithms and advanced program",Nell B. Dale,76.82,4.6,1988,173,algorithms
+763,Reading machines,Stephen Ramsay,57.4,4.8,2011,460,algorithms
+764,Dynamic reconfiguration,Ramachandran Vaidyanathan,88.73,3.5,2003,173,algorithms
+765,The Algorithmic Resolution of Diophantine Equations,Nigel P. Smart,81.43,4.0,1998,380,algorithms
+766,Algorithms for compiler design / \c O. G. Kakde,O. G. Kakde,91.71,4.3,2003,138,algorithms
+767,"Data structures, algorithms, and program style using C",James F. Korsh,32.12,3.7,1988,257,algorithms
+768,Emerging Security Algorithms and Techniques,Khaleel Ahmad,62.87,3.0,2019,279,algorithms
+769,Algorithms for Linear-Quadratic Optimization,Vasile Sima,69.22,4.0,1996,196,algorithms
+770,Geometric Algorithms and Combinatorial Optimization,Martin Grötschel,31.9,3.9,1988,171,algorithms
+771,Algorithmic geometry,J.-D Boissonnat,13.39,4.9,1998,243,algorithms
+772,Algorithmic bioprocesses,Anne Condon,87.21,3.4,2009,463,algorithms
+773,Algorithm-323,Erasmus Cromwell-Smith,52.12,4.2,2019,454,algorithms
+774,Statistical Mechanics,Werner Krauth,75.01,3.1,2006,144,algorithms
+775,Data Structures and Algorithms for GATE,Narasimha Karumanchi,62.9,4.4,2011,357,algorithms
+776,Algorithmic Organizing,Vern L. Glaser,79.5,3.6,2025,128,algorithms
+777,Scheduling Algorithms,Peter Brucker,73.28,4.6,1998,307,algorithms
+778,Some domain decomposition algorithms for elliptic problems,Maksymilian Dryja,49.63,3.9,1989,338,algorithms
+779,How Algorithms Create and Prevent Fake News,Noah Giansiracusa,21.53,3.6,2021,388,algorithms
+780,Stochastic Models,H. C. Tijms,76.0,3.3,1994,297,algorithms
+781,Algorithm Audit,Biagio Aragona,89.83,4.8,2021,365,algorithms
+782,Graph Algorithms And Applications,Giuseppe Liotta,90.76,3.4,2006,422,algorithms
+783,Algorithms in algebraic geometry,Alicia Dickenstein,78.07,4.1,2008,225,algorithms
+784,Kombinatorické algoritmy,Luděk Kučera,94.5,3.1,1989,512,algorithms
+785,The practical handbook of genetic algorithms,Lance Chambers,33.06,4.8,2001,120,algorithms
+786,We are data,John Cheney-Lippold,56.75,3.4,2017,129,algorithms
+787,Parallel genetic algorithms,Gabriel Luque,27.31,3.8,2011,331,algorithms
+788,Algorithms and data structures,"WADS '91 (1991 Ottawa, Ont.)",38.85,4.9,1991,448,algorithms
+789,Minimum-Volume Ellipsoids,Michael J. Todd,51.48,4.2,2016,436,algorithms
+790,Nine Algorithms That Changed the Future,John MacCormick,70.99,4.1,2011,315,algorithms
+791,Algorithms,"Uspenskiĭ, V. A.",63.05,4.2,1993,455,algorithms
+792,Digital Image Processing Algorithms and Applications,Ioannis Pitas,42.72,3.3,2000,142,algorithms
+793,Algoritmos Com Python,Guilherme Soares Lima,51.79,3.4,2019,416,algorithms
+794,"Algorithms, Fourth Edition",Robert Sedgewick,45.03,3.0,2015,251,algorithms
+795,Algorithms Are Not Enough,H. L. Roitblat,88.96,3.8,2020,412,algorithms
+796,Synthetic aperture radar signal processing with MATLAB algor,Mehrdad Soumekh,39.53,4.7,1999,397,algorithms
+797,Privacy,Michael Filimowicz,90.98,3.6,2022,204,algorithms
+798,Microcomputer Algorithms,John Killingbeck,35.78,3.7,2017,408,algorithms
+799,Network flows,Ravindra K. Ahuja,39.68,3.9,1988,260,algorithms
+800,Algorithmen - eine Einführung,Thomas H. Cormen,86.4,3.8,2004,472,algorithms
+801,Quantitative Trading,Xin Guo,93.65,3.9,2017,284,algorithms
+802,Algorithms for Convex Optimization,Nisheeth K. Vishnoi,38.19,4.0,2021,449,algorithms
+803,"Bundle of Algorithms in C++,  Parts 1-5",Robert Sedgewick,55.31,3.0,2001,336,algorithms
+804,Algorithmic graph theory and perfect graphs,Martin Charles Golumbic,96.87,4.1,1980,169,algorithms
+805,Beyond the Algorithm,Deepa Das Acevedo,19.9,3.5,2020,137,algorithms
+806,Graph Algorithms,Shimon Even,50.32,4.8,1988,236,algorithms
+807,Handbook of applied algorithms,Amiya Nayak,75.66,4.1,2007,266,algorithms
+808,Efficient parallel algorithms,"Gibbons, Alan",46.66,3.2,1988,321,algorithms
+809,Encyclopedia of algorithms,Ming-Yang Kao,25.87,4.0,2008,126,algorithms
+810,Algorithme,"Arnoux, Alexandre.",49.76,3.0,1948,182,algorithms
+811,Numerical methods,Srimanta Pal,68.42,3.0,2009,515,algorithms
+812,Recommender Systems,P. Pavan Kumar,52.79,4.4,2021,169,algorithms
+813,Foundations of software testing,Aditya Mathur,32.69,3.4,2008,212,algorithms
+814,Easy Learning Data Structures and Algorithms C#,yang hu,51.84,3.3,2019,178,algorithms
+815,Machine learning,Peter A. Flach,65.1,4.9,2012,239,algorithms
+816,Algorithms in SNOBOL4,James F. Gimpel,51.6,4.5,1976,216,algorithms
+817,Data Structures and Algorithms,Shubham Gupta,29.8,4.8,2024,213,algorithms
+818,Algorithm Design and Applications,Michael T. Goodrich,53.2,3.3,2014,416,algorithms
+819,Genetic Algorithms with Python,Clinton Sheppard,27.83,4.9,2016,494,algorithms
+820,"Neural Networks, Fuzzy Systems and Evolutionary Algorithms",S. Rajasekaran,50.24,3.2,2017,487,algorithms
+821,Java algorithms,Scott Robert Ladd,62.23,3.3,1998,203,algorithms
+822,Recursive algorithms,Richard Lorentz,62.97,4.4,1994,456,algorithms
+823,Approximation Algorithms for NP-Hard Problems,Dorit Hochbaum,35.65,3.8,1996,340,algorithms
+824,Algorithmic Desire,Matthew Flisfeder,41.13,3.9,2021,381,algorithms
+825,Learning JavaScript Data Structures and Algorithms,Loiane Groner,61.13,3.7,2014,212,algorithms
+826,Algorithms,Amro Solima,15.9,3.2,2019,455,algorithms
+827,Introduction to computing and algorithms,Russell L. Shackelford,72.33,3.0,1998,159,algorithms
+828,Algorithm design,Marvin C. Paull,39.63,3.0,1988,206,algorithms
+829,Analog Algorithm,Christoph GRUNBERGER,82.55,4.9,2019,140,algorithms
+830,Bioinformatics algorithms,Phillip Compeau,67.15,4.0,2014,159,algorithms
+831,NAG FORTRAN library manual mark 9,Numerical Algorithms Group.,59.23,3.2,1974,446,algorithms
+832,Algorithms on Strings,Maxime Crochemore,23.96,3.9,2007,289,algorithms
+833,Evolutionary computation,David B. Fogel,33.78,3.1,1998,343,algorithms
+834,Algorithme et programmation en Java,Vincent Granet,13.26,3.5,2000,460,algorithms
+835,Finite and algorithmic model theory,Javier Esparza,55.11,4.0,2011,140,algorithms
+836,Introduction to Data Science,Rafael A. Irizarry,87.21,3.9,2019,224,algorithms
+837,Agronomy Algorithm,Neetu Sharma,94.62,4.1,2022,339,algorithms
+838,Simple Algorithms,Sam Thompson,87.17,4.1,2020,232,algorithms
+839,Gravitational N-Body Simulations,Sverre J. Aarseth,15.54,4.5,2003,426,algorithms
+840,Beyond Algorithms,James Luke,83.68,3.2,2022,508,algorithms
+841,Handbook of chemoinformatics algorithms,Jean-Loup Faulon,78.08,4.8,2010,472,algorithms
+842,Differential diagnosis and management for the chiropractor,Thomas A. Souza,37.06,3.3,2000,482,algorithms
+843,Algorithm Design Basics,S. Raheja,53.18,3.4,2020,152,algorithms
+844,Data Mining for Association Rules and Sequential Patterns,Jean-Marc Adamo,54.52,4.2,2000,331,algorithms
+845,Algorithms in structural molecular biology,Bruce R. Donald,12.65,3.1,2011,121,algorithms
+846,"Cambridge IGCSE and o Level Computer Science Algorithms, Pro","Watson, David",47.07,4.8,2021,193,algorithms
+847,Data Structures and Algorithms Using C#,Michael McMillan,45.35,3.3,2007,227,algorithms
+848,Python Algorithmic Trading Cookbook,Pushpak Dagade,84.72,3.8,2020,288,algorithms
+849,Online algorithms,Gerhard Woeginger,16.79,4.6,1998,142,algorithms
+850,Introduction to data structures and algorithm analysis,Thomas L. Naps,86.14,3.2,1992,477,algorithms
+851,Digital Signal Processing,Anonymous,32.61,3.5,2006,515,algorithms
+852,Algorithmic Trading,Stewart Gray,49.37,3.6,2019,253,algorithms
+853,Uberland,Alex Rosenblat,45.07,4.2,2018,477,algorithms
+854,Robot dynamics algorithms,Roy Featherstone,62.5,4.6,1984,466,algorithms
+855,Combinatorial algorithms,Edward M. Reingold,42.39,4.0,1977,270,algorithms
+856,Numerical Methods,Laurene V. Fausett,65.39,4.2,2002,367,algorithms
+857,Sliding Window Algorithm for Mobile Communication Networks,Nuka Mallikharjuna Rao,24.83,3.2,2018,182,algorithms
+858,Algorithmic diagnosis of symptoms and signs,R. Douglas Collins,67.45,3.9,1995,306,algorithms
+859,Supercomputers,Frederick A. Matsen,89.91,4.1,1986,234,algorithms
+860,Statistical Arbitrage,Andrew Pole,30.14,3.1,2007,463,algorithms
+861,Big Data,Kuan-Ching Li,20.1,4.6,2015,240,algorithms
+862,Common medical diagnoses,Patrice M. Healey,45.08,3.1,1990,206,algorithms
+863,Operations Research Applications and Algorithms,Wayne L. Winston,86.82,4.6,1997,199,algorithms
+864,Design and analysis of algorithms,Jeffrey Dean Smith,67.65,4.7,1989,147,algorithms
+865,Algorithmic Mathematics in Machine Learning,Bastian Bohn,16.02,4.0,2024,383,algorithms
+866,Algorithm Will See You Now,JL Lycette,37.13,3.7,2023,253,algorithms
+867,The characteristics of parallel algorithms,Dennis B. Gannon,21.69,4.7,1987,476,algorithms
+868,Automating the News,Nicholas Diakopoulos,84.86,3.4,2019,433,algorithms
+869,Algorithms,Paul Tracy,98.53,3.9,2019,455,algorithms
+870,Handbook of Scheduling,Joseph Y-T Leung,34.17,4.5,2004,155,algorithms
+871,Data Structures and Algorithms in C++,Michael T. Goodrich,14.52,3.3,2002,519,algorithms
+872,Techniques for Designing and Analyzing Algorithms,Douglas R. Stinson,27.27,4.9,2021,134,algorithms
+873,Practical Numerical Algorithms for Chaotic Systems,Thomas S. Parker,72.86,3.5,1989,257,algorithms
+874,Genetic Algorithms and their Applications,John J. Grefenstette,42.63,4.2,1987,121,algorithms
+875,Python Algorithms: Mastering Basic Algorithms in the Python ,Magnus Lie Hetland,97.39,3.6,2014,233,algorithms
+876,Convergence of the QR algorithm,Beresford Parlett,28.48,3.9,1964,384,algorithms
+877,Parallel iterative algorithms,Jacques Mohcine Bahi,76.45,3.5,2007,185,algorithms
+878,Easy Learning Data Structures and Algorithms Java,yang hu,42.93,3.3,2021,358,algorithms
+879,Genetic algorithms,Fred Petry,79.72,3.7,1986,345,algorithms
+880,Algorithmic Cultures,Robert Seyfert,95.47,4.1,2016,281,algorithms
+881,Algorithms,Andy Vickler,75.36,4.0,2023,455,algorithms
+882,Programming Quantum Computers,Mercedes Gimeno-Segovia,24.7,3.2,2019,236,algorithms
+883,"Models, Algorithms and Technologies for Network Analysis",Mikhail V. Batsyn,68.76,3.1,2012,246,algorithms
+884,Optimization in Engineering,Ramteen Sioshansi,17.33,4.0,2017,236,algorithms
+885,Data Mining Algorithms,Pawel Cichosz,28.67,3.3,2014,170,algorithms
+886,Algorithmics of Nonuniformity,Micha Hofri,99.33,4.7,2018,371,algorithms
+887,Economy of Algorithms,Marek Kowalkiewicz,82.21,3.2,2024,344,algorithms
+888,Ultra-wideband positioning systems,Zafer Şahinoğlu,82.36,4.5,2008,380,algorithms
+889,Introduction to Algorithms,Thomas H. Cormen,45.58,3.8,1990,121,algorithms
+890,Algorithms to Live By,Brian Christian,58.91,4.4,2016,260,algorithms
+891,The algorithm design manual,Steven S. Skiena,61.74,3.0,1998,129,algorithms
+892,Data Structures and Algorithms Made Easy,Narasimha Karumanchi,87.72,4.4,2011,388,algorithms
+893,Data structures and algorithms,Alfred V. Aho,94.84,3.1,1983,297,algorithms
+894,Data structures and algorithm analysis in C,Mark Allen Weiss,91.82,3.2,1993,381,algorithms
+895,Algorithms,Robert Sedgewick,63.9,3.0,2011,455,algorithms
+896,Applied Cryptography,Bruce Schneier,32.13,3.4,1994,413,algorithms
+897,Grokking Algorithms,Aditya Y. Bhargava,81.43,4.3,2016,445,algorithms
+898,Algorithm design,Jon Kleinberg,78.97,3.6,1922,206,algorithms
+899,Algorithmic Trading,Ernie Chan,78.44,4.3,2013,253,algorithms
+900,Data Mining,Mehmed Kantardzic,93.26,4.8,2002,244,algorithms
+901,Design Analysis and Algorithms,Hari Mohan Pandey,45.71,4.4,2008,202,algorithms
+902,Hello world,Hannah Fry,72.61,3.7,2018,378,algorithms
+903,Algorithms and data structures,Niklaus Wirth,64.37,3.5,1986,448,algorithms
+904,The Master Algorithm,Pedro Domingos,63.08,4.2,2015,433,algorithms
+905,Astronomical algorithms,Jean Meeus,68.72,4.6,1991,299,algorithms
+906,Operations Research,Wayne L. Winston,67.85,4.6,1987,448,algorithms
+907,Digital signal processing,John G. Proakis,89.11,4.3,1992,393,algorithms
+908,Algorithms + data structures=programs,Niklaus Wirth,55.17,3.5,1976,165,algorithms
+909,Data structures & algorithms in Java,Robert Lafore,74.24,3.6,2003,212,algorithms
+910,Algorithms of Oppression,Safiya Umoja Noble,64.97,3.7,2018,366,algorithms
+911,Data Structures and Algorithms in Python,Michael T. Goodrich,87.69,3.3,2012,168,algorithms
+912,Algorithms Illuminated,Tim Roughgarden,69.71,3.0,2018,263,algorithms
+913,Python Algorithms,Magnus Lie Hetland,65.73,3.6,2010,344,algorithms
+914,Data structures and algorithms in C++,Adam Drozdek,77.99,4.5,1995,271,algorithms
+915,Data Structure and Algorithmic Thinking with Python: Data St,Narasimha Karumanchi,15.82,4.4,2015,193,algorithms
+916,"Information Theory, Inference & Learning Algorithms",David J.C. MacKay,52.52,3.4,2003,503,algorithms
+917,Data Structures and Algorithms Made Easy in Java,Narasimha Karumanchi,70.02,4.4,2011,145,algorithms
+918,"Graphs, algorithms, and optimization",William Kocay,68.34,4.6,2004,254,algorithms
+919,Algorithms unlocked,Thomas H. Cormen,59.15,3.8,2013,380,algorithms
+920,"Data structures, algorithms, and software principles in C",Thomas A. Standish,99.14,4.3,1995,310,algorithms
+921,Algorithms,Christos H. Papadimitriou,71.51,4.4,2006,455,algorithms
+922,Technically Wrong,Sara Wachter-Boettcher,51.23,3.7,2017,318,algorithms
+923,Algorithms in C++,Robert Sedgewick,99.24,3.0,1990,244,algorithms
+924,Once Upon an algorithm,Martin Erwig,89.63,3.9,2017,311,algorithms
+925,Algorithms in a nutshell,George T. Heineman,85.49,4.0,2008,308,algorithms
+926,Algorithmic game theory,Noam Nisan,72.67,4.5,2007,223,algorithms
+927,Applied and algorithmic graph theory,G. Chartrand,69.34,4.3,1993,497,algorithms
+928,Distributed operating systems & algorithms,Randy Chow,68.43,3.2,1996,317,algorithms
+929,Algorithms and data structures,Jeffrey H. Kingston,50.34,4.7,1990,448,algorithms
+930,Introduction to algorithms,Udi Manber,87.62,3.5,1989,169,algorithms
+931,Understanding Machine Learning,Shai Shalev-Shwartz,24.68,4.7,2014,437,algorithms
+932,Computer algorithms,Sara Baase,55.2,3.6,1978,506,algorithms
+933,Computer algorithms/C++,Ellis Horowitz,70.25,3.2,1996,177,algorithms
+934,Algorithmics,Gilles Brassard,47.13,4.3,1987,168,algorithms
+935,Algorithmic Trading,Jeffrey M Bacidore,21.63,4.3,2020,253,algorithms
+936,The Design and Analysis of Computer Algorithms,Alfred V. Aho,13.22,3.1,1974,152,algorithms
+937,Distributed Storage,Yaniv Pessach,35.26,4.1,2013,513,algorithms
+938,Machine learning,Stephen Marsland,31.11,3.0,2009,239,algorithms
+939,Swarm Intelligence Algorithms,Adam Slowik,45.88,4.1,2020,184,algorithms
+940,Algorithms for HVAC acoustics,Douglas D. Reynolds,27.46,4.1,1991,519,algorithms
+941,Fundamentals of computer algorithms,Ellis Horowitz,57.72,3.2,1978,487,algorithms
+942,Introduction to distributed algorithms,Gerard Tel,69.07,3.4,1994,236,algorithms
+943,Algorithmic trading & DMA,Barry Johnson,60.02,3.4,2010,330,algorithms
+944,Filterworld,Kyle Chayka,15.68,4.9,2024,414,algorithms
+945,Data structures and algorithms,Shi-Kuo Chang,95.87,4.4,2003,297,algorithms
+946,Combinatorial optimization,Christos H. Papadimitriou,86.24,4.4,1981,492,algorithms
+947,Python for Algorithmic Trading,Yves Hilpisch,70.55,4.9,2021,225,algorithms
+948,Algorithms and data structures,Charles F. Bowman,76.31,4.6,1994,448,algorithms
+949,Algorithm design,Michael T. Goodrich,70.34,3.3,2001,206,algorithms
+950,Machine vision algorithms and applications,Carsten Steger,29.17,4.5,2008,216,algorithms
+951,"Algorithms in C, Parts 1-4",Robert Sedgewick,86.68,3.0,1997,216,algorithms
+952,Automate this,Christopher Steiner,61.13,4.8,2012,244,algorithms
+953,How to Think About Algorithms,Jeff Edmonds,78.77,3.7,2008,201,algorithms
+954,Computer arithmetic algorithms,Israel Koren,57.61,4.6,1993,490,algorithms
+955,Algorithms,Richard Johnsonbaugh,78.89,3.7,2003,455,algorithms
+956,An introduction to bioinformatics algorithms,Neil C. Jones,78.4,4.5,2004,365,algorithms
+957,Grokking Artificial Intelligence Algorithms,Rishal Hurbans,38.11,3.3,2020,164,algorithms
+958,The YouTube Formula,Derral Eves,87.04,4.0,2021,464,algorithms
+959,Data Structures and Algorithms in Python,Robert Lafore,76.51,3.6,2019,168,algorithms
+960,Ethical Algorithm,Michael Kearns,99.56,4.0,2019,370,algorithms
+961,An introduction to the analysis of algorithms,Robert Sedgewick,43.04,3.0,1995,511,algorithms
+962,Quantitative Trading,Ernest P. Chan,53.63,3.7,2021,284,algorithms
+963,Parallel algorithms for regular architectures,Russ Miller,41.51,4.3,1996,255,algorithms
+964,Analysis and Design of Algorithms,Amrinder Arora,57.58,4.9,2014,188,algorithms
+965,Problems on algorithms,Ian Parberry,97.39,3.5,1995,399,algorithms
+966,Data structures & algorithm analysis in Java,Mark Allen Weiss,14.99,3.2,1999,413,algorithms
+967,Practical genetic algorithms,Randy L. Haupt,26.33,4.0,1998,192,algorithms
+968,Algorithms and Programming,Alexander Shen,57.17,4.9,1996,244,algorithms
+969,Bioinformatics,Orpita Bosu,39.98,4.1,2007,166,algorithms
+970,Combinatorial Optimization,Bernhard Korte,52.85,4.1,2005,388,algorithms
+971,Genetic algorithms + data structures = evolution programs,Zbigniew Michalewicz,52.09,4.3,1992,483,algorithms
+972,Algorithms Illuminated : Part 1,Tim Roughgarden,56.41,3.0,2017,285,algorithms
+973,"Design and Analysis of Algorithms, 1/e",SRIDHAR,44.46,4.0,2014,390,algorithms
+974,Algorithmic Trading with Python,Chris Conlan,38.94,4.2,2020,400,algorithms
+975,Algorithmic Short-Selling with Python,Laurent Bernut,19.07,4.5,2021,165,algorithms
+976,Garbage collection,"Jones, Richard",44.4,3.7,1996,502,algorithms
+977,"Neural, novel & hybrid algorithms for time series prediction",Timothy Masters,67.15,4.6,1995,445,algorithms
+978,Multilevel optimization,Athanasios Migdalas,91.33,3.8,1997,178,algorithms
+979,Improved Gaussian beam-scattering algorithm,James A. Lock,71.62,4.4,1995,442,algorithms
+980,Introduction to Algorithms,Moubachir MADANI FADOUL,45.44,3.9,2020,121,algorithms
+981,Competitive Programming in Python,Christoph Dürr,72.49,3.2,2020,335,algorithms
+982,Computer-aided analysis of electronic circuits,Leon O. Chua,47.58,3.9,1975,354,algorithms
+983,Meta-analysis of face recognition algorithms,P. Jonathon Phillips,28.6,3.9,2001,146,algorithms
+984,Discrete Problems in Nature Inspired Algorithms,Anupam Prof Shukla,78.75,4.9,2017,381,algorithms
+985,Genetic Algorithms Reference,"Tomasz, Dominik Gwiazda",82.57,4.2,2006,408,algorithms
+986,Theory of algorithms,"Markov, A. A.",76.56,3.6,1961,310,algorithms
+987,Signal processing algorithms,Samuel D. Stearns,66.37,4.2,1987,439,algorithms
+988,Expert-gate algorithm,Varad Vidyadhar Joshi,59.26,4.7,1992,288,algorithms
+989,Foundations of algorithms,Richard E. Neapolitan,72.78,3.0,2011,254,algorithms
+990,Algorithmic information theory,Gregory J. Chaitin,85.8,4.9,1987,232,algorithms
+991,Genetic Algorithm Essentials,Oliver Kramer,75.47,3.6,2017,240,algorithms
+992,Algorithms sequential and parallel,Russ Miller,31.77,4.3,1999,453,algorithms
+993,THE ART OF COMPUTER PROGRAMMING VOLUME 2 SEMINUMERICAL ALGOR,Donald Knuth,32.22,3.1,1969,385,algorithms
+994,An introduction to data structures and algorithms with Java,Glenn Rowe,62.79,4.2,1998,397,algorithms
+995,Green Communications,Jinsong Wu,46.74,3.2,2012,321,algorithms
+996,Wireless Communications,Giorgio A. Vitetta,47.82,3.3,2013,255,algorithms
+997,Visibility Algorithms in the Plane,Subir Kumar Ghosh,80.14,4.7,2003,175,algorithms
+998,Introduction to Computer Algorithms,Shackelford,36.37,4.9,1999,432,algorithms
+999,"BIOINFORMATICS ALGORITHMS,VOL.II",Phillip Compeau,50.11,4.0,2015,194,algorithms
+1000,Data Structures and Algorithms,C. V. Sastry,80.59,4.6,2018,213,algorithms
+1001,An introduction to algorithms,T. E. Hull,87.62,4.4,1967,339,algorithms
+1002,Handbook of genetic algorithms,Lawrence Davis,85.44,4.4,1991,183,algorithms
+1003,Fundamentals of Computer Algorithms,Sanguthevar Rajasekaran,75.73,4.3,2008,323,algorithms
+1004,Multidimensional clustering algorithms,Fionn Murtagh,37.09,4.4,1985,358,algorithms
+1005,Metaheuristic Optimization Algorithms,Laith Abualigah,85.96,3.0,2024,179,algorithms
+1006,"Data structures, algorithms, and performance",Derick Wood,81.61,4.2,1992,391,algorithms
+1007,Algorithmic Foundation of Multi-Scale Spatial Representation,Zhilin Li,82.83,4.4,2006,294,algorithms
+1008,Bio-Inspired Algorithms in PID Controller Optimization,Jagatheesan Kallannan,75.81,4.0,2018,376,algorithms
+1009,Report on the algorithmic language ALGOL 68,Adriaan van Wijngaarden,56.63,3.3,1969,405,algorithms
+1010,Robust Control Systems with Genetic Algorithms,Mo Jamshidi,86.78,3.9,2002,396,algorithms
+1011,Practical optimization,Andreas Antoniou,14.76,4.7,2004,200,algorithms
+1012,The Algorithm,Julian Mercer,68.72,3.3,2024,341,algorithms
+1013,Applications and algorithms in business,Fran Goertzel Gustavson,39.93,3.2,1978,200,algorithms
+1014,Data structures and algorithms in Java,Anonymous,61.73,3.5,2005,221,algorithms
+1015,Algorithms,Jeff Mapua,74.74,4.4,2018,455,algorithms
+1016,Algorithms,"González, Echo Elise",92.0,4.0,2020,455,algorithms
+1017,Algorithms in Bioinformatics,Paul A. Gagniuc,27.05,3.1,2021,392,algorithms
+1018,Structural Geology Algorithms,Richard W. Allmendinger,36.6,4.1,2011,153,algorithms
+1019,Jonah algorithms,JoAnn Rego,38.03,4.6,1979,127,algorithms
+1020,Digital image processing,Bernd Jähne,95.14,3.5,1991,149,algorithms
+1021,Hybrid Media Activism,Emiliano Treré,56.9,4.8,2018,204,algorithms
+1022,Quantum Monte Carlo Methods,James Gubernatis,36.28,4.9,2016,175,algorithms
+1023,Pattern matching algorithms,Alberto Apostolico,56.41,4.9,1997,234,algorithms
+1024,Hybrid evolutionary algorithms,Crina Grosan,62.15,4.8,2007,463,algorithms
+1025,Combinatorial Pattern Matching Algorithms in Computational B,Gabriel Valiente,21.54,3.7,2009,176,algorithms
+1026,Pattern Mining with Evolutionary Algorithms,Sebastián Ventura,67.17,3.7,2016,146,algorithms
+1027,Dictionary Learning Algorithms and Applications,Bogdan Dumitrescu,18.59,3.1,2018,245,algorithms
+1028,Algorithms and protocols for wireless and mobile ad hoc netw,Azzedine Boukerche,14.77,3.7,2008,336,algorithms
+1029,From Algorithms to Thinking Machines,Domenico Talia,74.46,4.3,2023,347,algorithms
+1030,Spectral methods,Jie Shen,50.75,4.8,2011,357,algorithms
+1031,Data Structures and Algorithms in C++,Lee Wittenberg,67.62,4.6,2016,519,algorithms
+1032,Algorithm Design,Patrick Bosc,52.27,4.5,2022,360,algorithms
+1033,Applied Learning Algorithms for Intelligent IoT,Pethuru Raj,63.98,4.4,2021,457,algorithms
+1034,Metaheuristic Algorithms in Industry 4. 0,Pritesh Shah,63.28,3.4,2021,504,algorithms
+1035,Vehicular networks,Andre-Luc Beylot,57.14,3.0,2013,494,algorithms
+1036,Mastering Machine Learning Algorithms,Giuseppe Bonaccorso,74.37,3.1,2020,427,algorithms
+1037,Design and Analysis of Cryptographic Algorithms in Blockchai,Ke Huang,77.07,4.3,2021,271,algorithms
+1038,Genetic Algorithms and Applications for Stock Trading Optimi,Vivek Kapoor,93.8,3.8,2021,368,algorithms
+1039,Phylogenetic Networks,Daniel H. Huson,72.46,3.5,2010,343,algorithms
+1040,Advanced Machine Learning Algorithms for Complex Financial A,Mohammad Irfan,99.74,4.8,2021,359,algorithms
+1041,Nature-Inspired Optimization Algorithms for Cyber-Physical S,Mohammad Sajid,37.75,4.4,2024,299,algorithms
+1042,Markov Chains,Wai-Ki Ching,81.82,3.9,2006,379,algorithms
+1043,Algorithms in computational molecular biology,Mourad Elloumi,42.32,3.7,2010,490,algorithms
+1044,Optimization,Elijah Polak,45.98,3.1,1997,173,algorithms
+1045,Contemporary Algorithms,Christopher I. Argyros,38.01,3.5,2022,360,algorithms
+1046,Vlsi Algorithms and Architectures,N. Ranganathan,47.0,4.2,1993,408,algorithms
+1047,Data-intensive computing,Ian Gorton,34.72,4.0,2012,180,algorithms
+1048,Graph theory,Nicos Christofides,37.7,4.6,1975,184,algorithms
+1049,Data Structures and Algorithm Analysis In C,Weiss,74.09,3.3,2002,373,algorithms
+1050,Mathematical methods and algorithms for signal processing,Todd K. Moon,92.93,3.1,2000,149,algorithms
+1051,Learning Algorithms Through Programming and Puzzle Solving,Alexander S. Kulikov,56.62,4.1,2018,179,algorithms
+1052,Flowcharts and algorithms,Continuing Mathematics Project.,62.9,3.1,1977,296,algorithms
+1053,Practical genetic algorithms,Anonymous,34.26,3.5,2004,192,algorithms
+1054,"Algorithms in C++, Parts 1-4",Robert Sedgewick,16.62,3.0,1998,497,algorithms
+1055,Introduction to Algorithms,Michael David,75.57,3.6,2021,121,algorithms
+1056,Error Correction Coding,Todd K. Moon,23.88,3.1,2005,236,algorithms
+1057,Artificial Intelligence,Alan Dix,65.26,4.8,2025,453,algorithms
+1058,Social Media Algorithm,Neil Cunnington,37.92,3.0,2019,404,algorithms
+1059,Machine vision algorithms in Java,Paul F. Whelan,50.25,3.8,2000,196,algorithms
+1060,Genetic algorithms and engineering optimization,Mitsuo Gen,18.51,3.9,1999,425,algorithms
+1061,Algorithms for Computational Biology,Adrian-Horia Dediu,28.73,4.4,2014,170,algorithms
+1062,Pattern Recognition Algorithms for Data Mining,Sankar K. Pal,84.1,4.6,2004,493,algorithms
+1063,Celestine Algorithms,Gina Pazzaglia,63.94,4.2,2016,306,algorithms
+1064,Combinatorics Graph Theory and Algorithms,"Combinatorics, Algorithms, and Applicati",21.97,3.2,1999,414,algorithms
+1065,Multisensor Data Fusion,Hassen Fourati,59.84,3.8,2015,242,algorithms
+1066,Hands-On Data Structures and Algorithms with Python,Basant Agarwal,85.8,4.7,2018,477,algorithms
+1067,Combinatorial algorithms,T. C. Hu,92.09,4.2,1982,270,algorithms
+1068,Graphics & visualization,T. Theoharis,53.79,3.8,2007,166,algorithms
+1069,Advances in Metaheuristics Algorithms,Erik Cuevas,69.52,3.4,2018,141,algorithms
+1070,Ensemble Methods,Zhi-Hua Zhou,37.25,3.7,2012,355,algorithms
+1071,Cambridge Handbook of the Law of Algorithms,Woodrow Barfield,33.44,3.4,2020,355,algorithms
+1072,Learn Data Structures and Algorithms with Golang,Bhagvan Kommadi,63.39,3.0,2019,452,algorithms
+1073,Easy Learning Data Structures and Algorithms Java Practice,yang hu,44.31,3.3,2019,455,algorithms
+1074,"Algorithms in C, Part 5",Robert Sedgewick,81.65,3.0,2001,315,algorithms
+1075,"Textbook of Data Structures and Algorithms, Volume 2",G. A. Vijayalakshmi Pai,27.02,4.5,2023,410,algorithms
+1076,Hypercube algorithms and implementations,Oliver A. McBryan,13.5,3.9,1986,149,algorithms
+1077,Algorithms 2,Pierre Berlioux,76.18,4.8,1990,190,algorithms
+1078,Introduction to operations research,Billy E. Gillett,23.1,4.8,1976,168,algorithms
+1079,PHP 7 Data Structures and Algorithms: Implement linked lists,Mizanur Rahman,67.51,3.1,2017,348,algorithms
+1080,Fundamental algorithms for computer graphics,NATO Advanced Study Institute on Fundame,36.35,3.2,1985,326,algorithms
+1081,Design and analysis of algorithms,Parag H. Dave,25.47,3.5,2008,147,algorithms
+1082,Steganography in Digital Media,Jessica Fridrich,35.44,4.1,2009,183,algorithms
+1083,Genetic Algorithms,Kim-Fung Man,19.52,3.5,2001,313,algorithms
+1084,GENETIC ALGORITHMS,JOHN H. HOLLAND,39.17,4.6,2021,250,algorithms
+1085,Online Algorithms,Rahul Vaze,90.7,3.9,2022,302,algorithms
+1086,Algorithms Unplugged,Berthold Vöcking,72.72,3.1,2011,295,algorithms
+1087,Algorithmic Mathematics,Stefan Hougardy,44.33,3.3,2016,125,algorithms
+1088,Practical algorithms for programmers,Andrew Binstock,20.66,3.5,1995,519,algorithms
+1089,Algorithm of the Night,A. S. Hamrah,20.64,4.0,2025,333,algorithms
+1090,Learning algorithms,P. Mars,66.81,4.8,1996,384,algorithms
+1091,Matrix algorithms,G. W. Stewart,82.43,3.5,1998,224,algorithms
+1092,Genetic algorithms and their applications,International Conference on Genetic Algo,93.66,3.9,1987,276,algorithms
+1093,Algorithms,Daniel R. Faust,51.71,4.8,2018,455,algorithms
+1094,Algebra: an algorithmic treatment,Kenneth E. Iverson,31.81,3.9,1972,464,algorithms
+1095,An optimal selection algorithm,Richard Cole,62.84,4.1,1986,498,algorithms
+1096,A data motion algorithm,Allan Gottlieb,21.38,3.6,1980,453,algorithms
+1097,Contemporary Algorithms,Ioannis K. Argyros,12.57,3.3,2023,360,algorithms
+1098,Introduction to parallel algorithms and architectures,Frank Thomson Leighton,92.3,4.6,1992,354,algorithms
+1099,Hands-On Genetic Algorithms with Python,Eyal Wirsansky,69.31,3.1,2020,365,algorithms
+1100,Cryptography Algorithms,Massimo Bertaccini,61.67,3.4,2022,292,algorithms
+1101,Interior point algorithms,Yinyu Ye,52.39,3.6,1997,258,algorithms
+1102,Instagram Marketing Algorithms,Leonard Carli,79.05,4.1,2021,359,algorithms
+1103,Social Media Algorithms,Adele Kuzmiakova,82.41,4.0,2025,408,algorithms
+1104,Algorithms in Java,Robert Sedgewick,94.71,3.0,2003,209,algorithms
+1105,Bad choices,Ali Almossawi,15.79,3.1,2017,269,algorithms
+1106,Algorithms for Next-Generation Sequencing,Wing-Kin Sung,22.37,3.3,2017,482,algorithms
+1107,Social Power of Algorithms,David Beer,54.2,4.7,2018,190,algorithms
+1108,Algorithmic Trading,James Weldon Johnson,86.17,4.7,2019,253,algorithms
+1109,Swarm Intelligence Algorithms (Two Volume Set),Adam Slowik,39.44,4.1,2020,261,algorithms
+1110,Building Winning Algorithmic Trading Systems,Kevin J. Davey,50.76,4.0,2014,437,algorithms
+1111,Combinatorial and Algorithmic Mathematics,Baha Alzalg,52.92,3.7,2022,400,algorithms
+1112,Algorithm specification,Courant Computer Science Symposium New Y,27.07,4.5,1972,320,algorithms
+1113,Geostatistical Simulation,Christian Lantuejoul,96.6,3.2,2001,135,algorithms
+1114,Selected Papers on the Analysis of Algorithms,Donald Knuth,57.01,3.1,2000,180,algorithms
+1115,Summary Algorithms to Live by,Book PRO,73.86,4.1,2022,361,algorithms
+1116,Evolutionary Optimization Algorithms,Altaf Q. H. Badar,90.97,3.8,2021,138,algorithms
+1117,Bioinformatics algorithms : an active learning approach - 3.,Anonymous,90.5,3.5,2018,419,algorithms
+1118,Algorithm Analysis and Design,S. R. Jena,56.97,4.1,2023,289,algorithms
+1119,Algorithms in Combinatorial Geometry,Herbert Edelsbrunner,34.78,4.4,1987,309,algorithms
+1120,Numerical Algorithms with C,Giesela Engeln-Müllges,93.9,4.9,2013,140,algorithms
+1121,Algorithmic Unconscious,Luca M. Possati,79.05,3.5,2021,137,algorithms
+1122,Bistatic SAR Data Processing Algorithms,Xiaolan Qiu,43.34,4.7,2013,440,algorithms
+1123,Evolutionary algorithms in engineering applications,D. Dasgupta,53.87,4.5,1997,233,algorithms
+1124,Advanced algorithms and operators,David B. Fogel,19.47,3.1,2000,502,algorithms
+1125,Absolute Beginner's Guide to Algorithms,Kirupa Chinnathambi,66.98,4.7,2023,193,algorithms
+1126,Compression and coding algorithms,Alistair Moffat,23.49,4.3,2002,232,algorithms
+1127,The logic of logistics,Julien Bramel,50.84,3.8,1997,410,algorithms
+1128,If... Then,Taina Bucher,24.57,3.2,2018,125,algorithms
+1129,Digital processing of synthetic aperture radar data,Ian G Cumming,88.69,4.3,2004,196,algorithms
+1130,Introduction to Megavoltage X-Ray Dose Computation Algorithm,Jerry Battista,53.67,4.7,2019,127,algorithms
+1131,Algorithmic Trading - Algorithmic Trading Strategies - Compe,Fudancy Research,52.5,3.6,2012,236,algorithms
+1132,Algorithms for Sensor Systems,Jie Gao,51.34,3.2,2013,322,algorithms
+1133,NAG ALGOL 60 library manual mark 7,Numerical Algorithms Group.,86.23,3.2,1978,335,algorithms
+1134,Machine Learning Algorithms and Applications in Engineering,Prasenjit Chatterjee,42.85,4.2,2022,310,algorithms
+1135,Evolutionary Algorithms for Mobile Ad Hoc Networks,Bernabé Dorronsoro,30.94,4.1,2014,466,algorithms
+1136,Introduction to the Analysis of Algorithms,Michael Soltys,14.16,4.2,2012,146,algorithms
+1137,Java 9 Data Structures and Algorithms,Debasish Ray Chawdhuri,76.53,3.5,2017,464,algorithms
+1138,Selected papers on analysis of algorithms,Donald Knuth,68.13,3.1,2000,444,algorithms
+1139,Algorithmic Life,Louise Amoore,59.31,3.1,2015,395,algorithms
+1140,Algorithms for communications systems and their applications,Nevio Benvenuto,30.75,3.2,2002,185,algorithms
+1141,Graph Algorithms,mohammad waqar,44.53,4.8,2021,236,algorithms
+1142,GIS Algorithms,Ningchuan Xiao,77.8,3.4,2015,175,algorithms
+1143,Seismological Algorithms,Durk J. Doornbos,89.13,4.0,1988,374,algorithms
+1144,Wprowadzenie do algorytmów,Thomas H. Cormen,49.41,3.8,2001,324,algorithms
+1145,The Algorithm,Hilke Schellmann,19.38,4.0,2024,341,algorithms
+1146,Algorithms--ESA 2004,"ESA 2004 (2004 Bergen, Norway)",39.51,4.2,2004,360,algorithms
+1147,Genetic algorithms in electromagnetics,Randy L. Haupt,26.71,4.0,2006,410,algorithms
+1148,EM Algorithm and Extensions,Geoffrey J. McLachlan,71.66,3.9,2007,361,algorithms
+1149,Algorithms,Jonas Skeppstedt,35.52,3.6,2018,455,algorithms
+1150,Algorithms and Theory of Computation Handbook - 2 Volume Set,Mikhail J. Atallah,19.62,3.2,2020,236,algorithms
+1151,Algorithm Trading 101,Jacinta Chan Phooi M'ng,32.29,3.7,2021,452,algorithms
+1152,Data Structure and Algorithm,Ajit Singh,45.33,4.8,2021,280,algorithms
+1153,Algorithms and Data Structures,Kurt Mehlhorn,77.06,4.4,2010,382,algorithms
+1154,Wireless Medical Systems and Algorithms,Pietro Salvo,49.9,4.2,2016,272,algorithms
+1155,Thinking in Algorithms,Albert Rutherford,97.8,4.8,2021,220,algorithms
+1156,Distributed Algorithms for Message-Passing Systems,Michel Raynal,42.45,3.0,2013,352,algorithms
+1157,Principal Component Analysis Networks and Algorithms,Xiangyu Kong,47.29,3.3,2016,371,algorithms
+1158,Algorithms on Trees and Graphs,Gabriel Valiente,87.05,3.7,2002,500,algorithms
+1159,Easy Learning Data Structures and Algorithms C++,Yang Hu,70.14,3.5,2019,199,algorithms
+1160,Foundations of Algorithms Using C++ Pseudocode,Richard Neapolitan,46.58,4.7,2003,264,algorithms
+1161,Beta [beta] mathematics handbook,Lennart Råde,59.77,4.2,1988,202,algorithms
+1162,Algorithms for visual design using the Processing language,Kostas Terzidis,24.35,3.1,2009,332,algorithms
+1163,Algorithms and Data Structures,Helmut Knebl,56.62,3.1,2020,382,algorithms
+1164,Information retrieval,William B. Frakes,64.35,4.1,1992,141,algorithms
+1165,Computer Vision,Richard Szeliski,64.7,4.0,2010,373,algorithms
+1166,Data Structures and Algorithms Made Easy: Data Structures an,Narasimha Karumanchi,67.81,4.4,2016,136,algorithms
+1167,Data Clustering,Charu C. Aggarwal,67.86,3.3,2013,381,algorithms
+1168,Mastering algorithms with C,Kyle Loudon,46.13,3.4,1999,227,algorithms
+1169,Flowchart and Algorithm Basics,A. B. Chaudhuri,74.1,4.6,2020,292,algorithms
+1170,The black box society,Frank Pasquale,85.54,4.2,2015,357,algorithms
+1171,Distributed Systems,Sukumar Ghosh,37.43,4.2,2006,135,algorithms
+1172,"Grokking Algorithms, Second Edition",Aditya Y. Bhargava,74.51,4.3,2024,367,algorithms
+1173,"Data structures, algorithms, and applications in C++",Sartaj Sahni,58.33,4.5,1998,446,algorithms
+1174,C++ algorithms for digital signal processing,"Embree, Paul M.",73.78,3.5,1999,501,algorithms
+1175,Scheduling,Michael Pinedo,17.19,3.9,1994,365,algorithms
+1176,Essential Algorithms,Rod Stephens,46.32,4.6,2013,317,algorithms
+1177,Data Structures and Algorithms,Rudolph Russell,38.26,4.8,2018,213,algorithms
+1178,What algorithms want,Ed Finn,13.51,3.8,2017,147,algorithms
+1179,"Spies, Lies, and Algorithms",Amy B. Zegart,33.84,3.9,2022,228,algorithms
+1180,Awesome algorithms and creative coding,Clive Gifford,20.26,3.2,2015,290,algorithms
+1181,Algorithms and data structures,Jurg Nievergelt,12.87,4.2,1992,448,algorithms
+1182,Data Structures & Algorithms in Dart,raywenderlich Tutorial Team,78.56,4.6,2022,441,algorithms
+1183,Machine Learning for Algorithmic Trading,Stefan Jansen,32.45,3.6,2020,306,algorithms
+1184,Algorithms in Action,Victor Savvich,28.38,3.4,2019,339,algorithms
+1185,Genetic algorithms for pattern recognition,Sankar K. Pal,86.46,4.6,1996,450,algorithms
+1186,Geometric Folding Algorithms,Erik D. Demaine,40.97,4.5,2007,366,algorithms
+1187,AAD Algorithms-Aided Design,Arturo Tedeschi,55.77,4.5,2014,241,algorithms
+1188,Data Mining,Nong Ye,52.32,4.7,2013,244,algorithms
+1189,Algorithm design,Eva Tardos,39.92,4.3,2005,206,algorithms
+1190,Data Structures And Algorithms With Javascript,Michael McMillan,82.67,3.3,2014,449,algorithms
+1191,Graph theory,Geir Agnarsson,70.81,4.0,2006,184,algorithms
+1192,Nature-Inspired Optimization Algorithms,Vasuki A,88.69,3.0,2020,458,algorithms
+1193,Algorithms,Panos Louridas,31.8,4.1,2020,455,algorithms
+1194,Statistically Sound Indicators For Financial Market Predicti,Timothy Masters,79.75,4.6,2019,451,algorithms
+1195,Algorithmic Thinking,Daniel Zingaro,62.16,4.6,2020,206,algorithms
+1196,Data structures and algorithm analysis,Mark Allen Weiss,29.0,3.2,1992,217,algorithms
+1197,Machine Learning,Mohssen Mohammed,18.46,3.3,2016,377,algorithms
+1198,"Algorithms in C, Parts 1-5",Robert Sedgewick,38.39,3.0,2001,478,algorithms
+1199,"Robotics, Vision and Control",Peter Corke,40.17,3.3,2017,482,algorithms
+1200,The advent of the algorithm,David Berlinski,39.96,4.6,2000,400,algorithms
+1201,Algorithms,John Mueller,42.93,3.7,2017,455,algorithms
+1202,Fundamentals of algorithmics,Gilles Brassard,78.74,4.3,1996,170,algorithms
+1203,Methods in Algorithmic Analysis,Vladimir A. Dobrushkin,77.03,4.5,2008,242,algorithms
+1204,Algorithmic puzzles,Anany Levitin,45.05,4.8,2011,232,algorithms
+1205,Information retrieval,David A. Grossman,22.66,3.2,1998,141,algorithms
+1206,Data Structures and Algorithms in Python,WILEY INDIA,95.27,3.1,2016,168,algorithms
+1207,Understanding algorithms and data structures,David Brunskill,36.12,3.8,1996,499,algorithms
+1208,Analysis of Algorithms,Jeffrey J. McConnell,69.97,3.2,2001,477,algorithms
+1209,Data structures and algorithms in Java,Adam Drozdek,55.71,4.5,2001,221,algorithms
+1210,Handbook of algorithms and data structures,G. H. Gonnet,76.64,4.5,1984,481,algorithms
+1211,Data Structures and Algorithms,Kurt Mehlhorn,86.72,4.4,1984,213,algorithms
+1212,Ready-to-run Visual Basic algorithms,Rod Stephens,61.47,4.6,1998,440,algorithms
+1213,Algorithms,Sushil C. Dimri,50.47,3.6,2020,455,algorithms
+1214,"Data Structures, Algorithms and Applications in Java",Sartaj Sahni,91.35,4.5,2000,439,algorithms
+1215,"Algorithms on strings, trees, and sequences",Dan Gusfield,97.94,4.0,1997,454,algorithms
+1216,Active noise control systems,Sen M. Kuo,59.57,4.7,1996,242,algorithms
+1217,Data Structures & Algorithms Using JavaScript,Hemant Jain,94.15,3.8,2017,318,algorithms
+1218,The Self-Taught Computer Scientist,Cory Althoff,47.37,4.4,2021,512,algorithms
+1219,Algorithms for RPN calculators,John A. Ball,72.01,4.0,1978,216,algorithms
+1220,Analysis and Design of Algorithms,Anuradha A. Puntambekar,13.84,4.4,2020,188,algorithms
+1221,Data Structures and Algorithms with Python,Kent D. D. Lee,18.78,3.2,2015,468,algorithms
+1222,The Design of Approximation Algorithms,David P. Williamson,33.46,3.6,2011,402,algorithms
+1223,Data Structures & Algorithm Analysis in C++,Mark A. Weiss,96.12,3.8,2013,307,algorithms
+1224,Data structures and algorithms,Iain T. Adamson,69.17,3.0,1996,297,algorithms
+1225,Algorithms for Dummies,John Paul Mueller,56.9,4.6,2017,471,algorithms
+1226,Algorithms,Anthony Ralston,42.43,3.2,1997,455,algorithms
+1227,40 Algorithms Every Programmer Should Know,Imran Ahmad,98.49,4.1,2020,445,algorithms
+1228,Data Analytics,Thomas A. Runkler,90.27,4.4,2012,424,algorithms
+1229,Foundations of Algorithms,Richard Neapolitan,37.01,4.7,2014,286,algorithms
+1230,Learn Algorithmic Trading,Sebastien Donadio,32.63,3.4,2019,244,algorithms
+1231,Digital image processing,Wilhelm Burger,33.2,3.6,2007,149,algorithms
+1232,Data structures and algorithms using Python,Rance D. Necaise,65.71,3.1,2011,167,algorithms
+1233,Algorithmic composition,Gerhard Nierhaus,40.93,3.8,2009,266,algorithms
+1234,Algorithms in bioinformatics,Wing-Kin Sung,88.83,3.3,2009,304,algorithms
+1235,"Graphs, Networks and Algorithms",Dieter Jungnickel,28.97,4.0,2006,442,algorithms
+1236,Distributed computing,Ajay D. Kshemkalyani,62.25,3.5,2008,317,algorithms
+1237,Gaming,Alexander R. Galloway,90.7,4.3,2005,337,algorithms
+1238,The alphabet and the algorithm,Mario Carpo,86.49,4.3,2011,397,algorithms
+1239,Teorii︠a︡ algorifmov,"Markov, A. A.",79.97,3.6,1954,173,algorithms
+1240,Genetic algorithms and genetic programming,Michael Affenzeller,19.08,4.5,2008,271,algorithms
+1241,Algorithmic Architecture,Kostas Terzidis,67.35,3.1,2006,215,algorithms
+1242,Problem Solving in Data Structures and Algorithms Using Java,Hemant Jain,37.54,3.8,2018,409,algorithms
+1243,Sensemaking,Christian Madsbjerg,39.06,3.5,2017,292,algorithms
+1244,Introduction to genetic algorithms,S. N. Sivanandam,66.81,3.8,2007,254,algorithms
+1245,Algorithms for VLSI Physical Design Automation,Naveed A. Sherwani,39.03,4.3,1998,298,algorithms
+1246,Bioinformatics,N. Gautham,94.8,3.1,2006,166,algorithms
+1247,Algoritmalara Giriş,Thomas H. Cormen,58.99,3.8,2016,459,algorithms
+1248,"Algorithms in Java, Part 5",Robert Sedgewick,76.37,3.0,2003,374,algorithms
+1249,Approximation algorithms,Vijay V. Vazirani,84.42,4.8,2001,510,algorithms
+1250,Optimization,Josef Stoer,55.76,3.3,1983,173,algorithms
+1251,Deep Learning,Witold Pedrycz,46.65,3.4,2019,147,algorithms
+1252,Financial Engineering and Computation,Yuh-Dauh Lyuu,25.97,4.3,2001,231,algorithms
+1253,Combinatorics,Peter J. Cameron,60.11,4.1,1994,450,algorithms
+1254,Distibuted Systems,Serge Haddad,50.94,4.3,2011,231,algorithms
+1255,Complex Networks,Kayhan Erciyes,31.26,4.3,2014,133,algorithms
+1256,Simulation-Based Algorithms for Markov Decision Processes,Hyeong Soo Chang,56.44,4.1,2010,120,algorithms
+1257,Data structures & algorithms in Java,Mitchell Waite,43.07,4.4,1998,212,algorithms
+1258,Pascal and algorithms,Gregory F. Wetzel,86.96,3.4,1987,508,algorithms
+1259,Algorithmic Reason,Claudia Aradau,47.89,4.9,2022,493,algorithms
+1260,Algorithms of informatics - Volume 2,mondAt Kiado,32.34,4.3,2007,288,algorithms
+1261,Combinatorial Optimization,Alexander Schrijver,17.84,4.7,2003,388,algorithms
+1262,"Bistatic SAR / GISAR / FISAR Geometry, Signal Models and Ima",Andon Dimitrov Lazarov,90.66,3.2,2013,367,algorithms
+1263,Machine Learning Refined,Jeremy Watt,20.95,3.0,2016,193,algorithms
+1264,Simplicity Through Simulation,Karl Dondaneau,12.43,4.9,2024,446,algorithms
+1265,Algorithms for Solving Financial Portfolio Design Problems,Fatima Zohra Lebbah,41.15,4.2,2019,515,algorithms
+1266,Algorithms and Ordering Heuristics for Distributed Constrain,Mohamed Wahbi,52.14,4.7,2013,318,algorithms
+1267,Cryptographic algorithms on reconfigurable hardware,Francisco Rodríguez-Henríquez,32.4,4.9,2006,202,algorithms
+1268,Parameter setting in evolutionary algorithms,Zbigniew Michalewicz,70.87,4.3,2007,290,algorithms
+1269,Automated Day Trading Strategies,Blake Butler,77.13,4.0,2022,132,algorithms
+1270,Discrete Cosine and Sine Transforms,Vladimir Britanak,50.81,3.4,2006,138,algorithms
+1271,Wavelets,Yves Meyer,97.11,4.6,1993,330,algorithms
+1272,Smart World Algorithm,Suman Saha,32.99,3.0,2023,236,algorithms
+1273,Just Algorithms,Christopher Slobogin,53.88,4.0,2021,355,algorithms
+1274,Variants Of Evolutionary Algorithms For Realworld Applicatio,Thomas Weise,62.76,3.5,2011,447,algorithms
+1275,An object-oriented collection of minimum degree algorithms,Gary Kumfert,88.6,4.3,1999,176,algorithms
+1276,Rhinoplasty in Practice,Suleyman Tas,83.56,4.6,2022,470,algorithms
+1277,Gabor analysis and algorithms,Hans G. Feichtinger,53.85,4.5,1997,342,algorithms
+1278,IN THE ALGORITHM WE TRUST,Anonymous,82.37,3.5,2025,430,algorithms
+1279,Classification and learning using genetic algorithms,Sanghamitra Bandyopadhyay,68.0,3.6,2007,376,algorithms
+1280,Smart Camera Design,Marilyn Wolf,79.15,3.1,2017,401,algorithms
+1281,Principles of digital image processing,Wilhelm Burger,81.54,3.6,2009,399,algorithms
+1282,Psychopharmacology Algorithms,David Osser,72.09,4.3,2020,519,algorithms
+1283,The Science Of Algorithmic Trading And Portfolio Management,Robert Kissell,30.02,4.6,2013,444,algorithms
+1284,"Domain decomposition methods, algorithms and theory",Andrea Toselli,98.35,4.6,2005,401,algorithms
+1285,Wavefront cache-friendly algorithm for compact numerical sch,Alex Povitsky,93.69,3.8,1999,181,algorithms
+1286,Algorithms for the PRINQUAL and TRANSREG procedures,SAS Institute,82.39,4.8,1990,139,algorithms
+1287,Algorithms and data structures,Workshop on Algorithms and Data Structur,51.94,3.0,1995,448,algorithms
+1288,Codeless Data Structures and Algorithms,Armstrong Subero,71.04,4.1,2020,381,algorithms
+1289,9 Algorithms That Changed the Future,John MacCormick,86.06,4.1,2013,324,algorithms
+1290,Pascal Algorithms Intro Proble,Wetzel,88.18,3.9,1987,318,algorithms
+1291,Discrete Probability and Algorithms,David Aldous,55.23,3.0,1995,491,algorithms
+1292,Numerical calculations and algorithms,Royce Beckett,67.73,4.1,1967,385,algorithms
+1293,C++ components and algorithms,Scott Robert Ladd,26.35,3.3,1992,167,algorithms
+1294,Bearing-only tracking algorithms,Alex Grindlay,48.1,4.0,1980,399,algorithms
+1295,Rantaku arugorizumu,Hisao Tamaki,20.97,3.2,2008,358,algorithms
+1296,Handbook of Memetic Algorithms,Ferrante Neri,29.21,4.7,2012,186,algorithms
+1297,Rigid Body Dynamics Algorithms,Roy Featherstone,28.04,4.6,2007,190,algorithms
+1298,Instance-Specific Algorithm Configuration,Yuri Malitsky,24.8,4.0,2014,305,algorithms
+1299,Algorithms in Invariant Theory,Bernd Sturmfels,19.92,3.6,1993,253,algorithms
+1300,Architectures for Computer Vision,Hong Jeong,76.38,3.1,2014,495,algorithms
+1301,"NAG FORTRAN mini manual, mark 11",Numerical Algorithms Group.,71.4,3.2,1984,484,algorithms
+1302,NAG Algol 68 Library Manual Mark 2 (ZM2),Numerical Algorithms Group.,17.69,3.2,1978,477,algorithms
+1303,NAG library manual Mark 5,Numerical Algorithms Group.,40.69,3.2,1976,133,algorithms
+1304,NAG mini manual Mark 5,Numerical Algorithms Group.,63.74,3.2,1976,387,algorithms
+1305,NAG ALGOL 60 library manual,Numerical Algorithms Group.,42.65,3.2,1978,374,algorithms
+1306,Fast transforms,Douglas F. Elliott,43.72,4.0,1982,224,algorithms
+1307,Multiplicative Programming,George Boger,30.14,4.7,1999,162,algorithms
+1308,Animal Algorithms,Eric Cassell,81.78,4.7,2021,204,algorithms
+1309,Mathematics for the analysis of algorithms,Daniel H. Greene,44.22,4.9,1981,511,algorithms
+1310,Efficient algorithms for listing combinatorial structures,Leslie Ann Goldberg,94.45,4.5,1993,509,algorithms
+1311,Algorithmic and Computational Robotics,Bruce Donald,30.29,3.7,2001,194,algorithms
+1312,Algorithms for fixed-range optimal trajectories,Homer Q. Lee,97.15,4.7,1980,347,algorithms
+1313,Robust algebraic multilevel methods and algorithms,Johannes Kraus,75.96,4.5,2009,485,algorithms
+1314,Image fusion,Tania Stathaki,21.96,4.4,2008,443,algorithms
+1315,Diagnostic Imaging,Ronald L. Eisenberg,71.74,4.7,1988,305,algorithms
+1316,Numerical algorithms,J. L. Mohamed,91.81,3.3,1986,281,algorithms
+1317,Models And Algorithms For Genome Evolution,Cedric Chauve,24.42,4.9,2013,375,algorithms
+1318,Artificial-intelligence-based electrical machines and drives,Peter Vas,47.56,3.1,1999,277,algorithms
+1319,Algorithmic foundations of robotics V,Jean-Daniel Boissonnat,67.15,4.6,2003,412,algorithms
+1320,Stochastic Algorithms for Visual Tracking,John MacCormick,41.94,4.1,2011,445,algorithms
+1321,Algorithms and complexity in Durham 2007,ACiD 2007 (2007 University of Durham),52.24,3.4,2007,395,algorithms
+1322,Automatic differentiation of algorithms,Andreas Griewank,41.11,4.5,1992,432,algorithms
+1323,Think Data Structures: Algorithms and Information Retrieval ,Allen B. Downey,74.39,4.5,2017,191,algorithms
+1324,The stable marriage problem,Dan Gusfield,90.4,4.0,1989,167,algorithms
+1325,Deblurring images,Per Christian Hansen,19.48,4.4,2006,140,algorithms
+1326,DNA Computing Based Genetic Algorithm,Jili Tao,30.18,4.4,2020,357,algorithms
+1327,Sampling Algorithms,Yves Tillé,98.19,3.9,2006,241,algorithms
+1328,Minimization Algorithms,Gábor Szegő,77.97,3.2,1973,398,algorithms
+1329,Circadian Algorithms,Tom Night,59.15,3.2,2022,405,algorithms
+1330,Evolutionary Algorithms,Lawrence D. Davis,83.27,3.4,2012,174,algorithms
+1331,Scalable Algorithms,Vassil Alexandrov,46.46,3.8,2018,240,algorithms
+1332,Algorithmic Antitrust,Aurelien Portuese,92.81,4.8,2021,316,algorithms
+1333,Algorithmic Commonplaces,Thomas VanDrunen,21.38,4.7,2023,398,algorithms
+1334,Coding Algorithms,Samantha S. Bell,91.1,3.6,2023,502,algorithms
+1335,Gospel Algorithm,T. W. Randolph,25.14,3.3,2015,197,algorithms
+1336,Bandit Algorithms,Tor Lattimore,94.72,3.3,2020,375,algorithms
+1337,Beginning Algorithms,Simon Harris,69.01,4.5,2005,426,algorithms
+1338,Sporty Algorithms,Allyssa Loya,59.03,3.4,2020,414,algorithms
+1339,Clustering and Routing Algorithms for Wireless Sensor Networ,Pratyay Kuila,72.42,3.7,2017,429,algorithms
+1340,Algorithms for Emergency Medicine,Mark Harrison,17.54,4.7,2022,296,algorithms
+1341,Algorithms for Reinforcement Learning,Csaba Szepesvari,63.01,3.3,2010,166,algorithms
+1342,"BIOINFORMATICS ALGORITHMS,VOL.I",Phillip Compeau,43.2,4.0,2015,147,algorithms
+1343,Algorithms for network programming,Jeff L. Kennington,94.24,4.7,1980,436,algorithms
+1344,The analysis of algorithms,Paul Walton Purdom,39.96,3.5,1985,420,algorithms
+1345,Algorithms for clustering data,Anil K. Jain,22.87,3.0,1988,468,algorithms
+1346,Practical algorithms in C++,Bryan Flamig,29.84,3.3,1995,368,algorithms
+1347,Data Structure and Algorithm,Prof. Maria S. Rukadikar,77.55,4.4,2011,280,algorithms
+1348,Computer applications and algorithms,C. William Gear,76.35,4.8,1986,437,algorithms
+1349,Data Structures and Algorithms,Lad Custom Publishing Inc.,36.31,3.4,2024,213,algorithms
+1350,ANALYS ALGORITHM,BANACHOWSKI,18.16,3.7,1991,185,algorithms
+1351,Algorithmic Reality,David Sanchez,52.11,3.0,2022,147,algorithms
+1352,Parallel Algorithms,M. H. Alsuwaiyel,43.9,3.4,2022,271,algorithms
+1353,Distributed Algorithms,Nancy Lynch,38.83,3.5,2002,233,algorithms
+1354,Algorithm models,Donald Jay Hoffman,51.12,3.7,1973,327,algorithms
+1355,Algorithmic learning,Alan Hutchinson,49.96,3.1,1994,250,algorithms
+1356,The Algorithm,Anonymous,78.46,3.5,2024,341,algorithms
+1357,Proximal Algorithms,Neal Parikh,55.41,3.6,2013,145,algorithms
+1358,Algorithm Engineering,"Stefan Schirra,Matthias M. Ller-Hanneman",51.02,4.7,2011,261,algorithms
+1359,Imbalanced Learning,Haibo He,49.93,4.6,2013,390,algorithms
+1360,Meta-Heuristic and Evolutionary Algorithms for Engineering O,Omid Bozorg-Haddad,41.15,3.9,2017,290,algorithms
+1361,A practical guide to data structures and algorithms using ja,Sally A. Goldman,60.74,4.6,2007,210,algorithms
+1362,Distributed algorithms and protocols,Michel Raynal,96.35,3.0,1988,169,algorithms
+1363,Clever algorithms,Jason Brownlee,72.86,3.3,2011,329,algorithms
+1364,"Algorithms, computation, and mathematics",School Mathematics Study Group.,38.87,4.7,1966,195,algorithms
+1365,On-Line Portfolio Selection,Bin Li,74.61,3.9,1999,200,algorithms
+1366,"Textbook of Data Structures and Algorithms, Volume 1",G. A. Vijayalakshmi Pai,15.74,4.5,2022,240,algorithms
+1367,Algorithms : This Book Includes,Andy Vickler,34.69,4.0,2021,404,algorithms
+1368,Pattern discovery in bioinformatics,Laxmi Parida,14.76,4.4,2007,245,algorithms
+1369,Algorithmic learning theory,Sanjay Jain,48.43,4.7,2003,401,algorithms
+1370,Ontohackers : Radical Movement Philosophy in the Age of Exti,Jaime del Val,32.59,4.4,2024,147,algorithms
+1371,Algorithms for fuzzy clustering,Sadaaki Miyamoto,61.13,3.5,2008,265,algorithms
+1372,Algorithmic Trading Methods,Robert L. Kissell,97.97,3.5,2020,174,algorithms
+1373,Computer and Cyber Security,Brij B. Gupta,20.45,3.6,2018,222,algorithms
+1374,Markov Chains,Bruno Sericola,64.66,4.2,2013,379,algorithms
+1375,Revised report on the algorithmic language ALGOL 68,Cornelis H. A. Koster,37.25,3.9,1976,234,algorithms
+1376,Introduction to Algorithmic Marketing,Ilya Katsov,92.55,4.4,2017,379,algorithms
+1377,Common-Sense Guide to Data Structures and Algorithms in Pyth,Jay Wengrow,92.27,4.4,2024,125,algorithms
+1378,Graph algorithms and applications 3,Giuseppe Liotta,52.97,3.4,2004,456,algorithms
+1379,First Aid Algorithms for the USMLE Step 3 (First Aid USMLE),Jordan M. Steinberg,35.64,4.4,2008,192,algorithms
+1380,Matrix Methods in Data Mining and Pattern Recognition (Funda,Lars Eldén,26.9,4.9,2007,218,algorithms
+1381,Data structures and algorithms with object-oriented design p,Bruno R. Preiss,97.72,3.9,2000,483,algorithms
+1382,Shadow Algorithms Data Miner,Andrew Woo,41.84,4.3,2012,134,algorithms
+1383,Guide to Experimental Algorithmics,Catherine C. McGeoch,67.75,3.5,2012,335,algorithms
+1384,Art of Algorithm Design,Sachi Nandan Mohanty,74.47,3.5,2021,144,algorithms
+1385,Introduction to Bioinformatics Algorithms,Neil C. Jones,22.49,4.5,2004,353,algorithms
+1386,Image Processing,Maher A. Sid-Ahmed,66.26,3.4,1994,445,algorithms
+1387,Understanding Molecular Simulation,Daan Frenkel,24.37,3.2,2001,311,algorithms
+1388,Speech Coding Algorithms,Wai C. Chu,70.82,3.4,2003,425,algorithms
+1389,125 Problems in Text Algorithms,Maxime Crochemore,62.37,3.9,2021,462,algorithms
+1390,Fast algorithms for 3D-graphics,Georg Glaeser,65.6,3.8,1994,144,algorithms
+1391,Recent advances in harmony search algorithm,Zong Woo Geem,45.34,3.4,2010,353,algorithms
+1392,Algebraic operads,Murray R. Bremner,81.07,3.3,2016,494,algorithms
+1393,Algorithmic techniques for the polymer sciences,Bradley S. Tice,76.66,4.3,2014,377,algorithms
+1394,Kernel Learning Algorithms For Face Recognition,Jun-Bao Li,22.36,3.2,2012,296,algorithms
+1395,Surgical oncology,Keith W. Millikan,86.2,3.6,2003,401,algorithms
+1396,Algorithmic aspects of bioinformatics,Hans-Joachim Böckenhauer,71.63,3.6,2007,180,algorithms
+1397,Michigan algorithm decoder [MAD],Bruce W. Arden,73.12,3.1,1960,253,algorithms
+1398,Graph algorithms and applications 2,Giuseppe Liotta,49.92,3.4,2004,286,algorithms
+1399,Trading at the Speed of Light,Donald MacKenzie,51.53,4.9,2021,519,algorithms
+1400,Optimization Using Evolutionary Algorithms and Metaheuristic,Kaushik Kumar,86.56,4.3,2019,372,algorithms
+1401,Low Rank Approximation,Ivan Markovsky,48.97,4.7,2011,152,algorithms
+1402,Data structures and algorithm analysis in Ada,Mark Allen Weiss,49.68,3.2,1993,415,algorithms
+1403,Algorithms in Java,Anonymous,65.03,3.5,2002,209,algorithms
+1404,Adaptive Filtering,Paulo S. R. Diniz,26.23,4.7,2008,437,algorithms
+1405,Applied algebra,Darel W. Hardy,92.43,3.9,2002,445,algorithms
+1406,Fundamentals of wavelets,Jaideva C. Goswami,98.1,3.0,2008,187,algorithms
+1407,Permutation and Randomization Tests for Trading System Devel,Timothy Masters,92.19,4.6,2020,236,algorithms
+1408,Learning JavaScript Data Structures and Algorithms: Write co,Loiane Groner,50.42,3.7,2018,409,algorithms
+1409,Algorithms,Tobias Matzner,19.78,3.9,2023,455,algorithms
+1410,Optimization,Rajesh Kumar Arora,33.5,3.1,2015,173,algorithms
+1411,Oracle's Algorithm : ,Doug Ray,50.91,3.7,2025,348,algorithms
+1412,Grouping Genetic Algorithms,Michael Mutingi,33.67,3.8,2016,306,algorithms
+1413,Real-World Algorithms,Panos Louridas,73.86,4.1,2017,332,algorithms
+1414,Algorithmic languages,International Symposium on Algorithmic L,41.52,4.7,1981,239,algorithms
+1415,Graphic C Algorithms,Yang Hu,12.72,3.5,2020,280,algorithms
+1416,Numerical algorithms,Bruce W. Arden,32.29,3.1,1970,281,algorithms
+1417,International Journal of Computational Models and Algorithms,Aryya Gangopadhyay,43.9,3.4,2010,160,algorithms
+1418,Basic Matrix Algebra with Algorithms and Applications,Robert A. Liebler,36.61,4.0,2018,322,algorithms
+1419,Applied Evolutionary Algorithms for Engineers Using Python,Leonardo Azevedo Scardua,69.97,3.6,2021,187,algorithms
+1420,Proportionate-Type Normalized Least Mean Square Algorithms,Kevin Wagner,32.14,4.0,2013,212,algorithms
+1421,Algorithmic Audience in the Age of Artificial Intelligence,Roselyn Du,85.7,4.0,2023,509,algorithms
+1422,An impact-location estimation algorithm for subsonic uninhab,Jeffrey E. Bauer,31.82,3.3,1997,269,algorithms
+1423,Evolutionary Computation 1,Thomas Baeck,67.75,4.4,2017,229,algorithms
+1424,Mathematics of the Gods and the Algorithms of Men,Paolo Zellini,39.22,4.0,2020,180,algorithms
+1425,Signal Processing for 5G,Fa-Long Luo,63.44,4.1,2016,448,algorithms
+1426,Algorithms for Sample Preparation with Microfluidic Lab-on-C,Sukanta Bhattacharjee,96.11,4.2,2019,259,algorithms
+1427,Genetic algorithms and fuzzy logic systems,Lotfi Asker Zadeh,66.58,4.7,1997,409,algorithms
+1428,The Secret Life of Data,Aram Sinnreich,20.55,4.7,2024,503,algorithms
+1429,Artificial Intelligence,Jeremy Rogerson,45.88,3.0,2022,453,algorithms
+1430,Algorithms and data structures in C++,L. Ammeraal,27.94,4.4,1996,283,algorithms
+1431,Data Structures and Algorithms In C#,Michael Mcmillan,29.52,3.5,2003,374,algorithms
+1432,Analysis of speedup in distributed algorithms,John P. Fishburn,32.32,3.7,1984,232,algorithms
+1433,"Data structures, algorithms, and program style",James F. Korsh,76.15,3.7,1986,388,algorithms
+1434,Data Structure and Algorithm with C,Debdutta Pal,42.03,3.2,2018,429,algorithms
+1435,The Design And Analysis of Algorithms,Nitin Upadhyay,19.67,3.8,2007,285,algorithms
+1436,Algorithms in Infertility and Reproductive Medicine,Kamini A. Rao,65.0,4.7,2023,218,algorithms
+1437,Algorithms (4th Edition)(Chinese Edition),MEI Robert Sedgewick MEI Kevin Wayne,74.5,3.7,2012,263,algorithms
+1438,A general theory of optimal algorithms,J. F. Traub,23.5,3.2,1980,307,algorithms
+1439,Phylogenetic Networks Concepts Algorithms And Applications,Daniel H. Huson,27.27,3.5,2010,418,algorithms
+1440,Transparency in Social Media,Sorin Adam Matei,81.12,4.0,2015,206,algorithms
+1441,Algorithms for computer-aided design of linear microwave cir,Stanisław Rosłoniec,64.75,3.3,1990,343,algorithms
+1442,Algorithms and programming,A. Shen,39.95,3.8,2010,387,algorithms
+1443,The LLL Algorithm,"Nguyen, Phong, Q.",87.7,3.3,2010,214,algorithms
+1444,Numerical algorithms,E. V. Krishnamurthy,41.27,4.9,1986,281,algorithms
+1445,Rubiks Cube Algorithms,Rod Lloyd,77.78,3.1,2015,309,algorithms
