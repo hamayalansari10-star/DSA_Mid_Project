@@ -100,14 +100,14 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(main_widget)
         layout = QVBoxLayout(main_widget)
 
-        # Header Title
+        # Clean Title Bar
         header = QFrame()
         header.setStyleSheet("background-color: #1e293b; border-radius: 8px; padding: 8px;")
         h_layout = QHBoxLayout(header)
         h_title = QLabel("📚 Algorithmic Book Analytics Engine")
         h_title.setStyleSheet("font-size: 18px; font-weight: bold; color: #38bdf8;")
-        h_sub = QLabel("A+ Mid-Term Evaluation • OpenLibrary Live Scraping Engine")
-        h_sub.setStyleSheet("color: #94a3b8;")
+        h_sub = QLabel("OpenLibrary API Scraper & Real-Time Data Analytics Engine")
+        h_sub.setStyleSheet("color: #94a3b8; font-size: 12px;")
         h_layout.addWidget(h_title)
         h_layout.addStretch()
         h_layout.addWidget(h_sub)
