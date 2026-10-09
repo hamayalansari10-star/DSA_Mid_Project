@@ -1,5 +1,4 @@
 import time
-import math
 
 class SearchResult:
     def __init__(self, data, time_ms, comparisons):
@@ -10,19 +9,10 @@ class SearchResult:
 class SearchingEngine:
 
     @staticmethod
-    def evaluate_numeric_op(val, op, target):
-        if op == "=": return val == target
-        if op == ">": return val > target
-        if op == ">=": return val >= target
-        if op == "<": return val < target
-        if op == "<=": return val <= target
-        return False
-
-    @staticmethod
     def linear_search(data, col, match_type, query):
         comps = 0
         results = []
-        q_str = str(query).lower()
+        q_str = str(query).lower().strip()
         start = time.perf_counter()
 
         for item in data:
@@ -42,15 +32,13 @@ class SearchingEngine:
 
     @staticmethod
     def binary_search(data, col, query):
-        # Requires pre-sorted list by col
         sorted_data = sorted(data, key=lambda x: str(getattr(x, col.lower())).lower())
         comps = 0
         results = []
-        q_str = str(query).lower()
+        q_str = str(query).lower().strip()
         start = time.perf_counter()
 
-        low = 0
-        high = len(sorted_data) - 1
+        low, high = 0, len(sorted_data) - 1
         found_idx = -1
 
         while low <= high:
@@ -66,7 +54,6 @@ class SearchingEngine:
                 high = mid - 1
 
         if found_idx != -1:
-            # Expand both directions for duplicates
             left = found_idx
             while left >= 0 and str(getattr(sorted_data[left], col.lower())).lower() == q_str:
                 comps += 1
@@ -83,12 +70,6 @@ class SearchingEngine:
 
     @staticmethod
     def composite_search(data, rules):
-        """
-        rules = [
-          {"col": "Category", "op": "Contains", "val": "Fiction", "logic": "AND"},
-          {"col": "Rating", "op": ">=", "val": "4.0", "logic": "AND"}
-        ]
-        """
         start = time.perf_counter()
         results = []
         comps = 0
@@ -101,11 +82,16 @@ class SearchingEngine:
                 op = r["op"]
                 target_val = r["val"]
 
-                if r["col"] in ["Price", "Rating", "Year", "Pages"]:
+                if r["col"] in ["Price", "Rating", "Year", "Pages", "ID"]:
                     try:
                         num_target = float(target_val)
                         num_val = float(col_val)
-                        res = SearchingEngine.evaluate_numeric_op(num_val, op, num_target)
+                        if op == "=": res = num_val == num_target
+                        elif op == ">": res = num_val > num_target
+                        elif op == ">=": res = num_val >= num_target
+                        elif op == "<": res = num_val < num_target
+                        elif op == "<=": res = num_val <= num_target
+                        else: res = str(num_target) in str(num_val)
                     except ValueError:
                         res = False
                 else:
@@ -118,9 +104,12 @@ class SearchingEngine:
 
                 if r.get("not", False):
                     res = not res
+
                 rule_evals.append((res, r.get("logic", "AND")))
 
-            # Combine rules logically
+            if not rule_evals:
+                continue
+
             final_match = rule_evals[0][0]
             for res, logic in rule_evals[1:]:
                 if logic == "AND":
